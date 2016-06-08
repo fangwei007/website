@@ -51,7 +51,7 @@
                         <li <?php echo strstr($url, 'about') === FALSE ? '' : 'class="active"'; ?>>
                             <a href="/about">About</a>
                         </li>
-                        @if (!Auth::guest())
+                        @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
                         <li <?php echo strstr($url, 'items') === FALSE ? '' : 'class="active"'; ?>>
                             <!--<a href="services.html">Services</a>-->
                             <a href="/items">Items</a>
