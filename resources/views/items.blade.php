@@ -21,25 +21,22 @@
     <!-- /.row -->
 
     <!-- Projects Row -->
-    <?php $nums = count($items); ?>
-    @for ($j = 0; $j < ceil($nums / 3); $j++)
     <div class="row">
-        @for ($i = 0; $i < 3 && $i < $nums; $i++, $nums--)
+        @foreach ($items as $item)
         <div class="col-md-4 img-portfolio">
             <a href="/item">
                 <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
             </a>
-            {{ $items[$i]['image'] }}
+            {{ $item->image }}
             <h3>
-                <a href="/item">{{ $items[$i]['name'] }}</a>
+                <a href="/item">{{ $item->name }}</a>
             </h3>
-            <p>{{ $items[$i]['introduction'] }}</p>
+            <p>{{ $item->introduction }}</p>
         </div>
-        @endfor
+        @endforeach
     </div>
-    @endfor
     <!-- /.row -->
-    <hr>
+    @if($items->total() > 9) <hr> @endif
 
     <!-- Pagination -->
     @include('pagination.default', ['paginator' => $items])
