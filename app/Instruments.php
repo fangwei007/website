@@ -10,6 +10,6 @@ class Instruments extends Model
     protected $table = 'instruments';
     
     public function fetchAll() {
-        return Instruments::where('status', 'A')->paginate(3);
+        return Instruments::where('status', 'A')->paginate(6);
     }
 }
