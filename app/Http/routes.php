@@ -28,3 +28,6 @@ Route::get('/contact', function () {
 Route::get('/item', function () {
     return view('single_item');
 });
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
