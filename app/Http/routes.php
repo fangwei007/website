@@ -19,9 +19,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/items', function () {
-    return view('items');
-});
+Route::get('/items', 'InstrumentsController@index');
 
 Route::get('/contact', function () {
     return view('contact');

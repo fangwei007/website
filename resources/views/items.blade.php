@@ -20,6 +20,7 @@
     </div>
     <!-- /.row -->
 
+    {{ $items }}
     <!-- Projects Row -->
     <div class="row">
         <div class="col-md-4 img-portfolio">
