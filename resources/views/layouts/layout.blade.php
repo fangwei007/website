@@ -30,7 +30,7 @@
     </head>
 
     <body>
-        
+
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -42,22 +42,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                    <a class="navbar-brand" href="/">Start Bootstrap</a>
                 </div>
+                <?php $url = url()->current(); ?>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
+                        <li <?php echo strstr($url, 'about') === FALSE ? '' : 'class="active"'; ?>>
                             <a href="/about">About</a>
                         </li>
-                        <li>
+                        <li <?php echo strstr($url, 'items') === FALSE ? '' : 'class="active"'; ?>>
                             <!--<a href="services.html">Services</a>-->
                             <a href="/items">Items</a>
                         </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
+                        <li <?php echo strstr($url, 'contact') === FALSE ? '' : 'class="active"'; ?>>
+                            <a href="/contact">Contact</a>
                         </li>
-                        <li class="dropdown active">
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>

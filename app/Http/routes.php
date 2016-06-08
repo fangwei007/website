@@ -22,3 +22,11 @@ Route::get('/about', function () {
 Route::get('/items', function () {
     return view('items');
 });
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/item', function () {
+    return view('single_item');
+});
