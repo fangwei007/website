@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new authentication controller instance.
@@ -52,7 +52,19 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-        ]);
+            'verification' => 'required|regex:/^Fang-wei$/'
+        ],
+        [
+            'name.required' => "请填写用户名。",
+            'email.required' => "请填写有效邮箱。",
+            'email.email' => "邮箱格式无效。",
+            'email.unique' => "邮箱也被占用，请重试。",
+            'password.required' => "请填写密码。",
+            'password.min' => "密码至少6位。",
+            'password.confirmed' => "密码输入有误，请重试。",
+            'verification.required' => "请填写验证码。",
+            'verification.regex' => "验证码无效。",
+            ]);
     }
 
     /**
