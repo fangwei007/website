@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
     <head>
 
@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Modern Business - Start Bootstrap Template</title>
+        <title>新网站</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,23 +42,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Start Bootstrap</a>
+                    <a class="navbar-brand" href="/">新网站</a>
                 </div>
                 <?php $url = url()->current(); ?>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li <?php echo strstr($url, 'about') === FALSE ? '' : 'class="active"'; ?>>
-                            <a href="/about">About</a>
+                            <a href="/about">关于我们</a>
                         </li>
                         @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
                         <li <?php echo strstr($url, 'items') === FALSE ? '' : 'class="active"'; ?>>
                             <!--<a href="services.html">Services</a>-->
-                            <a href="/items">Items</a>
+                            <a href="/items">产品详情</a>
                         </li>
                         @endif
                         <li <?php echo strstr($url, 'contact') === FALSE ? '' : 'class="active"'; ?>>
-                            <a href="/contact">Contact</a>
+                            <a href="/contact">联系我们</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
@@ -103,7 +103,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <!-- Authentication Links -->
                             @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">VIP?</a></li>
+                            <li><a href="{{ url('/login') }}">注册用户？</a></li>
                             <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
                             @else
                             <li class="dropdown">
@@ -112,7 +112,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> 登 出</a></li>
                                 </ul>
                             </li>
                             @endif
@@ -126,6 +126,17 @@
 
         @yield('content')
 
+
+        <hr>
+
+        <!-- Footer -->
+        <footer style="margin: 50px 10% auto">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 
@@ -134,9 +145,9 @@
 
         <!-- Script to Activate the Carousel -->
         <script>
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
+$('.carousel').carousel({
+    interval: 5000 //changes the speed
+})
         </script>
     </body>
 
