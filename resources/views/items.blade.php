@@ -20,99 +20,53 @@
     </div>
     <!-- /.row -->
 
-    {{ $items }}
     <!-- Projects Row -->
     <div class="row">
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
+        @for ($i = 0; $i < 3; $i++)
+            <div class="col-md-4 img-portfolio">
+                <a href="/item">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                {{ $items[$i]['image'] }}
+                <h3>
+                    <a href="/item">{{ $items[$i]['name'] }}</a>
+                </h3>
+                <p>{{ $items[$i]['introduction'] }}</p>
+            </div>
+        @endfor
     </div>
     <!-- /.row -->
 
     <!-- Projects Row -->
     <div class="row">
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
+        @for ($i = 3; $i < 6; $i++)
+            <div class="col-md-4 img-portfolio">
+                <a href="/item">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                {{ $items[$i]['image'] }}
+                <h3>
+                    <a href="/item">{{ $items[$i]['name'] }}</a>
+                </h3>
+                <p>{{ $items[$i]['introduction'] }}</p>
+            </div>
+        @endfor
     </div>
 
     <!-- Projects Row -->
     <div class="row">
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="/item">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
+        @for ($i = 6; $i < 9; $i++)
+            <div class="col-md-4 img-portfolio">
+                <a href="/item">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                {{ $items[$i]['image'] }}
+                <h3>
+                    <a href="/item">{{ $items[$i]['name'] }}</a>
+                </h3>
+                <p>{{ $items[$i]['introduction'] }}</p>
+            </div>
+        @endfor
     </div>
     <!-- /.row -->
 
