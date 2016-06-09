@@ -130,10 +130,10 @@
         <hr>
 
         <!-- Footer -->
-        <footer style="margin: 50px 10% auto">
+        <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; 新网站 方方 2016</p>
                 </div>
             </div>
         </footer>
