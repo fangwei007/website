@@ -37,10 +37,10 @@
             <div class="top-bar">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 col-xs-4">
-                            <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                        <div class="col-sm-6 col-xs-6">
+                            <div class="top-number"><p><i class="fa fa-phone-square"></i> 13903336666 &nbsp;&nbsp;&nbsp;<i class="fa fa-mobile-phone"></i> 13903336666</p></div>
                         </div>
-                        <div class="col-sm-6 col-xs-8">
+                        <div class="col-sm-6 col-xs-6">
                             <div class="social">
                                 <!--                                <ul class="social-share">
                                                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>

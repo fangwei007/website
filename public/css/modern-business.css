@@ -105,6 +105,16 @@ footer {
     header.carousel .carousel {
         height: 70%;
     }
+
+    .navbar-header {
+        margin: -35px 0 20px;
+        padding: 10px;
+    }
+
+    .social,
+    .top-number{
+        visibility: hidden;
+    }
 }
 
 .carousel-indicators li {
