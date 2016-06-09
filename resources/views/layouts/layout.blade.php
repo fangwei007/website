@@ -51,7 +51,7 @@
                                                                 </ul>-->
                                 <div class="search">
                                     <form role="form">
-                                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                        <input type="text" class="search-form" autocomplete="off" placeholder="搜索">
                                         <i class="fa fa-search"></i>
                                     </form>
                                 </div>
