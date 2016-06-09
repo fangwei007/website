@@ -2181,7 +2181,7 @@ ul.faq li > div h3 {
     color: #888;
 }
 
-ul.pagination > li > a {
+/*ul.pagination > li > a {
     border: 1px solid #F1F1F1;
     margin-right:5px;
     border-radius: 5px;
@@ -2199,7 +2199,7 @@ ul.pagination > li:hover > a {
     background-color: #337ab7 !important;
     border-color: #337ab7 !important;
     color: #fff;
-}
+}*/
 
 .search_box {
     background-image: url("../images/search_icon.png");
