@@ -92,6 +92,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    @if (Auth::user()->isAdmin()) <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-dashboard"></i> 控制台</a></li>@endif
                                     <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> 登 出</a></li>
                                 </ul>
                             </li>
@@ -102,6 +103,7 @@
             </nav><!--/nav-->
 
         </header><!--/header-->
+        
         @yield('content')
 
         <!-- Footer -->
