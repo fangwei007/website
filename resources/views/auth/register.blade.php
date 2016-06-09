@@ -85,6 +85,8 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i> 注册用户
                                 </button>
+                                
+                                <a class="btn btn-link" href="{{ url('/login') }}">返 回</a>
                             </div>
                         </div>
                     </form>
