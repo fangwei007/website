@@ -16,6 +16,7 @@
 
         <!-- Custom CSS -->
         <link href="css/modern-business.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,78 +33,57 @@
     <body>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">新网站</a>
-                </div>
-                <?php $url = url()->current(); ?>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li <?php echo strstr($url, 'about') === FALSE ? '' : 'class="active"'; ?>>
-                            <a href="/about">关于我们</a>
-                        </li>
-                        @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
-                        <li <?php echo strstr($url, 'items') === FALSE ? '' : 'class="active"'; ?>>
-                            <!--<a href="services.html">Services</a>-->
-                            <a href="/items">产品详情</a>
-                        </li>
-                        @endif
-                        <li <?php echo strstr($url, 'contact') === FALSE ? '' : 'class="active"'; ?>>
-                            <a href="/contact">联系我们</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="portfolio-1-col.html">1 Column Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-2-col.html">2 Column Portfolio</a>
-                                </li>
-                                <li class="active">
-                                    <a href="portfolio-3-col.html">3 Column Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-4-col.html">4 Column Portfolio</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-item.html">Single Portfolio Item</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="full-width.html">Full Width Page</a>
-                                </li>
-                                <li>
-                                    <a href="sidebar.html">Sidebar Page</a>
-                                </li>
-                                <li>
-                                    <a href="faq.html">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="404.html">404</a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">Pricing Table</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <ul class="nav navbar-nav navbar-right">
+        <header id="header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-4">
+                            <div class="top-number"><p><i class="fa fa-phone-square"></i>  +0123 456 70 90</p></div>
+                        </div>
+                        <div class="col-sm-6 col-xs-8">
+                            <div class="social">
+                                <!--                                <ul class="social-share">
+                                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                                                </ul>-->
+                                <div class="search">
+                                    <form role="form">
+                                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                        <i class="fa fa-search"></i>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.container-->
+            </div><!--/.top-bar-->
+
+            <nav class="navbar navbar-inverse" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo"></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li <?php echo Request::is('/') ? 'class="active"' : ''; ?>><a href="/">首 页</a></li>
+                            <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about">关于我们</a></li>
+                            @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
+                            <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items">产品详情</a></li>
+                            @endif
+                            <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact">联系我们</a></li>
                             <!-- Authentication Links -->
                             @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">注册用户？</a></li>
+                            <li <?php echo Request::is('login') || Request::is('register') ? 'class="active"' : ''; ?> ><a href="{{ url('/login') }}">注册用户？</a></li>
                             <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
                             @else
                             <li class="dropdown">
@@ -117,26 +97,24 @@
                             </li>
                             @endif
                         </ul>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
+                    </div>
+                </div><!--/.container-->
+            </nav><!--/nav-->
 
+        </header><!--/header-->
         @yield('content')
 
-
-        <hr>
-
         <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; 新网站 方方 2016</p>
+        <div class="container">
+            <hr>
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; 新网站 方方 2016</p>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 

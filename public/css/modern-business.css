@@ -12,7 +12,7 @@ body {
 }
 
 body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 10px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 body.boxed .body {
@@ -85,7 +85,7 @@ header.carousel .fill {
 /* Footer Styles */
 
 footer {
-    margin: 20px 10% 20px;
+    /*margin: 20px 10% 20px;*/
 }
 
 /* Responsive Styles */
