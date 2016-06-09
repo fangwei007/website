@@ -106,3 +106,44 @@ footer {
         height: 70%;
     }
 }
+
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    margin: 0 15px 0 0;
+    position: relative;
+}
+
+.carousel-indicators li:after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #FFF;
+    left: -3px;
+    top: -3px;
+}
+
+.carousel-indicators .active{
+    width: 20px;
+    height: 20px;
+    background-color: #337ab7;
+    margin: 0 15px 0 0;
+    border: 1px solid #337ab7;
+    position: relative;
+}
+
+.carousel-indicators .active:after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: #337ab7;
+    border: 1px solid #337ab7;
+    left: -3px;
+    top: -3px;
+}
