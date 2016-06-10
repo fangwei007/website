@@ -7,8 +7,8 @@ use App\Instruments;
 use App\Http\Requests;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
 
-class InstrumentsController extends Controller
-{
+class InstrumentsController extends Controller {
+
     /**
      * Create a new controller instance.
      *
@@ -16,8 +16,10 @@ class InstrumentsController extends Controller
      */
     public function __construct() {
         $this->middleware(['auth', 'role']);
+
+        $this->middleware('admin', ['except' => [ 'index']]);
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -64,7 +66,8 @@ class InstrumentsController extends Controller
      * @return Response
      */
     public function edit($id) {
-        //
+        $item = Instruments::where('id', $id)->first();
+        return view('instruments.edit', ['item' => $item]);
     }
 
     /**
@@ -75,7 +78,7 @@ class InstrumentsController extends Controller
      * @return Response
      */
     public function update(Request $request, $id) {
-        //
+        
     }
 
     /**
@@ -87,4 +90,5 @@ class InstrumentsController extends Controller
     public function destroy($id) {
         //
     }
+
 }

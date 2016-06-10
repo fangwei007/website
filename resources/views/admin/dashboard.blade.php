@@ -78,11 +78,11 @@
                                 <tbody>
                                     @foreach ($items as $item)
                                     <tr class="odd gradeX">
-                                        <td>{{ $item->name }}</td>
+                                        <td><a href="/items/{{ $item->id }}/edit">{{ $item->name }}</a></td>
                                         <td>{{ $item->introduction }}</td>
-                                        <td class="center">{{ $item->image }}</td>
+                                        <td class="center">{{ substr(strrchr($item->image, "/"), 1) }}</td>
                                         <td>{{ $item->created_at }}</td>
-                                        <td class="center">{{ $item->deleted_at }}</td>
+                                        <td class="center"><?php echo $item->deleted_at == NULL ? "无" : $item->deleted_at; ?></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
