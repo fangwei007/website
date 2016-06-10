@@ -41,7 +41,7 @@
                                         <td>{{ $user->email }}</td>
                                         <td class="center">{{ $user->role }}</td>
                                         <td>{{ $user->created_at }}</td>
-                                        <td class="center">{{ $user->deleted_at }}</td>
+                                        <td class="center"><?php echo $user->deleted_at == NULL ? "无" : $user->deleted_at; ?></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
