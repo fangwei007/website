@@ -13,11 +13,23 @@
                     <form role="form" method="post" action="{{ url('/items/' . $item->id) }}" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         <input type="hidden" name="_method" value="PUT">
-
-                        <div class="form-group">
+                        @if (count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        <div class="form-group {{ $errors->has('item-name') ? 'has-error' : '' }}">
                             <label>仪器型号</label>
                             <input class="form-control" type="text" name="item-name" value="{{ $item->name }}" />
-                            <p class="help-block">Example block-level help text here.</p>
+                            @if ($errors->has('item-name'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('item-name') }}</strong>
+                            </span>
+                            @endif
                         </div>
 
                         <div class="form-group">

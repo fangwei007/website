@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Instruments;
 use App\Http\Requests;
+use Validator;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
 
 class InstrumentsController extends Controller {
@@ -78,10 +79,23 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function update(Request $request, $id) {
+        $item = Instruments::where('id', $id)->first();
         if ($request->hasFile('item-image')) {
             $filename = $request->file("item-image")->getClientOriginalName();
-            $file = $request->file('item-image')->move(base_path() . "/public/uploads/$id", $filename);
-            var_dump($file);
+            $request->file('item-image')->move(base_path() . "/public/uploads/$item->name", $filename);
+        }
+
+        $validator = Validator::make($request->all(), [
+                    'item-name' => "required|unique:instruments,name,$id,id",
+                        ], [
+                    'item-name.unique' => "This video name has been used.",
+                    'item-name.required' => "Please enter video name.",
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        } else {
+            
         }
     }
 
