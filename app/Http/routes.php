@@ -33,3 +33,5 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/admin', 'AdminController@index');
+
+Route::get('/items/{id}/edit', ['middleware' => ['auth', 'admin'], 'uses' => 'InstrumentsController@edit']);

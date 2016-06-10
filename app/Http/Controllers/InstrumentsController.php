@@ -47,11 +47,6 @@ class InstrumentsController extends Controller
         
     }
 
-    public function logout() {
-        session()->forget('logged_in');
-        return redirect('/admin');
-    }
-
     /**
      * Display the specified resource.
      *
