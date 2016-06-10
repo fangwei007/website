@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Instruments;
 use App\Http\Requests;
 
 class AdminController extends Controller
@@ -23,7 +24,9 @@ class AdminController extends Controller
      * @return Response
      */
     public function index() {
-        return view('admin.dashboard');
+        $users = User::all();
+        $instruments = Instruments::all();
+        return view('admin.dashboard',['users' => $users, 'items' => $instruments]);
     }
 
     /**
