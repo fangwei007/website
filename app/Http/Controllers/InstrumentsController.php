@@ -78,7 +78,11 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function update(Request $request, $id) {
-        
+        if ($request->hasFile('item-image')) {
+            $filename = $request->file("item-image")->getClientOriginalName();
+            $file = $request->file('item-image')->move(base_path() . "/public/uploads/$id", $filename);
+            var_dump($file);
+        }
     }
 
     /**

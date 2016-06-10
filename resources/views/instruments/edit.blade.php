@@ -10,7 +10,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-lg-6">
-                    <form role="form" method="post" action="{{ url('/items/' . $item->id) }}">
+                    <form role="form" method="post" action="{{ url('/items/' . $item->id) }}" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         <input type="hidden" name="_method" value="PUT">
 
@@ -28,7 +28,7 @@
                         <div class="form-group">
                             <label>图 片</label><br>
                             <img src="{{ $item->image }}"/>
-                            <input type="file" name='item-image'/>
+                            <input type="file" name='item-image'>
                         </div>
 
                         <div class="form-group">
