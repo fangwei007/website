@@ -42,13 +42,13 @@
                         </div>
                         <div class="col-sm-6 col-xs-6">
                             <div class="social">
-                                <!--                                <ul class="social-share">
-                                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                                                </ul>-->
+                                <ul class="social-share">
+                                    <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-weixin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-qq"></i></a></li> 
+                                    <li><a href="#"><i class="fa fa-apple"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-windows"></i></a></li>
+                                </ul>
                                 <div class="search">
                                     <form role="form">
                                         <input type="text" class="search-form" autocomplete="off" placeholder="搜索">
@@ -75,25 +75,25 @@
 
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li <?php echo Request::is('/') ? 'class="active"' : ''; ?>><a href="/">首 页</a></li>
-                            <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about">关于我们</a></li>
+                            <li <?php echo Request::is('/') ? 'class="active"' : ''; ?>><a href="/"><i class="fa fa-home"></i> 首 页</a></li>
+                            <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about"><i class="fa fa-info-circle"></i> 关于我们</a></li>
                             @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
-                            <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items">产品详情</a></li>
+                            <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items"><i class="fa fa-unlock"></i> 产品详情</a></li>
                             @endif
-                            <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact">联系我们</a></li>
+                            <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact"><i class="fa fa-phone-square"></i> 联系我们</a></li>
                             <!-- Authentication Links -->
                             @if (Auth::guest())
-                            <li <?php echo Request::is('login') || Request::is('register') ? 'class="active"' : ''; ?> ><a href="{{ url('/login') }}">注册用户？</a></li>
+                            <li <?php echo Request::is('login') || Request::is('register') ? 'class="active"' : ''; ?> ><a href="{{ url('/login') }}"><i class="fa fa-user"></i> 会员登陆</a></li>
                             <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
                             @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
                                     @if (Auth::user()->isAdmin()) <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-dashboard"></i> 控制台</a></li>@endif
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> 登 出</a></li>
+                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> 退出登录</a></li>
                                 </ul>
                             </li>
                             @endif
@@ -103,7 +103,7 @@
             </nav><!--/nav-->
 
         </header><!--/header-->
-        
+
         @yield('content')
 
         <!-- Footer -->
