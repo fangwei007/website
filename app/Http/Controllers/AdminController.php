@@ -51,6 +51,7 @@ class AdminController extends Controller {
                     'name' => 'required|max:255',
                     'email' => 'required|email|max:255|unique:users',
                     'password' => 'required|min:6|confirmed',
+                    'role' => 'required|size:1|alpha'
                         ], [
                     'name.required' => "请填写用户名。",
                     'email.required' => "请填写有效邮箱。",
