@@ -35,7 +35,7 @@ class AdminController extends Controller
      * @return Response
      */
     public function create() {
-        //
+        return view('admin.create');
     }
 
     /**
@@ -45,12 +45,7 @@ class AdminController extends Controller
      * @return Response
      */
     public function store(Request $request) {
-        
-    }
-
-    public function logout() {
-        session()->forget('logged_in');
-        return redirect('/admin');
+        print_r($request->input());
     }
 
     /**

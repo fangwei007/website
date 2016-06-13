@@ -21,6 +21,8 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     Route::resource('items', 'InstrumentsController');
+    
+    Route::resource('admin', 'AdminController');
 
     Route::get('/contact', function () {
         return view('contact');
@@ -30,8 +32,6 @@ Route::group(['middleware' => 'web'], function () {
         return view('single_item');
     });
 
-
     Route::get('/home', 'HomeController@index');
 
-    Route::get('/admin', 'AdminController@index');
 });

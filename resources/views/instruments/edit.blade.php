@@ -7,29 +7,18 @@
     @include('admin.navbar')
 
     <div id="page-wrapper">
+        <div class="panel-heading"><h2>更新仪器信息</h2></div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-lg-6">
                     <form role="form" method="post" action="{{ url('/items/' . $item->id) }}" enctype="multipart/form-data">
                         {!! csrf_field() !!}
+                        
                         <input type="hidden" name="_method" value="PUT">
-                        @if (count($errors) > 0)
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                        <div class="form-group {{ $errors->has('item-name') ? 'has-error' : '' }}">
+
+                        <div class="form-group">
                             <label>仪器型号</label>
                             <input class="form-control" type="text" name="item-name" value="{{ $item->name }}" />
-                            @if ($errors->has('item-name'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('item-name') }}</strong>
-                            </span>
-                            @endif
                         </div>
 
                         <div class="form-group">
