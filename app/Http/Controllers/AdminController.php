@@ -65,7 +65,13 @@ class AdminController extends Controller {
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         } else {
-            
+            User::create([
+                        'name' => $request->input('name'),
+                        'email' => $request->input('email'),
+                        'password' => bcrypt($request->input('password')),
+                        'role' => $request->input('role')
+            ]);
+            return redirect('/admin');
         }
     }
 

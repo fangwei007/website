@@ -85,7 +85,7 @@
                                 <label class="col-lg-2 control-label">权 限</label>
                                 <label class="col-lg-1 control-label"></label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="role" id="radio1" value="N" checked>未认证会员
+                                    <input type="radio" name="role" id="radio1" value="N" checked>未认证
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" name="role" id="radio2" value="A">认证会员

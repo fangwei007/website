@@ -29,6 +29,7 @@
                             <table class="table table-striped table-bordered table-hover" id="user-records">
                                 <thead>
                                     <tr>
+                                        <th>操 作</th>
                                         <th>用户名</th>
                                         <th>电子邮箱</th>
                                         <th>用户权限</th>
@@ -39,9 +40,21 @@
                                 <tbody>
                                     @foreach ($users as $user)
                                     <tr class="odd gradeX">
+                                        <td class="text-center">
+                                            <a href="/admin/{{ $user->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
+                                            <a href='#'><i class="fa fa-minus-circle"></i></a>
+                                        </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td class="center">{{ $user->role }}</td>
+                                        <td class="center">
+                                            @if ($user->role === 'N')
+                                            未认证
+                                            @elseif ($user->role === 'A')
+                                            认证会员
+                                            @elseif ($user->role === 'V')
+                                            管理员
+                                            @endif
+                                        </td>
                                         <td>{{ $user->created_at }}</td>
                                         <td class="center"><?php echo $user->deleted_at == NULL ? "无" : $user->deleted_at; ?></td>
                                     </tr>
@@ -79,6 +92,7 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
+                                        <th>操 作</th>
                                         <th>仪器型号</th>
                                         <th>设备简介</th>
                                         <th>图 片</th>
@@ -89,7 +103,11 @@
                                 <tbody>
                                     @foreach ($items as $item)
                                     <tr class="odd gradeX">
-                                        <td><a href="/items/{{ $item->id }}/edit"><i class="fa fa-pencil"></i> {{ $item->name }}</a></td>
+                                        <td class="text-center">
+                                            <a href="/items/{{ $item->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
+                                            <a href='#'><i class="fa fa-minus-circle"></i></a>
+                                        </td>
+                                        <td>{{ $item->name }}</td>
                                         <td>{{ $item->introduction }}</td>
                                         <td class="center">{{ substr(strrchr($item->image, "/"), 1) }}</td>
                                         <td>{{ $item->created_at }}</td>
