@@ -19,7 +19,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-lg-3"><label>创建新用户</label></div>
+                            <div class="col-lg-3"><label>修改用户信息</label></div>
                             <div class="col-lg-3 pull-right">
                                 <a href="/admin" class=""><i class="fa fa-th-list"></i>回到前页</a>
                             </div>
@@ -30,9 +30,9 @@
                             {!! csrf_field() !!}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label class="col-lg-2 control-label">新用户名</label>
+                                <label class="col-lg-2 control-label">用户名</label>
                                 <div class="col-lg-6">
-                                    <input class="form-control" type="text" name="name" value="{{ old('name') }}" />
+                                    <input class="form-control" type="text" name="name" value="{{ $user->name }}" />
                                 </div>
 
                                 @if ($errors->has('name'))
@@ -45,7 +45,7 @@
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label class="col-lg-2 control-label">电子邮箱</label>
                                 <div class="col-lg-6">
-                                    <input class="form-control" type="text" name="email" value="{{ old('email') }}" />
+                                    <input class="form-control" type="text" name="email" value="{{ $user->email }}" />
                                 </div>
 
                                 @if ($errors->has('email'))
@@ -55,8 +55,12 @@
                                 @endif
                             </div>
 
+                            <div class="form-group">
+                                <p class="col-lg-5 control-label">如若修改密码，请填写下面信息：</p>
+                            </div>
+
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label class="col-lg-2 control-label">密 码</label>
+                                <label class="col-lg-2 control-label">新的密码</label>
                                 <div class="col-lg-6">
                                     <input type="password" class="form-control" name="password">
                                 </div>
@@ -85,20 +89,20 @@
                                 <label class="col-lg-2 control-label">权 限</label>
                                 <label class="col-lg-1 control-label"></label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="role" id="radio1" value="N" checked>未认证
+                                    <input type="radio" name="role" id="radio1" value="N" <?php echo $user->role == 'N' ? 'checked' : '' ?> >未认证
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="role" id="radio2" value="A">认证会员
+                                    <input type="radio" name="role" id="radio2" value="A" <?php echo $user->role == 'A' ? 'checked' : '' ?> >认证会员
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="role" id="radio3" value="V">管理员
+                                    <input type="radio" name="role" id="radio3" value="V" <?php echo $user->role == 'V' ? 'checked' : '' ?> >管理员
                                 </label>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-lg-4 control-label"></label>
-                                <button type="submit" class="btn btn-default">创 建</button>
-                                <button type="reset" class="btn btn-default">重 置</button>
+                                <button type="submit" class="btn btn-default">确认修改</button>
+                                <!--<button type="reset" class="btn btn-default">重 置</button>-->
                             </div>
                         </form>
                     </div>

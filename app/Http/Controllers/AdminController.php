@@ -93,6 +93,12 @@ class AdminController extends Controller {
      */
     public function edit($id) {
         //
+        $user = User::where('id', $id)->first();
+        if ($user != NULL) {
+            return view('admin.edit', ["user" => $user]);
+        } else {
+            return view('errors.404');
+        }   
     }
 
     /**
