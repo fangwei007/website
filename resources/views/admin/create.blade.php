@@ -29,32 +29,56 @@
                         <form  class="form-horizontal" role="form" method="post" action="{{ url('/admin/') }}">
                             {!! csrf_field() !!}
 
-                            <div class="form-group">
-                                <label class="col-lg-2 control-label">用户名</label>
+                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                <label class="col-lg-2 control-label">新用户名</label>
                                 <div class="col-lg-6">
-                                    <input class="form-control" type="text" name="user-name" value="" />
+                                    <input class="form-control" type="text" name="name" value="{{ old('name') }}" />
                                 </div>
+
+                                @if ($errors->has('name'))
+                                <span class="help-block">
+                                    {{ $errors->first('name') }}
+                                </span>
+                                @endif
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label class="col-lg-2 control-label">电子邮箱</label>
                                 <div class="col-lg-6">
-                                    <input class="form-control" type="text" name="user-email" value="" />
+                                    <input class="form-control" type="text" name="email" value="{{ old('email') }}" />
                                 </div>
+
+                                @if ($errors->has('email'))
+                                <span class="help-block">
+                                    {{ $errors->first('email') }}
+                                </span>
+                                @endif
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label class="col-lg-2 control-label">密 码</label>
                                 <div class="col-lg-6">
                                     <input type="password" class="form-control" name="password">
                                 </div>
+
+                                @if ($errors->has('password'))
+                                <span class="help-block">
+                                    {{ $errors->first('password') }}
+                                </span>
+                                @endif
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                                 <label class="col-lg-2 control-label">确认密码</label>
                                 <div class="col-lg-6">
-                                    <input type="password" class="form-control" name="password">
+                                    <input type="password" class="form-control" name="password_confirmation">
                                 </div>
+
+                                @if ($errors->has('password_confirmation'))
+                                <span class="help-block">
+                                    {{ $errors->first('password_confirmation') }}
+                                </span>
+                                @endif
                             </div>
 
                             <div class="form-group">

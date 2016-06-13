@@ -10,28 +10,25 @@
   | and give it the controller to call when that URI is requested.
   |
  */
-Route::group(['middleware' => 'web'], function () {
-    Route::auth();
-    Route::get('/', function () {
-        return view('index');
-    });
-
-    Route::get('/about', function () {
-        return view('about');
-    });
-
-    Route::resource('items', 'InstrumentsController');
-    
-    Route::resource('admin', 'AdminController');
-
-    Route::get('/contact', function () {
-        return view('contact');
-    });
-
-    Route::get('/item', function () {
-        return view('single_item');
-    });
-
-    Route::get('/home', 'HomeController@index');
-
+Route::auth();
+Route::get('/', function () {
+    return view('index');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::resource('items', 'InstrumentsController');
+
+Route::resource('admin', 'AdminController');
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/item', function () {
+    return view('single_item');
+});
+
+Route::get('/home', 'HomeController@index');

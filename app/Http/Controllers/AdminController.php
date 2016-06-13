@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Validator;
 use App\Instruments;
 use App\Http\Requests;
 
-class AdminController extends Controller
-{
+class AdminController extends Controller {
+
     /**
      * Create a new controller instance.
      *
@@ -17,7 +18,7 @@ class AdminController extends Controller
     public function __construct() {
         $this->middleware(['auth', 'admin']);
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +27,7 @@ class AdminController extends Controller
     public function index() {
         $users = User::all();
         $instruments = Instruments::all();
-        return view('admin.dashboard',['users' => $users, 'items' => $instruments]);
+        return view('admin.dashboard', ['users' => $users, 'items' => $instruments]);
     }
 
     /**
@@ -45,7 +46,26 @@ class AdminController extends Controller
      * @return Response
      */
     public function store(Request $request) {
-        print_r($request->input());
+
+        $validator = Validator::make($request->all(), [
+                    'name' => 'required|max:255',
+                    'email' => 'required|email|max:255|unique:users',
+                    'password' => 'required|min:6|confirmed',
+                        ], [
+                    'name.required' => "请填写用户名。",
+                    'email.required' => "请填写有效邮箱。",
+                    'email.email' => "邮箱格式无效。",
+                    'email.unique' => "邮箱也被占用，请重试。",
+                    'password.required' => "请填写密码。",
+                    'password.min' => "密码至少6位。",
+                    'password.confirmed' => "密码输入有误，请重试。",
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        } else {
+            
+        }
     }
 
     /**
@@ -88,4 +108,5 @@ class AdminController extends Controller
     public function destroy($id) {
         //
     }
+
 }

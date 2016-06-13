@@ -43,7 +43,7 @@
 
                             <div class="form-group">
                                 <label>图 片</label><br>
-                                <img src="{{ $item->image }}"/>
+                                <img class="img-thumbnail" src="{{ $item->image }}"/>
                                 <input type="file" name='item-image'>
                             </div>
 
