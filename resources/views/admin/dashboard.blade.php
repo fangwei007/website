@@ -89,7 +89,7 @@
                                 <tbody>
                                     @foreach ($items as $item)
                                     <tr class="odd gradeX">
-                                        <td><a href="/items/{{ $item->id }}/edit">{{ $item->name }}</a></td>
+                                        <td><a href="/items/{{ $item->id }}/edit"><i class="fa fa-pencil"></i> {{ $item->name }}</a></td>
                                         <td>{{ $item->introduction }}</td>
                                         <td class="center">{{ substr(strrchr($item->image, "/"), 1) }}</td>
                                         <td>{{ $item->created_at }}</td>

@@ -17,7 +17,14 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h2>更新仪器信息</h2></div>
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-lg-3"><label>更新仪器信息</label></div>
+                            <div class="col-lg-3 pull-right">
+                                <a href="/admin" class=""><i class="fa fa-th-list"></i>回到前页</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="panel-body">
                         <form role="form" method="post" action="{{ url('/items/' . $item->id) }}" enctype="multipart/form-data">
                             {!! csrf_field() !!}
