@@ -82,6 +82,9 @@
             <!-- /.col-lg-12 -->
         </div>
         <!-- /.row -->
+        @if (Session::has('messageItem'))
+        <div class="alert alert-info">{{ Session::get('messageItem') }} <strong><i>{{ Session::get('newItem') }} </i></strong></div>
+        @endif
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
@@ -97,9 +100,9 @@
                                 <thead>
                                     <tr>
                                         <th>操 作</th>
-                                        <th>仪器型号</th>
-                                        <th>设备简介</th>
-                                        <th>图 片</th>
+                                        <th>器材型号</th>
+                                        <th>器材简介</th>
+                                        <th>器材图片</th>
                                         <th>入库日期</th>
                                         <th>注销日期</th>
                                     </tr>
@@ -113,7 +116,7 @@
                                         </td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->introduction }}</td>
-                                        <td class="center">{{ substr(strrchr($item->image, "/"), 1) }}</td>
+                                        <td class="center"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
                                         <td>{{ $item->created_at }}</td>
                                         <td class="center"><?php echo $item->deleted_at == NULL ? "无" : $item->deleted_at; ?></td>
                                     </tr>

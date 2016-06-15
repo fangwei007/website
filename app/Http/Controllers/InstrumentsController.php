@@ -7,6 +7,7 @@ use App\Instruments;
 use App\Http\Requests;
 use Validator;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
+use Illuminate\Support\Facades\Session;
 
 class InstrumentsController extends Controller {
 
@@ -37,7 +38,7 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function create() {
-        //
+        return view('instruments.create');
     }
 
     /**
@@ -47,7 +48,36 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function store(Request $request) {
-        
+        $validator = Validator::make($request->all(), [
+                    'item-name' => "required|unique:instruments,name",
+                    'item-introduction' => "required",
+                    'item-image' => "required|image"
+                        ], [
+                    'item-name.unique' => "器材型号重复，请重试。",
+                    'item-name.required' => "请填写器材型号。",
+                    'item-introduction.required' => "请填写器材简介。",
+                    'item-image.required' => "请上传合适的图片。",
+                    'item-image.image' => "非法图片格式，请重试。",
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        } else {
+            $extension = $request->file("item-image")->getClientOriginalExtension();
+            $filename = $request->input('item-name') . '.' . $extension;
+            $request->file('item-image')->move(base_path() . "/public/uploads/" . $request->input('item-name'), $filename);
+            
+            $data = [
+                'name' => $request->input('item-name'),
+                'introduction' => $request->input('item-introduction'),
+                'image' => "/uploads/" . $request->input('item-name') . '/' . $filename
+            ];
+            
+            Instruments::create($data);
+            Session::flash('messageItem', "添加新器材");
+            Session::flash('newItem', $request->input('item-name'));
+            return redirect('/admin');
+        }
     }
 
     /**
@@ -80,6 +110,7 @@ class InstrumentsController extends Controller {
      */
     public function update(Request $request, $id) {
         $item = Instruments::where('id', $id)->first();
+        
         if ($request->hasFile('item-image')) {
             $filename = $request->file("item-image")->getClientOriginalName();
             $request->file('item-image')->move(base_path() . "/public/uploads/$item->name", $filename);
@@ -87,9 +118,11 @@ class InstrumentsController extends Controller {
 
         $validator = Validator::make($request->all(), [
                     'item-name' => "required|unique:instruments,name,$id,id",
+                    'item-introduction' => "required"
                         ], [
-                    'item-name.unique' => "This video name has been used.",
-                    'item-name.required' => "Please enter video name.",
+                    'item-name.unique' => "器材型号重复，请重试。",
+                    'item-name.required' => "请填写器材型号。",
+                    'item-introduction.required' => "请填写器材简介。",
         ]);
 
         if ($validator->fails()) {
