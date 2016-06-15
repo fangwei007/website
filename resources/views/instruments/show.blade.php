@@ -10,14 +10,14 @@
         <div class="col-lg-12">
             <h1 class="page-header"> 仪器设备
                 <small>{{ $item->name }}</small>
+                @if (Auth::user()->role == 'V')
+                <a class="pull-right" href="/items/{{ $item->id }}/edit"><button type="button" class="btn btn-outline btn-info">编辑此仪器</button></a>
+                @endif
             </h1>
             <ol class="breadcrumb">
                 <li><a href="/">首 页</a>
                 </li>
                 <li class="active"> 仪器设备</li>
-                @if (Auth::user()->role == 'V')
-                <a class="pull-right" href="/items/{{ $item->id }}/edit">编 辑</a>
-                @endif
             </ol>
         </div>
     </div>

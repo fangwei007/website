@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <label>更新器材信息</label>
-                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>回到控制面板</a>
+                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>控制面板</a>
                             </div>
                         </div>
                     </div>
@@ -65,6 +65,7 @@
 
                             <button type="submit" class="btn btn-default">更 新</button>
                             <button type="reset" class="btn btn-default">重 置</button>
+                            <button type="" class="btn btn-default"><a href="/items/{{ $item->id }}">预 览</a></button>
                         </form>
                     </div>
                 </div>

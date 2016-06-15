@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <label>添加新器材</label>
-                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>回到控制面板</a>
+                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>控制面板</a>
                             </div>
                         </div>
                     </div>

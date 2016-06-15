@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/admin"><i class="fa fa-desktop"></i> 控制台</a>
+        <a class="navbar-brand" href="/admin"><i class="fa fa-desktop"></i> 控制面板</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -45,7 +45,7 @@
                     <!-- /input-group -->
                 </li>
                 <li>
-                    <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> 控制台面板</a>
+                    <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> 控制面板</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
