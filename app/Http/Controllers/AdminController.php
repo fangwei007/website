@@ -143,7 +143,7 @@ class AdminController extends Controller {
             User::where('id', $id)->update($data);
             // redirect
             Session::flash('message', "更新成功!");
-            return redirect("/admin/$id/edit");
+            return redirect()->back();
         }
     }
 
@@ -154,12 +154,39 @@ class AdminController extends Controller {
      * @return Response
      */
     public function destroy($id) {
-        //
         $delete_user = User::where('id', $id)->first();
         if ($delete_user != NULL) {
             $delete_user->delete();
-//            $delete_user->forceDelete();
-            return redirect('/admin');
+            return redirect()->back();
+        }
+
+        return view("errors.404");
+    }
+    
+    public function trash() {
+        
+        $removed_users = User::onlyTrashed()->get();
+        $removed_items = Instruments::onlyTrashed()->get();
+        
+        return view('admin.trash', ['users' => $removed_users, 'items' => $removed_items]);
+    }
+    
+    public function restore($id) {
+
+        $removed_user = User::onlyTrashed()->where('id', $id)->first();
+        if ($removed_user != NULL) {
+            $removed_user->restore();
+            return redirect()->back();
+        }
+
+        return view("errors.404");
+    }
+    
+    public function permDestroy($id) {
+        $removed_user = User::onlyTrashed()->where('id', $id)->first();
+        if ($removed_user != NULL) {
+            $removed_user->forceDelete();
+            return redirect()->back();
         }
 
         return view("errors.404");

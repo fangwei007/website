@@ -19,11 +19,23 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/trash', 'AdminController@trash');
+
+Route::get('/trash/user/{id}/restore', 'AdminController@restore');
+
+Route::get('/trash/user/{id}/perm-delete', 'AdminController@permDestroy');
+
+Route::get('/trash/item/{id}/restore', 'InstrumentsController@restore');
+
+Route::get('/trash/item/{id}/perm-delete', 'InstrumentsController@permDestroy');
+
 Route::resource('items', 'InstrumentsController');
 
 Route::resource('admin', 'AdminController');
 
 Route::get('/admin/{id}/delete', 'AdminController@destroy');
+
+Route::get('/items/{id}/delete', 'InstrumentsController@destroy');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -34,3 +46,4 @@ Route::get('/item', function () {
 });
 
 Route::get('/home', 'HomeController@index');
+

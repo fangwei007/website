@@ -87,7 +87,7 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function show($id) {
-        //
+        return redirect('/admin');
     }
 
     /**
@@ -109,13 +109,6 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function update(Request $request, $id) {
-        $item = Instruments::where('id', $id)->first();
-        
-        if ($request->hasFile('item-image')) {
-            $filename = $request->file("item-image")->getClientOriginalName();
-            $request->file('item-image')->move(base_path() . "/public/uploads/$item->name", $filename);
-        }
-
         $validator = Validator::make($request->all(), [
                     'item-name' => "required|unique:instruments,name,$id,id",
                     'item-introduction' => "required"
@@ -128,7 +121,23 @@ class InstrumentsController extends Controller {
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         } else {
-            
+            $data = [
+                'name' => $request->input('item-name'),
+                'introduction' => $request->input('item-introduction'),
+                
+            ];
+
+            if ($request->hasFile('item-image')) {
+                $extension = $request->file("item-image")->getClientOriginalExtension();
+                $filename = $request->input('item-name') . '.' . $extension;
+                $request->file('item-image')->move(base_path() . "/public/uploads/" . $request->input('item-name'), $filename);
+                $data['image'] = "/uploads/" . $request->input('item-name') . '/' . $filename;
+            }
+
+            Instruments::where('id', $id)->update($data);
+            // redirect
+            Session::flash('message', "更新成功!");
+            return redirect()->back();
         }
     }
 
@@ -139,7 +148,33 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function destroy($id) {
-        //
+        $delete_item = Instruments::where('id', $id)->first();
+        if ($delete_item != NULL) {
+            $delete_item->delete();
+            return redirect()->back();
+        }
+
+        return view("errors.404");
     }
 
+    public function restore($id) {
+
+        $removed_item = Instruments::onlyTrashed()->where('id', $id)->first();
+        if ($removed_item != NULL) {
+            $removed_item->restore();
+            return redirect()->back();
+        }
+
+        return view("errors.404");
+    }
+    
+    public function permDestroy($id) {
+        $removed_item = Instruments::onlyTrashed()->where('id', $id)->first();
+        if ($removed_item != NULL) {
+            $removed_item->forceDelete();
+            return redirect()->back();
+        }
+
+        return view("errors.404");
+    }
 }

@@ -26,6 +26,9 @@
                         </div>
                     </div>
                     <div class="panel-body">
+                        @if (Session::has('message'))
+                        <div class="alert alert-info">{{ Session::get('message') }}</div>
+                        @endif
                         <form role="form" method="post" action="{{ url('/items/' . $item->id) }}" enctype="multipart/form-data">
                             {!! csrf_field() !!}
 
@@ -43,7 +46,9 @@
 
                             <div class="form-group">
                                 <label>器材图片</label><br>
-                                <img class="img-thumbnail" src="{{ $item->image }}"/>
+                                <img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/>
+                                <!--<p>{{ substr(strrchr($item->image, "/"), 1) }}</p>-->
+                                <p></p>
                                 <input type="file" name='item-image'>
                             </div>
 

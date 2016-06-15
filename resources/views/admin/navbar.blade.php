@@ -131,6 +131,9 @@
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
+                <li>
+                    <a href="/trash"><i class="fa fa-trash-o fa-fw"></i> 回收站</a>
+                </li>
             </ul>
         </div>
         <!-- /.sidebar-collapse -->

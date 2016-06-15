@@ -10,7 +10,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header"><i class="fa fa-users"></i> 用户管理</h2>
+                <h2 class="page-header"><i class="fa fa-trash-o"></i> 用户回收站</h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -23,7 +23,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row"> 
-                            <div class="col-sm-2">注册用户记录表 <a href="/admin/create"><i class="fa fa-plus-square"></i></a></div>
+                            <div class="col-sm-2">被删除的用户 </div>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
@@ -45,8 +45,8 @@
                                     <?php if (Auth::user()->id == $user->id) continue; ?>
                                     <tr class="odd gradeX">
                                         <td class="text-center">
-                                            <a href="/admin/{{ $user->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
-                                            <a href='/admin/{{ $user->id }}/delete'><i class="fa fa-minus-circle"></i></a>
+                                            <a href="/trash/user/{{ $user->id }}/restore"><i class="fa fa-repeat"></i></a>&nbsp;
+                                            <a href='/trash/user/{{ $user->id }}/perm-delete'><i class="fa fa-times"></i></a>
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
@@ -77,7 +77,7 @@
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header"><i class="fa fa-gears"></i> 设备管理</h2>
+                <h2 class="page-header"><i class="fa fa-trash-o"></i> 设备回收站</h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -90,7 +90,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row"> 
-                            <div class="col-sm-2">仪器设备记录表 <a href="/items/create"><i class="fa fa-plus-square"></i></a></div>
+                            <div class="col-sm-2">被删除的仪器设备 </div>
                         </div>
                     </div>
                     <!-- /.panel-heading -->
@@ -111,8 +111,8 @@
                                     @foreach ($items as $item)
                                     <tr class="odd gradeX">
                                         <td class="text-center col-sm-1">
-                                            <a href="/items/{{ $item->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
-                                            <a href='/items/{{ $item->id }}/delete'><i class="fa fa-minus-circle"></i></a>
+                                            <a href="/trash/item/{{ $item->id }}/restore"><i class="fa fa-repeat"></i></a>&nbsp;
+                                            <a href='/trash/item/{{ $item->id }}/perm-delete'><i class="fa fa-times"></i></a>
                                         </td>
                                         <td class="col-sm-2">{{ $item->name }}</td>
                                         <td class="col-sm-4">{{ $item->introduction }}</td>
