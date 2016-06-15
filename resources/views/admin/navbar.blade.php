@@ -16,13 +16,10 @@
                 <i class="fa fa-user"></i> {{ Auth::user()->name }} <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="/"><i class="fa fa-home fa-fw"></i> 回到网站</a>
-                </li>
-                <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设 置</a>
-                </li>
+                <li><a href="/"><i class="fa fa-home fa-fw"></i> 回到网站</a></li>
+                <li><a href="/admin/{{ Auth::user()->id }}/edit"><i class="fa fa-gear fa-fw"></i> 设 置</a></li>
                 <li class="divider"></li>
-                <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> 退出登陆</a>
-                </li>
+                <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> 退出登陆</a></li>
             </ul>
             <!-- /.dropdown-user -->
         </li>

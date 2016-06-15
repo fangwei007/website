@@ -352,3 +352,10 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+@media(max-width:767px) {
+    .navbar-top-links .dropdown-user {
+        right: 0;
+        left: 0;
+    }
+}

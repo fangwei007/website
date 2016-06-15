@@ -9,7 +9,11 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
+                @if (Auth::user()->id == $user->id)
+                <h2 class="page-header"><i class="fa fa-user"></i> 个人设置</h2>
+                @else
                 <h2 class="page-header"><i class="fa fa-users"></i> 用户管理</h2>
+                @endif
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -89,7 +93,13 @@
                                 </span>
                                 @endif
                             </div>
-
+                            @if (Auth::user()->id == $user->id)
+                            <div class="form-group hidden">
+                                <label class="radio-inline">
+                                    <input type="radio" name="role" id="radio3" value="V" <?php echo $user->role == 'V' ? 'checked' : '' ?> >管理员
+                                </label>
+                            </div>
+                            @else
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">权 限</label>
                                 <label class="col-lg-1 control-label"></label>
@@ -103,6 +113,7 @@
                                     <input type="radio" name="role" id="radio3" value="V" <?php echo $user->role == 'V' ? 'checked' : '' ?> >管理员
                                 </label>
                             </div>
+                            @endif
 
                             <div class="form-group">
                                 <label class="col-lg-4 control-label"></label>

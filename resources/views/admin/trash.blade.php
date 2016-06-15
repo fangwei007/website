@@ -37,7 +37,7 @@
                                         <th>电子邮箱</th>
                                         <th>用户权限</th>
                                         <th>创建日期</th>
-                                        <th>注销日期</th>
+                                        <!--<th>注销日期</th>-->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -60,7 +60,7 @@
                                             @endif
                                         </td>
                                         <td>{{ $user->created_at }}</td>
-                                        <td class="center"><?php echo $user->deleted_at == NULL ? "无" : $user->deleted_at; ?></td>
+                                        <!--<td class="center"><?php echo $user->deleted_at == NULL ? "无" : $user->deleted_at; ?></td>-->
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -101,10 +101,10 @@
                                     <tr>
                                         <th>操 作</th>
                                         <th>器材型号</th>
-                                        <th>器材简介</th>
+                                        <!--<th>器材简介</th>-->
                                         <th>器材图片</th>
-                                        <th>入库日期</th>
-                                        <th>注销日期</th>
+                                        <th>删除日期</th>
+                                        <!--<th>效果预览</th>-->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -115,10 +115,10 @@
                                             <a href='/trash/item/{{ $item->id }}/perm-delete'><i class="fa fa-times"></i></a>
                                         </td>
                                         <td class="col-sm-2">{{ $item->name }}</td>
-                                        <td class="col-sm-4">{{ $item->introduction }}</td>
+                                        <!--<td class="col-sm-4">{{ $item->introduction }}</td>-->
                                         <td class="center col-sm-1"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
-                                        <td class="col-sm-2">{{ $item->created_at }}</td>
-                                        <td class="center col-sm-1"><?php echo $item->deleted_at == NULL ? "无" : $item->deleted_at; ?></td>
+                                        <td class="col-sm-2">{{ $item->deleted_at }}</td>
+                                        <!--<td class="center col-sm-1"><?php echo $item->deleted_at == NULL ? "无" : $item->deleted_at; ?></td>-->
                                     </tr>
                                     @endforeach
                                 </tbody>
