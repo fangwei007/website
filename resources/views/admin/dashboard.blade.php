@@ -118,7 +118,7 @@
                                         <td class="col-sm-4">{{ $item->introduction }}</td>
                                         <td class="center col-sm-1"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
                                         <td class="col-sm-2">{{ $item->created_at }}</td>
-                                        <td class="center col-sm-1"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-info">预 览</button></a></td>
+                                        <td class="center col-sm-1"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

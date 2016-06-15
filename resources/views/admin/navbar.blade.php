@@ -16,7 +16,7 @@
                 <i class="fa fa-user"></i> {{ Auth::user()->name }} <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="/"><i class="fa fa-arrow-right fa-fw"></i> 回到网站</a>
+                <li><a href="/"><i class="fa fa-home fa-fw"></i> 回到网站</a>
                 </li>
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设 置</a>
                 </li>
@@ -43,6 +43,12 @@
                                                 </span>
                                             </div>-->
                     <!-- /input-group -->
+                    <div class="text-center">
+                        <a href="/">
+                            <button type="button" class="btn btn-outline btn-primary">
+                                <i class="fa fa-home fa-fw"></i> 回到网站
+                            </button>
+                        </a></div>
                 </li>
                 <li>
                     <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> 控制面板</a>
