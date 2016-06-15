@@ -73,6 +73,8 @@ class AdminController extends Controller {
                         'password' => bcrypt($request->input('password')),
                         'role' => $request->input('role')
             ]);
+            Session::flash('message', "创建新用户");
+            Session::flash('newUser', $request->input('name'));
             return redirect('/admin');
         }
     }

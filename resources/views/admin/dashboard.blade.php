@@ -14,6 +14,9 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
+        @if (Session::has('message'))
+        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('newUser') }} </i></strong></div>
+        @endif
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-12">
@@ -39,7 +42,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($users as $user)
-                                    <?php if(Auth::user()->id == $user->id) continue; ?>
+                                    <?php if (Auth::user()->id == $user->id) continue; ?>
                                     <tr class="odd gradeX">
                                         <td class="text-center">
                                             <a href="/admin/{{ $user->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
