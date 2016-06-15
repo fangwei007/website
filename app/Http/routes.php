@@ -41,9 +41,5 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/item', function () {
-    return view('single_item');
-});
-
 Route::get('/home', 'HomeController@index');
 

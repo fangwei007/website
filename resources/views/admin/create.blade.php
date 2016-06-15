@@ -19,9 +19,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-lg-3"><label>创建新用户</label></div>
-                            <div class="col-lg-3 pull-right">
-                                <a href="/admin" class=""><i class="fa fa-th-list"></i>回到前页</a>
+                            <div class="col-lg-12">
+                                <label>创建新用户</label>
+                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>回到前页</a>
                             </div>
                         </div>
                     </div>

@@ -24,12 +24,13 @@
     <div class="row">
         @foreach ($items as $item)
         <div class="col-md-4 img-portfolio">
-            <a href="/item">
-                <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+            <a href="/items/{{ $item->id }}">
+                <!--<img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">-->
+                <img class="img-responsive img-hover" src="{{ $item->image }}" alt="">
             </a>
-            {{ $item->image }}
+
             <h3>
-                <a href="/item">{{ $item->name }}</a>
+                <a href="/items/{{ $item->id }}">{{ $item->name }}</a>
             </h3>
             <p>{{ $item->introduction }}</p>
         </div>

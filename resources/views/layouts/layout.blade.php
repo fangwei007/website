@@ -12,14 +12,14 @@
         <title>新网站</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="css/modern-business.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
+        <link href="/css/modern-business.css" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,7 +70,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo"></a>
+                        <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="logo"></a>
                     </div>
 
                     <div class="collapse navbar-collapse navbar-right">
@@ -118,10 +118,10 @@
             </footer>
         </div>
         <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+        <script src="/js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
 
         <!-- Script to Activate the Carousel -->
         <script>
