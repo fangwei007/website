@@ -39,10 +39,11 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($users as $user)
+                                    <?php if(Auth::user()->id == $user->id) continue; ?>
                                     <tr class="odd gradeX">
                                         <td class="text-center">
                                             <a href="/admin/{{ $user->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
-                                            <a href='#'><i class="fa fa-minus-circle"></i></a>
+                                            <a href='/admin/{{ $user->id }}/delete'><i class="fa fa-minus-circle"></i></a>
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>

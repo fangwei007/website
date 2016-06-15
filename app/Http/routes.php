@@ -23,6 +23,8 @@ Route::resource('items', 'InstrumentsController');
 
 Route::resource('admin', 'AdminController');
 
+Route::get('/admin/{id}/delete', 'AdminController@destroy');
+
 Route::get('/contact', function () {
     return view('contact');
 });

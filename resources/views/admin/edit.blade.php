@@ -26,8 +26,13 @@
                         </div>
                     </div>
                     <div class="panel-body">
-                        <form  class="form-horizontal" role="form" method="post" action="{{ url('/admin/') }}">
+                        @if (Session::has('message'))
+                        <div class="alert alert-info">{{ Session::get('message') }}</div>
+                        @endif
+                        <form  class="form-horizontal" role="form" method="post" action="{{ url('/admin/' . $user->id) }}">
                             {!! csrf_field() !!}
+
+                            <input type="hidden" name="_method" value="PUT">
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                 <label class="col-lg-2 control-label">用户名</label>
@@ -56,7 +61,7 @@
                             </div>
 
                             <div class="form-group">
-                                <p class="col-lg-5 control-label">如若修改密码，请填写下面信息：</p>
+                                <p class="col-lg-5 control-label small">如若修改密码，请填写下面信息：</p>
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
