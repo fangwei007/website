@@ -49,12 +49,13 @@ class AdminController extends Controller {
     public function store(Request $request) {
 
         $validator = Validator::make($request->all(), [
-                    'name' => 'required|max:255',
+                    'name' => 'required|max:255|unique:users',
                     'email' => 'required|email|max:255|unique:users',
                     'password' => 'required|min:6|confirmed',
                     'role' => 'required|size:1|alpha'
                         ], [
                     'name.required' => "请填写用户名。",
+                    'name.unique' => "用户名已被使用，请重新选择。",
                     'email.required' => "请填写有效邮箱。",
                     'email.email' => "邮箱格式无效。",
                     'email.unique' => "邮箱已被占用，请重试。",
