@@ -84,8 +84,8 @@ class AdminController extends Controller {
                         'role' => $request->input('role')
             ]);
             Session::flash('message', "创建新用户");
-            Session::flash('newUser', $request->input('name'));
-            return redirect('/admin');
+            Session::flash('userName', $request->input('name'));
+            return redirect('/user-manage');
         }
     }
 
@@ -165,6 +165,8 @@ class AdminController extends Controller {
     public function destroy($id) {
         $delete_user = User::where('id', $id)->first();
         if ($delete_user != NULL) {
+            Session::flash('message', "已删除");
+            Session::flash('userName', $delete_user->name);
             $delete_user->delete();
             if (isset($_GET['r']) && $_GET['r'] == 'user') return redirect('/user-manage');
             return redirect()->back();
@@ -182,9 +184,10 @@ class AdminController extends Controller {
     }
     
     public function restore($id) {
-
         $removed_user = User::onlyTrashed()->where('id', $id)->first();
         if ($removed_user != NULL) {
+            Session::flash('message', "已还原");
+            Session::flash('userName', $removed_user->name);
             $removed_user->restore();
             return redirect()->back();
         }
@@ -195,6 +198,8 @@ class AdminController extends Controller {
     public function permDestroy($id) {
         $removed_user = User::onlyTrashed()->where('id', $id)->first();
         if ($removed_user != NULL) {
+            Session::flash('message', "永久删除");
+            Session::flash('userName', $removed_user->name);
             $removed_user->forceDelete();
             return redirect()->back();
         }

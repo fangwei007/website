@@ -15,7 +15,7 @@
             <!-- /.col-lg-12 -->
         </div>
         @if (Session::has('message'))
-        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('newUser') }} </i></strong></div>
+        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('userName') }} </i></strong></div>
         @endif
         <!-- /.row -->
         <div class="row">
@@ -83,7 +83,7 @@
         </div>
         <!-- /.row -->
         @if (Session::has('messageItem'))
-        <div class="alert alert-info">{{ Session::get('messageItem') }} <strong><i>{{ Session::get('newItem') }} </i></strong></div>
+        <div class="alert alert-info">{{ Session::get('messageItem') }} <strong><i>{{ Session::get('itemName') }} </i></strong></div>
         @endif
         <div class="row">
             <div class="col-lg-12">

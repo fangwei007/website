@@ -75,8 +75,8 @@ class InstrumentsController extends Controller {
             
             Instruments::create($data);
             Session::flash('messageItem', "添加新器材");
-            Session::flash('newItem', $request->input('item-name'));
-            return redirect('/admin');
+            Session::flash('itemName', $request->input('item-name'));
+            return redirect('/item-manage');
         }
     }
 
@@ -153,6 +153,8 @@ class InstrumentsController extends Controller {
     public function destroy($id) {
         $delete_item = Instruments::where('id', $id)->first();
         if ($delete_item != NULL) {
+            Session::flash('messageItem', "已删除");
+            Session::flash('itemName', $delete_item->name);
             $delete_item->delete();
             if (isset($_GET['r']) && $_GET['r'] == 'item') return redirect('/item-manage');
             return redirect()->back();
@@ -162,9 +164,10 @@ class InstrumentsController extends Controller {
     }
 
     public function restore($id) {
-
         $removed_item = Instruments::onlyTrashed()->where('id', $id)->first();
         if ($removed_item != NULL) {
+            Session::flash('messageItem', "已还原");
+            Session::flash('itemName', $removed_item->name);
             $removed_item->restore();
             return redirect()->back();
         }
@@ -175,6 +178,8 @@ class InstrumentsController extends Controller {
     public function permDestroy($id) {
         $removed_item = Instruments::onlyTrashed()->where('id', $id)->first();
         if ($removed_item != NULL) {
+            Session::flash('messageItem', "永久删除");
+            Session::flash('itemName', $removed_item->name);
             $removed_item->forceDelete();
             return redirect()->back();
         }

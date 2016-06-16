@@ -15,7 +15,7 @@
             <!-- /.col-lg-12 -->
         </div>
         @if (Session::has('message'))
-        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('newUser') }} </i></strong></div>
+        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('userName') }} </i></strong></div>
         @endif
         <!-- /.row -->
         <div class="row">
