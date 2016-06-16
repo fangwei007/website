@@ -12,7 +12,7 @@ body {
 }
 
 body {
-    padding-top: 10px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 5px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 body.boxed .body {
@@ -115,6 +115,9 @@ footer {
     .social,
     .top-number{
         visibility: hidden;
+    }
+    .top-bar {
+        margin-bottom: -30px;
     }
 }
 

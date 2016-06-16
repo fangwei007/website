@@ -76,19 +76,19 @@
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
                             <li <?php echo Request::is('/') ? 'class="active"' : ''; ?>><a href="/"><i class="fa fa-home"></i> 首 页</a></li>
-                            <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about"><i class="fa fa-info-circle"></i> 关于我们</a></li>
+                            <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about">关于我们</a></li>
                             @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
                             <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items"><i class="fa fa-unlock"></i> 产品详情</a></li>
                             @endif
-                            <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact"><i class="fa fa-phone-square"></i> 联系我们</a></li>
+                            <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact">联系我们</a></li>
                             <!-- Authentication Links -->
                             @if (Auth::guest())
-                            <li <?php echo Request::is('login') || Request::is('register') ? 'class="active"' : ''; ?> ><a href="{{ url('/login') }}"><i class="fa fa-user"></i> 会员登陆</a></li>
+                            <li <?php echo Request::is('login') || Request::is('register') ? 'class="active"' : ''; ?> ><a href="{{ url('/login') }}">会员登陆</a></li>
                             <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
                             @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <i class="fa fa-user"></i> {{ Auth::user()->name }} <span class="caret"></span>
+                                    hi {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
