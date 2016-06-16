@@ -9,7 +9,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header"><i class="fa fa-gears"></i> 设备管理</h2>
+                <h2 class="page-header"><i class="fa fa-gear"></i> 设备管理</h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <label>更新器材信息</label>
-                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>控制面板</a>
+                                <a href="/item-manage" class="pull-right"><i class="fa fa-gears"></i> 返回列表</a>
                             </div>
                         </div>
                     </div>

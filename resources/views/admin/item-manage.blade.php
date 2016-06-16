@@ -43,9 +43,11 @@
                                 <tbody>
                                     @foreach ($items as $item)
                                     <tr class="odd gradeX">
-                                        <td class="text-center col-sm-1">
-                                            <a href="/items/{{ $item->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
-                                            <a href='/items/{{ $item->id }}/delete'><i class="fa fa-minus-circle"></i></a>
+                                        <td class="text-center tooltip-demo">
+                                            <div class="row">
+                                                <a href="/items/{{ $item->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
+                                                <a href='/items/{{ $item->id }}/delete' data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除" onclick="return confirm('确认放入回收站吗？');"><i class="fa fa-minus-circle"></i></a>
+                                            </div>
                                         </td>
                                         <td class="col-sm-2">{{ $item->name }}</td>
                                         <td id="hide-when-500" class="col-sm-4">{{ $item->introduction }}</td>

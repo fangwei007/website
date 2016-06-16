@@ -43,9 +43,11 @@
                                     @foreach ($users as $user)
                                     <?php if (Auth::user()->id == $user->id) continue; ?>
                                     <tr class="odd gradeX">
-                                        <td class="text-center">
-                                            <a href="/admin/{{ $user->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
-                                            <a href='/admin/{{ $user->id }}/delete'><i class="fa fa-minus-circle"></i></a>
+                                        <td class="text-center tooltip-demo">
+                                            <div class="row">
+                                                <a href="/admin/{{ $user->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
+                                                <a href='/admin/{{ $user->id }}/delete' data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除" onclick="return confirm('确认放入回收站吗？');"><i class="fa fa-minus-circle"></i></a>
+                                            </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
@@ -108,15 +110,17 @@
                                 <tbody>
                                     @foreach ($items as $item)
                                     <tr class="odd gradeX">
-                                        <td class="text-center col-sm-1">
-                                            <a href="/items/{{ $item->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
-                                            <a href='/items/{{ $item->id }}/delete'><i class="fa fa-minus-circle"></i></a>
+                                        <td class="text-center tooltip-demo">
+                                            <div class="row">
+                                                <a href="/items/{{ $item->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
+                                                <a href='/items/{{ $item->id }}/delete' data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle"></i></a>
+                                            </div>
                                         </td>
-                                        <td class="col-sm-2">{{ $item->name }}</td>
-                                        <td id="hide-when-500" class="col-sm-4">{{ $item->introduction }}</td>
-                                        <td class="center col-sm-1"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
-                                        <td id="hide-when-500" class="col-sm-2">{{ $item->created_at }}</td>
-                                        <td id="hide-when-360" class="center col-sm-1"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
+                                        <td>{{ $item->name }}</td>
+                                        <td id="hide-when-500">{{ $item->introduction }}</td>
+                                        <td><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
+                                        <td id="hide-when-500">{{ $item->created_at }}</td>
+                                        <td id="hide-when-360"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

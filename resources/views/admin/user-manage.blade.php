@@ -43,9 +43,11 @@
                                     @foreach ($users as $user)
                                     <?php if (Auth::user()->id == $user->id) continue; ?>
                                     <tr class="odd gradeX">
-                                        <td class="text-center">
-                                            <a href="/admin/{{ $user->id }}/edit"><i class="fa fa-pencil"></i></a>&nbsp;
-                                            <a href='/admin/{{ $user->id }}/delete'><i class="fa fa-minus-circle"></i></a>
+                                        <td class="text-center tooltip-demo">
+                                            <div class="row">
+                                                <a href="/admin/{{ $user->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
+                                                <a href='/admin/{{ $user->id }}/delete' data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除" onclick="return confirm('确认放入回收站吗？');"><i class="fa fa-minus-circle"></i></a>
+                                            </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>

@@ -12,7 +12,7 @@
                 @if (Auth::user()->id == $user->id)
                 <h2 class="page-header"><i class="fa fa-user"></i> 个人设置</h2>
                 @else
-                <h2 class="page-header"><i class="fa fa-users"></i> 用户管理</h2>
+                <h2 class="page-header"><i class="fa fa-user"></i> 用户管理</h2>
                 @endif
             </div>
             <!-- /.col-lg-12 -->

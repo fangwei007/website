@@ -43,9 +43,11 @@
                                     @foreach ($users as $user)
                                     <?php if (Auth::user()->id == $user->id) continue; ?>
                                     <tr class="odd gradeX">
-                                        <td class="text-center">
-                                            <a href="/trash/user/{{ $user->id }}/restore"><i class="fa fa-repeat"></i></a>&nbsp;
-                                            <a href='/trash/user/{{ $user->id }}/perm-delete'><i class="fa fa-times"></i></a>
+                                        <td class="text-center tooltip-demo">
+                                            <div class="row">
+                                                <a href="/trash/user/{{ $user->id }}/restore"  data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原" onclick="return confirm('确认还原吗？');"><i class="fa fa-refresh"></i></a>&nbsp;
+                                                <a href='/trash/user/{{ $user->id }}/perm-delete'  data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除" onclick="return confirm('确认永久刪除吗？');"><i class="fa fa-times-circle"></i></a>
+                                            </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
@@ -107,14 +109,17 @@
                                 <tbody>
                                     @foreach ($items as $item)
                                     <tr class="odd gradeX">
-                                        <td class="text-center col-sm-1">
-                                            <a href="/trash/item/{{ $item->id }}/restore"><i class="fa fa-repeat"></i></a>&nbsp;
-                                            <a href='/trash/item/{{ $item->id }}/perm-delete'><i class="fa fa-times"></i></a>
+                                        <td class="text-center tooltip-demo">
+                                            <div class="row">
+                                                <a href="/trash/item/{{ $item->id }}/restore" data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原" onclick="return confirm('确认还原吗？');"><i class="fa fa-refresh"></i></a>
+                                                &nbsp;
+                                                <a href='/trash/item/{{ $item->id }}/perm-delete' data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除" onclick="return confirm('确认永久刪除吗？');"><i class="fa fa-times-circle"></i></a>
+                                            </div>
                                         </td>
-                                        <td class="col-sm-2">{{ $item->name }}</td>
-                                        <td id="hide-when-500" class="col-sm-4">{{ $item->introduction }}</td>
-                                        <td id="hide-when-500" class="center col-sm-1"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
-                                        <td class="col-sm-2">{{ $item->deleted_at }}</td>
+                                        <td>{{ $item->name }}</td>
+                                        <td id="hide-when-500"">{{ $item->introduction }}</td>
+                                        <td id="hide-when-500"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
+                                        <td>{{ $item->deleted_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
