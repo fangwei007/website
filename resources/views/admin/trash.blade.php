@@ -45,8 +45,8 @@
                                     <tr class="odd gradeX">
                                         <td class="text-center tooltip-demo">
                                             <div class="row">
-                                                <a href="/trash/user/{{ $user->id }}/restore"  data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原" onclick="return confirm('确认还原吗？');"><i class="fa fa-refresh"></i></a>&nbsp;
-                                                <a href='/trash/user/{{ $user->id }}/perm-delete'  data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除" onclick="return confirm('确认永久刪除吗？');"><i class="fa fa-times-circle"></i></a>
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/user/{{ $user->id }}/restore"></i></a>&nbsp;
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/user/{{ $user->id }}/perm-delete"></i></a>
                                             </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
@@ -111,10 +111,8 @@
                                     <tr class="odd gradeX">
                                         <td class="text-center tooltip-demo">
                                             <div class="row">
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/item/{{ $item->id }}/restore"></i></a>
-                                                &nbsp;
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/item/{{ $item->id }}/restore"></i></a>&nbsp;
                                                 <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/item/{{ $item->id }}/perm-delete"></i></a>
-                                                <!--<a href='/trash/item/{{ $item->id }}/perm-delete' data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除" onclick="return confirm('确认永久刪除吗？');"><i class="fa fa-times-circle"></i></a>-->
                                             </div>
                                         </td>
                                         <td>{{ $item->name }}</td>
