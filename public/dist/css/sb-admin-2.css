@@ -358,4 +358,9 @@ table.dataTable thead .sorting:after {
         right: 0;
         left: 0;
     }
+
+    #hide-when-small {
+        display: none;
+    }
 }
+

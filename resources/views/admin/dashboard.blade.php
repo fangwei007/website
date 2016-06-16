@@ -36,7 +36,7 @@
                                         <th>用户名</th>
                                         <th>电子邮箱</th>
                                         <th>用户权限</th>
-                                        <th>创建日期</th>
+                                        <th id="hide-when-small">创建日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -58,7 +58,7 @@
                                             管理员
                                             @endif
                                         </td>
-                                        <td>{{ $user->created_at }}</td>
+                                        <td id="hide-when-small">{{ $user->created_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -99,10 +99,10 @@
                                     <tr>
                                         <th>操 作</th>
                                         <th>器材型号</th>
-                                        <!--<th>器材简介</th>-->
+                                        <th id="hide-when-small">器材简介</th>
                                         <th>器材图片</th>
-                                        <!--<th>入库日期</th>-->
-                                        <th>效果预览</th>
+                                        <th id="hide-when-small">入库日期</th>
+                                        <th id="hide-when-small">效果预览</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -113,10 +113,10 @@
                                             <a href='/items/{{ $item->id }}/delete'><i class="fa fa-minus-circle"></i></a>
                                         </td>
                                         <td class="col-sm-2">{{ $item->name }}</td>
-                                        <!--<td class="col-sm-4">{{ $item->introduction }}</td>-->
+                                        <td id="hide-when-small" class="col-sm-4">{{ $item->introduction }}</td>
                                         <td class="center col-sm-1"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
-                                        <!--<td class="col-sm-2">{{ $item->created_at }}</td>-->
-                                        <td class="center col-sm-1"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
+                                        <td id="hide-when-small" class="col-sm-2">{{ $item->created_at }}</td>
+                                        <td id="hide-when-small" class="center col-sm-1"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
