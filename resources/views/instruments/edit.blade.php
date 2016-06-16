@@ -57,7 +57,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary">更 新</button>
-                            
+
                         </form>
                         <div class="row" style="margin-top: -34px; margin-left: 70px">
                             <a href="/items/{{ $item->id }}"><button type="" class="btn btn-info">预 览</button></a>

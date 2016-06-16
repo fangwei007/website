@@ -114,7 +114,7 @@
                                 </label>
                             </div>
                             @endif
-                            
+
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">添加时间</label>
                                 <label class="radio-inline text-primary">{{ $user->created_at }}</label>
