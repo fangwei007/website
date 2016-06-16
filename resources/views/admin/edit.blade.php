@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <label>修改用户信息</label>
-                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>控制面板</a>
+                                <a href="/user-manage" class="pull-right"><i class="fa fa-group"></i> 返回列表</a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                             </div>
 
                             <div class="form-group">
-                                <p class="col-lg-5 control-label small">如若修改密码，请填写下面信息：</p>
+                                <p class="col-lg-5 control-label small pull-left">如若修改密码，请填写下面信息：</p>
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">

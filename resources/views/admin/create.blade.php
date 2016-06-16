@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <label>创建新用户</label>
-                                <a href="/admin" class="pull-right"><i class="fa fa-th-list"></i>控制面板</a>
+                                <a href="/user-manage" class="pull-right"><i class="fa fa-group"></i> 返回列表</a>
                             </div>
                         </div>
                     </div>

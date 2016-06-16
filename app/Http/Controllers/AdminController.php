@@ -30,6 +30,16 @@ class AdminController extends Controller {
         $instruments = Instruments::all();
         return view('admin.dashboard', ['users' => $users, 'items' => $instruments]);
     }
+    
+    public function userManage() {
+        $users = User::all();
+        return view('admin.user-manage', ['users' => $users]);
+    }
+    
+    public function itemManage() {
+        $instruments = Instruments::all();
+        return view('admin.item-manage', ['items' => $instruments]);
+    }
 
     /**
      * Show the form for creating a new resource.

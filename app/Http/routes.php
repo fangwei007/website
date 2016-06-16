@@ -43,3 +43,6 @@ Route::get('/contact', function () {
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/user-manage', 'AdminController@userManage');
+
+Route::get('/item-manage', 'AdminController@itemManage');
