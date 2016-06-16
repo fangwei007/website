@@ -46,13 +46,13 @@
 
                             <div class="form-group">
                                 <label>器材图片</label><br>
-                                <img class="img-thumbnail" style="max-height: 300px; max-width: 260px;" src="{{ $item->image }}"/>
+                                <img class="img-thumbnail" src="{{ $item->image }}"/>
                                 <p></p>
                                 <label class="btn btn-link" for="my-file-selector">
                                     <input id="my-file-selector" name="item-image" type="file" style="display:none;" onchange="$('#upload-file-info').html($(this).val());">
                                     <i class="fa fa-link"></i> 添加图片
                                 </label>
-                                <span class='label label-info' id="upload-file-info"></span>
+                                <span class='label label-success' id="upload-file-info"></span>
                             </div>
 
                             <div class="form-group">
