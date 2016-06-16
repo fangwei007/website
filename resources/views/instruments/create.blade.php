@@ -44,8 +44,9 @@
                                 <input type="file" name='item-image'>
                             </div>
 
-                            <button type="submit" class="btn btn-default">添 加</button>
-                            <button type="reset" class="btn btn-default">重 置</button>
+                            <button type="submit" class="btn btn-primary">添 加</button>
+                            &nbsp;
+                            <button type="reset" class="btn btn-warning">重 置</button>
                         </form>
                     </div>
                 </div>

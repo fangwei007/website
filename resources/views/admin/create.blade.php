@@ -15,7 +15,7 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row">
@@ -25,12 +25,13 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="panel-body">
                         <form  class="form-horizontal" role="form" method="post" action="{{ url('/admin/') }}">
                             {!! csrf_field() !!}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label class="col-lg-2 control-label">新用户名</label>
+                                <label class="col-lg-3 control-label">新用户名</label>
                                 <div class="col-lg-6">
                                     <input class="form-control" type="text" name="name" value="{{ old('name') }}" />
                                 </div>
@@ -43,7 +44,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label class="col-lg-2 control-label">电子邮箱</label>
+                                <label class="col-lg-3 control-label">电子邮箱</label>
                                 <div class="col-lg-6">
                                     <input class="form-control" type="text" name="email" value="{{ old('email') }}" />
                                 </div>
@@ -56,7 +57,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label class="col-lg-2 control-label">密 码</label>
+                                <label class="col-lg-3 control-label">密 码</label>
                                 <div class="col-lg-6">
                                     <input type="password" class="form-control" name="password">
                                 </div>
@@ -69,7 +70,7 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                                <label class="col-lg-2 control-label">确认密码</label>
+                                <label class="col-lg-3 control-label">确认密码</label>
                                 <div class="col-lg-6">
                                     <input type="password" class="form-control" name="password_confirmation">
                                 </div>
@@ -82,7 +83,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-lg-2 control-label">权 限</label>
+                                <label class="col-lg-3 control-label">权 限</label>
                                 <label class="col-lg-1 control-label"></label>
                                 <label class="radio-inline">
                                     <input type="radio" name="role" id="radio1" value="N" checked>未认证
@@ -96,9 +97,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-lg-4 control-label"></label>
-                                <button type="submit" class="btn btn-default">创 建</button>
-                                <button type="reset" class="btn btn-default">重 置</button>
+                                <label class="col-lg-5 control-label"></label>
+                                <button type="submit" class="btn btn-primary">创 建</button>
+                                &nbsp;
+                                <button type="reset" class="btn btn-warning">重 置</button>
                             </div>
                         </form>
                     </div>
