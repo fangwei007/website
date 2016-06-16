@@ -43,7 +43,7 @@
     <body>
 
         @yield('content')
-
+        
         <!-- jQuery -->
         <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -83,6 +83,8 @@
             $("[data-toggle=popover]")
                     .popover()
         </script>
+        
+        @include('modals')
     </body>
 
 </html>
