@@ -40,8 +40,12 @@
                             </div>
 
                             <div class="form-group">
-                                <label>器材图片</label><br>
-                                <input type="file" name='item-image'>
+                                <label>器材图片</label>
+                                <label class="btn btn-link" for="my-file-selector">
+                                    <input id="my-file-selector" name="item-image" type="file" style="display:none;" onchange="$('#upload-file-info').html($(this).val());">
+                                    <i class="fa fa-link"></i> 添加图片
+                                </label>
+                                <span class='label label-success' id="upload-file-info"></span>
                             </div>
 
                             <button type="submit" class="btn btn-primary">添 加</button>
