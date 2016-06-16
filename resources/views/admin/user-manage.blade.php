@@ -46,7 +46,7 @@
                                         <td class="text-center tooltip-demo">
                                             <div class="row">
                                                 <a href="/admin/{{ $user->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
-                                                <a href='/admin/{{ $user->id }}/delete' data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除" onclick="return confirm('确认放入回收站吗？');"><i class="fa fa-minus-circle"></i></a>
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle" data-toggle="modal" data-target="#confirm-delete" data-href="/admin/{{ $user->id }}/delete"></i></a>
                                             </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
