@@ -100,6 +100,7 @@ class InstrumentsController extends Controller {
      */
     public function edit($id) {
         $item = Instruments::where('id', $id)->first();
+        if ($item == NULL) return view("errors.404");
         return view('instruments.edit', ['item' => $item]);
     }
 
@@ -153,6 +154,7 @@ class InstrumentsController extends Controller {
         $delete_item = Instruments::where('id', $id)->first();
         if ($delete_item != NULL) {
             $delete_item->delete();
+            if (isset($_GET['r']) && $_GET['r'] == 'item') return redirect('/item-manage');
             return redirect()->back();
         }
 

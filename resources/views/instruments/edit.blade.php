@@ -46,27 +46,24 @@
 
                             <div class="form-group">
                                 <label>器材图片</label><br>
-                                <img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/>
-                                <!--<p>{{ substr(strrchr($item->image, "/"), 1) }}</p>-->
+                                <img class="img-thumbnail" style="max-height: 300px; max-width: 300px;" src="{{ $item->image }}"/>
                                 <p></p>
                                 <input type="file" name='item-image'>
                             </div>
 
                             <div class="form-group">
-                                <label>入庫日期</label>
-                                <p class="form-control-static">{{ $item->created_at }}</p>
+                                <label class="control-label">添加时间 </label>
+                                <label class="radio-inline text-primary">{{ $item->created_at }}</label>
                             </div>
 
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" <?php if ($item->deleted_at !== NULL) echo "checked"; ?> name="item-delete" /> 放入回收站
-                                </label>
-                            </div>
-
-                            <button type="submit" class="btn btn-default">更 新</button>
-                            <button type="reset" class="btn btn-default">重 置</button>
-                            <button type="" class="btn btn-default"><a href="/items/{{ $item->id }}">预 览</a></button>
+                            <button type="submit" class="btn btn-primary">更 新</button>
+                            
                         </form>
+                        <div class="row" style="margin-top: -34px; margin-left: 70px">
+                            <a href="/items/{{ $item->id }}"><button type="" class="btn btn-info">预 览</button></a>
+                            &nbsp;
+                            <button class="btn btn-danger" data-toggle="modal" data-target="#confirm-delete" data-href="/items/{{ $item->id }}/delete?r=item">放入回收站</button>
+                        </div>
                     </div>
                 </div>
             </div>

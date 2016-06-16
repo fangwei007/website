@@ -106,7 +106,6 @@ class AdminController extends Controller {
      * @return Response
      */
     public function edit($id) {
-        //
         $user = User::where('id', $id)->first();
         if ($user != NULL) {
             return view('admin.edit', ["user" => $user]);
@@ -167,6 +166,7 @@ class AdminController extends Controller {
         $delete_user = User::where('id', $id)->first();
         if ($delete_user != NULL) {
             $delete_user->delete();
+            if (isset($_GET['r']) && $_GET['r'] == 'user') return redirect('/user-manage');
             return redirect()->back();
         }
 

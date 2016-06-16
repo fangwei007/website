@@ -65,7 +65,7 @@
                             </div>
 
                             <div class="form-group">
-                                <p class="col-lg-5 control-label small pull-left">如若修改密码，请填写下面信息：</p>
+                                <p class="col-lg-5 control-label small pull-left text-primary">如若修改密码，请填写下面信息：</p>
                             </div>
 
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
@@ -114,13 +114,18 @@
                                 </label>
                             </div>
                             @endif
+                            
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">添加时间</label>
+                                <label class="radio-inline text-primary">{{ $user->created_at }}</label>
+                            </div>
 
                             <div class="form-group">
-                                <label class="col-lg-4 control-label"></label>
-                                <button type="submit" class="btn btn-default">确认修改</button>
-                                <!--<button type="reset" class="btn btn-default">重 置</button>-->
+                                <label class="col-lg-2 control-label"></label>
+                                <button type="submit" class="btn btn-primary">确认修改</button>
                             </div>
                         </form>
+                        <div class="col-lg-8"><button class="btn btn-danger pull-right" data-toggle="modal" data-target="#confirm-delete" data-href="/admin/{{ $user->id }}/delete?r=user" style="margin-top: -50px">放入回收站</button></div>
                     </div>
                 </div>
             </div>
