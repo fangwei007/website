@@ -78,7 +78,7 @@
                             <li <?php echo Request::is('/') ? 'class="active"' : ''; ?>><a href="/"><i class="fa fa-home"></i> 首 页</a></li>
                             <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about">关于我们</a></li>
                             @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
-                            <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items"><i class="fa fa-unlock"></i> 产品详情</a></li>
+                            <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items">产品详情 <i class="fa fa-unlock"></i></a></li>
                             @endif
                             <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact">联系我们</a></li>
                             <!-- Authentication Links -->
