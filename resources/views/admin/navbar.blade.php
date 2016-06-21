@@ -57,10 +57,10 @@
                     <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="blank.html">Blank Page</a>
+                            <a href="#">Blank Page</a>
                         </li>
                         <li>
-                            <a href="login.html">Login Page</a>
+                            <a href="#">Login Page</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
