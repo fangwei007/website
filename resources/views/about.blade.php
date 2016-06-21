@@ -8,13 +8,13 @@
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">About
-                <small>Subheading</small>
+            <h1 class="page-header">公司信息
+                <!--<small>公司信息</small>-->
             </h1>
             <ol class="breadcrumb">
-                <li><a href="/">Home</a>
+                <li><a href="/">首 页</a>
                 </li>
-                <li class="active">About</li>
+                <li class="active">关于我们</li>
             </ol>
         </div>
     </div>
