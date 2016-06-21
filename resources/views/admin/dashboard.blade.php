@@ -10,129 +10,78 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header"><i class="fa fa-users"></i> 用户管理</h2>
+                <h1 class="page-header">控制面板 <small>当月共有: </small></h1> 
             </div>
             <!-- /.col-lg-12 -->
         </div>
-        @if (Session::has('message'))
-        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('userName') }} </i></strong></div>
-        @endif
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <div class="row"> 
-                            <div class="col-sm-6">注册用户记录表 <a href="/admin/create"><i class="fa fa-plus-square"></i></a></div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-users fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{{ count($users) }}</div>
+                                <div>新用户</div>
+                            </div>
                         </div>
                     </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="dataTable_wrapper">
-                            <table class="table table-striped table-bordered table-hover" id="user-records">
-                                <thead>
-                                    <tr>
-                                        <th>操 作</th>
-                                        <th>用户名</th>
-                                        <th>电子邮箱</th>
-                                        <th>用户权限</th>
-                                        <th id="hide-when-500">创建日期</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($users as $user)
-                                    <?php if (Auth::user()->id == $user->id) continue; ?>
-                                    <tr class="odd gradeX">
-                                        <td class="text-center tooltip-demo">
-                                            <div class="row">
-                                                <a href="/admin/{{ $user->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle" data-toggle="modal" data-target="#confirm-delete" data-href="/admin/{{ $user->id }}/delete"></i></a>
-                                            </div>
-                                        </td>
-                                        <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td class="center">
-                                            @if ($user->role === 'N')
-                                            未认证
-                                            @elseif ($user->role === 'A')
-                                            认证会员
-                                            @elseif ($user->role === 'V')
-                                            管理员
-                                            @endif
-                                        </td>
-                                        <td id="hide-when-500">{{ $user->created_at }}</td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                    <a href="/user-manage">
+                        <div class="panel-footer">
+                            <span class="pull-left">查看详情</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
                         </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                    <!-- /.panel-body -->
+                    </a>
                 </div>
-                <!-- /.panel -->
             </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header"><i class="fa fa-gears"></i> 设备管理</h2>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-        @if (Session::has('messageItem'))
-        <div class="alert alert-info">{{ Session::get('messageItem') }} <strong><i>{{ Session::get('itemName') }} </i></strong></div>
-        @endif
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-green">
                     <div class="panel-heading">
-                        <div class="row"> 
-                            <div class="col-sm-6">仪器设备记录表 <a href="/items/create"><i class="fa fa-plus-square"></i></a></div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-gears fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{{ count($items) }}</div>
+                                <div>新仪器</div>
+                            </div>
                         </div>
                     </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="dataTable_wrapper">
-                            <table class="table table-striped table-bordered table-hover" id="item-records">
-                                <thead>
-                                    <tr>
-                                        <th>操 作</th>
-                                        <th>器材型号</th>
-                                        <th id="hide-when-500">器材简介</th>
-                                        <th>器材图片</th>
-                                        <th id="hide-when-500">入库日期</th>
-                                        <th id="hide-when-360">效果预览</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($items as $item)
-                                    <tr class="odd gradeX">
-                                        <td class="text-center tooltip-demo">
-                                            <div class="row">
-                                                <a href="/items/{{ $item->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle" data-toggle="modal" data-target="#confirm-delete" data-href="/items/{{ $item->id }}/delete"></i></a>
-                                            </div>
-                                        </td>
-                                        <td>{{ $item->name }}</td>
-                                        <td id="hide-when-500">{{ $item->introduction }}</td>
-                                        <td><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
-                                        <td id="hide-when-500">{{ $item->created_at }}</td>
-                                        <td id="hide-when-360"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                    <a href="/item-manage">
+                        <div class="panel-footer">
+                            <span class="pull-left">查看详情</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
                         </div>
-                        <!-- /.table-responsive -->
-                    </div>
-                    <!-- /.panel-body -->
+                    </a>
                 </div>
-                <!-- /.panel -->
             </div>
-            <!-- /.col-lg-12 -->
+            <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-trash-o fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{ $trash }}</div>
+                                    <div>回收站</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/trash">
+                            <div class="panel-footer">
+                                <span class="pull-left">查看详情</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
         </div>
         <!-- /.row -->
     </div>

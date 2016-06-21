@@ -8,6 +8,7 @@ use Validator;
 use App\Instruments;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Session;
+use Carbon\Carbon;
 
 class AdminController extends Controller {
 
@@ -26,9 +27,11 @@ class AdminController extends Controller {
      * @return Response
      */
     public function index() {
-        $users = User::all();
-        $instruments = Instruments::all();
-        return view('admin.dashboard', ['users' => $users, 'items' => $instruments]);
+        $users = User::where('created_at', '>=', Carbon::now()->startOfMonth())->get();
+        $instruments = Instruments::where('created_at', '>=', Carbon::now()->startOfMonth())->get();
+        $trash_u = User::onlyTrashed()->count();
+        $trash_i = Instruments::onlyTrashed()->count();
+        return view('admin.dashboard', ['users' => $users, 'items' => $instruments, 'trash' => $trash_u + $trash_i]);
     }
     
     public function userManage() {
