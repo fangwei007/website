@@ -88,7 +88,7 @@ class InstrumentsController extends Controller {
      */
     public function show($id) {
         $item = Instruments::where('id', $id)->first();
-        $related_items = Instruments::inRandomOrder()->take(4)->get();
+        $related_items = Instruments::all()->random(4);
         return view('instruments.show', ['item' => $item, 'related_items' => $related_items]);
     }
 
