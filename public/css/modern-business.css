@@ -104,6 +104,10 @@ footer {
     .img-related {
         margin-bottom: 30px;
     }
+    
+    body {
+        margin: 0;
+    }
 }
 
 @media(max-width:767px) {
@@ -184,13 +188,13 @@ footer {
 }
 
 .carousel .carousel-content {
-/*  margin-top: 80px;
-  margin-left: 30px;*/
-  min-height: 400px;
+    /*  margin-top: 80px;
+      margin-left: 30px;*/
+    min-height: 400px;
 }
 
 .carousel .slide-margin{
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 .page-container {
