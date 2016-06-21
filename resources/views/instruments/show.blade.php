@@ -32,6 +32,8 @@
         </div>
 
         <div class="col-md-4">
+            <h3>仪器型号</h3>
+            <p>{{ $item->name }}</p>
             <h3>仪器介绍</h3>
             <p>{{ $item->introduction }}</p>
             <h3>详细参数</h3>
