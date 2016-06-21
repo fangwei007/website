@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Page Content -->
-<div class="container" style="min-height: 650px">
+<div class="container page-container" style="min-height: 650px">
 
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">

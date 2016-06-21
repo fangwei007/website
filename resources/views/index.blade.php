@@ -18,9 +18,9 @@
                 <div class="row slide-margin">
                     <div class="col-sm-6">
                         <div class="carousel-content">
-                            <h1 class="animation animated-item-1">这是一所宁静美丽的江南小城。小城西北角，有一所大学</h1>
-                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                            <!--                                <h1 class="animation animated-item-1">这是一所宁静美丽的江南小城。小城西北角，有一所大学</h1>
+                                                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
                         </div>
                     </div>
 
@@ -39,9 +39,9 @@
                 <div class="row slide-margin">
                     <div class="col-sm-6">
                         <div class="carousel-content">
-                            <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                            <!--                                <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
                         </div>
                     </div>
 
@@ -60,9 +60,9 @@
                 <div class="row slide-margin">
                     <div class="col-sm-6">
                         <div class="carousel-content">
-                            <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                            <!--                                <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
                         </div>
                     </div>
                     <div class="col-sm-6 hidden-xs animation animated-item-4">
@@ -85,7 +85,7 @@
 </header>
 
 <!-- Page Content -->
-<div class="container">
+<div class="container page-container">
 
     <!-- Marketing Icons Section -->
     <div class="row">

@@ -30,84 +30,85 @@
 
     </head>
 
-    <body>
-
-        <!-- Navigation -->
-        <header id="header">
-            <div class="top-bar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-6">
-                            <div class="top-number"><p><i class="fa fa-phone-square"></i> 13903336666 &nbsp;&nbsp;&nbsp;<i class="fa fa-mobile-phone"></i> 13903336666</p></div>
-                        </div>
-                        <div class="col-sm-6 col-xs-6">
-                            <div class="social">
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="fa fa-weibo"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-weixin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-qq"></i></a></li> 
-                                    <li><a href="#"><i class="fa fa-apple"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-windows"></i></a></li>
-                                </ul>
-                                <div class="search">
-                                    <form role="form">
-                                        <input type="text" class="search-form" autocomplete="off" placeholder="搜索">
-                                        <i class="fa fa-search"></i>
-                                    </form>
+    <body style="background-image: url('/images/patterns/straws.png')">
+        <div class="boxed" style="padding: 0">
+            <!-- Navigation -->
+            <header id="header">
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-6">
+                                <div class="top-number"><p><i class="fa fa-phone-square"></i> 13903336666 &nbsp;&nbsp;&nbsp;<i class="fa fa-mobile-phone"></i> 13903336666</p></div>
+                            </div>
+                            <div class="col-sm-6 col-xs-6">
+                                <div class="social">
+                                    <ul class="social-share">
+                                        <li><a href="#"><i class="fa fa-weibo"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-weixin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-qq"></i></a></li> 
+                                        <li><a href="#"><i class="fa fa-apple"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-windows"></i></a></li>
+                                    </ul>
+                                    <div class="search">
+                                        <form role="form">
+                                            <input type="text" class="search-form" autocomplete="off" placeholder="搜索">
+                                            <i class="fa fa-search"></i>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div><!--/.container-->
-            </div><!--/.top-bar-->
+                    </div><!--/.container-->
+                </div><!--/.top-bar-->
 
-            <nav class="navbar navbar-inverse" role="banner">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="/"><img src="/images/logo3.png" alt="logo"></a>
-                    </div>
+                <nav class="navbar navbar-inverse" role="banner">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/"><img src="/images/logo3.png" alt="logo"></a>
+                        </div>
 
-                    <div class="collapse navbar-collapse navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li <?php echo Request::is('/') ? 'class="active"' : ''; ?>><a href="/"><i class="fa fa-home"></i> 首 页</a></li>
-                            <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about">关于我们</a></li>
-                            @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
-                            <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items">产品详情 <i class="fa fa-unlock"></i></a></li>
-                            @endif
-                            <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact">联系我们</a></li>
-                            <!-- Authentication Links -->
-                            @if (Auth::guest())
-                            <li <?php echo Request::is('login') || Request::is('register') ? 'class="active"' : ''; ?> ><a href="{{ url('/login') }}">会员登陆</a></li>
-                            <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
-                            @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    hi {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                        <div class="collapse navbar-collapse navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li <?php echo Request::is('/') ? 'class="active"' : ''; ?>><a href="/"><i class="fa fa-home"></i> 首 页</a></li>
+                                <li <?php echo Request::is('about') ? 'class="active"' : ''; ?>><a href="/about">关于我们</a></li>
+                                @if (!Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isMember()))
+                                <li <?php echo Request::is('items') ? 'class="active"' : ''; ?>><a href="/items">产品详情 <i class="fa fa-unlock"></i></a></li>
+                                @endif
+                                <li <?php echo Request::is('contact') ? 'class="active"' : ''; ?>><a href="/contact">联系我们</a></li>
+                                <!-- Authentication Links -->
+                                @if (Auth::guest())
+                                <li <?php echo Request::is('login') || Request::is('register') ? 'class="active"' : ''; ?> ><a href="{{ url('/login') }}">会员登陆</a></li>
+                                <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
+                                @else
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                        hi {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    @if (Auth::user()->isAdmin()) <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-dashboard"></i> 控制台</a></li>@endif
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> 退出登录</a></li>
-                                </ul>
-                            </li>
-                            @endif
-                        </ul>
-                    </div>
-                </div><!--/.container-->
-            </nav><!--/nav-->
+                                    <ul class="dropdown-menu" role="menu">
+                                        @if (Auth::user()->isAdmin()) <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-dashboard"></i> 控制台</a></li>@endif
+                                        <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> 退出登录</a></li>
+                                    </ul>
+                                </li>
+                                @endif
+                            </ul>
+                        </div>
+                    </div><!--/.container-->
+                </nav><!--/nav-->
 
-        </header><!--/header-->
+            </header><!--/header-->
+        </div>
 
         @yield('content')
 
         <!-- Footer -->
-        <div class="container">
+        <div class="container page-container">
             <hr>
             <footer>
                 <div class="row">

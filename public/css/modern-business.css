@@ -12,7 +12,15 @@ body {
 }
 
 body {
-    padding-top: 5px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*padding-top: 5px;  Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: #FFF;
+    border-bottom: 5px solid #121214;
+    border-radius: 5px;
+    border-top: 5px solid #CCC;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+    margin: 10px auto;
+    max-width: 1170px;
+    height: auto;
 }
 
 body.boxed .body {
@@ -176,10 +184,16 @@ footer {
 }
 
 .carousel .carousel-content {
-  margin-top: 80px;
-  margin-left: 30px;
+/*  margin-top: 80px;
+  margin-left: 30px;*/
+  min-height: 400px;
 }
 
 .carousel .slide-margin{
   margin-top: 0px;
+}
+
+.page-container {
+    background-color: white;
+    width: 100%;
 }
