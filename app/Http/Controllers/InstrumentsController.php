@@ -28,7 +28,12 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function index() {
-        $instruments = Instruments::where('deleted_at', NULL)->paginate(6);
+        if (isset($_GET['q']) && !empty($_GET['q'])) {
+            $name = $_GET['q'];
+            $instruments = Instruments::where('name', $name)->orWhere('name', 'like', '%' . $name . '%')->paginate(9)->appends(['q' => $name]);
+        } else {
+            $instruments = Instruments::where('deleted_at', NULL)->paginate(9);
+        }
         return view('items', ['items' => $instruments]);
     }
 
@@ -66,13 +71,13 @@ class InstrumentsController extends Controller {
             $extension = $request->file("item-image")->getClientOriginalExtension();
             $filename = $request->input('item-name') . '.' . $extension;
             $request->file('item-image')->move(base_path() . "/public/uploads/" . $request->input('item-name'), $filename);
-            
+
             $data = [
                 'name' => $request->input('item-name'),
                 'introduction' => $request->input('item-introduction'),
                 'image' => "/uploads/" . $request->input('item-name') . '/' . $filename
             ];
-            
+
             Instruments::create($data);
             Session::flash('messageItem', "添加新器材");
             Session::flash('itemName', $request->input('item-name'));
@@ -100,7 +105,8 @@ class InstrumentsController extends Controller {
      */
     public function edit($id) {
         $item = Instruments::where('id', $id)->first();
-        if ($item == NULL) return view("errors.404");
+        if ($item == NULL)
+            return view("errors.404");
         return view('instruments.edit', ['item' => $item]);
     }
 
@@ -127,7 +133,6 @@ class InstrumentsController extends Controller {
             $data = [
                 'name' => $request->input('item-name'),
                 'introduction' => $request->input('item-introduction'),
-                
             ];
 
             if ($request->hasFile('item-image')) {
@@ -156,7 +161,8 @@ class InstrumentsController extends Controller {
             Session::flash('messageItem', "已删除");
             Session::flash('itemName', $delete_item->name);
             $delete_item->delete();
-            if (isset($_GET['r']) && $_GET['r'] == 'item') return redirect('/item-manage');
+            if (isset($_GET['r']) && $_GET['r'] == 'item')
+                return redirect('/item-manage');
             return redirect()->back();
         }
 
@@ -174,7 +180,7 @@ class InstrumentsController extends Controller {
 
         return view("errors.404");
     }
-    
+
     public function permDestroy($id) {
         $removed_item = Instruments::onlyTrashed()->where('id', $id)->first();
         if ($removed_item != NULL) {
@@ -186,4 +192,5 @@ class InstrumentsController extends Controller {
 
         return view("errors.404");
     }
+
 }
