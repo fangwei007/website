@@ -97,42 +97,6 @@ footer {
     text-align: center;
 }
 
-/* Responsive Styles */
-
-@media(max-width:991px) {
-    .customer-img,
-    .img-related {
-        margin-bottom: 30px;
-    }
-    
-    body {
-        margin: 0;
-    }
-}
-
-@media(max-width:767px) {
-    .img-portfolio {
-        margin-bottom: 15px;
-    }
-
-    header.carousel .carousel {
-        height: 70%;
-    }
-
-    .navbar-header {
-        margin: -35px 0 20px;
-        padding: 10px;
-    }
-
-    .social,
-    .top-number{
-        visibility: hidden;
-    }
-    .top-bar {
-        margin-bottom: -30px;
-    }
-}
-
 .carousel-indicators li {
     width: 20px;
     height: 20px;
@@ -195,6 +159,94 @@ footer {
 
 .carousel .slide-margin{
     margin-top: 0px;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .carousel .carousel-content {
+        /*  margin-top: 80px;
+          margin-left: 30px;*/
+        min-height: 300px;
+    }
+
+    .carousel-indicators li {
+        width: 16px;
+        height: 16px;
+    }
+
+    .carousel-indicators li:after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .carousel-indicators .active{
+        width: 16px;
+        height: 16px;
+    }
+
+    .carousel-indicators .active:after {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+
+    .navbar-header {
+        margin: -35px 0 20px;
+        padding: 10px;
+    }
+
+    .social,
+    .top-number{
+        visibility: hidden;
+    }
+    .top-bar {
+        margin-bottom: -30px;
+    }
+
+    .carousel .carousel-content {
+        /*  margin-top: 80px;
+          margin-left: 30px;*/
+        min-height: 225px;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+    }
+
+    .carousel-indicators li:after {
+        width: 14px;
+        height: 14px;
+    }
+
+    .carousel-indicators .active{
+        width: 10px;
+        height: 10px;
+    }
+
+    .carousel-indicators .active:after {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 .page-container {
