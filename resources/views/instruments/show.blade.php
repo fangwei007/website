@@ -35,7 +35,7 @@
             <h3>仪器介绍</h3>
             <p>{{ $item->introduction }}</p>
             <h3>详细参数</h3>
-            <ul>
+            <ul style="margin-left: -20px">
                 <li>Lorem Ipsum</li>
                 <li>Dolor Sit Amet</li>
                 <li>Consectetur</li>
