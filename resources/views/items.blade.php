@@ -74,7 +74,7 @@ if ($html == null) :
                     <div class="overlay">
                         <a href="/items/{{ $item->id }}">
                             <h2>型号：{{ $item->name }}</h2>
-                            <p>简介：{{ $item->introduction }}</p>
+                            <p>简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . '...' : $item->introduction; ?></p>
                         </a>
                     </div>
 

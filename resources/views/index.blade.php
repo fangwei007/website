@@ -171,7 +171,7 @@ if ($html == null) :
                     <img class="img-responsive" src="{{ $item->image }}" alt="">
                     <div class="overlay">
                         <h2>型号：{{ $item->name }}</h2>
-                        <p class="info" href="#">简介：{{ $item->introduction }}</p>
+                        <p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>
                     </div>
                 </div>
             </div>
