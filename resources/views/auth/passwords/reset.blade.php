@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 
 @section('content')
-<div class="container">
-    <div class="row">
+<div class="container page-container">
+    <div class="row" style="margin-top: 5%; min-height: 650px">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
