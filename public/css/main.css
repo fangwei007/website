@@ -179,7 +179,7 @@ body > section {
 }
 
 .navbar>.container .navbar-brand{
-    margin-left: 0;
+    margin-left: 15px;
 }
 
 .top-bar {

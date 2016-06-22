@@ -131,40 +131,23 @@
     <!-- /.row -->
 
     <!-- Portfolio Section -->
+    <link href="/css/home-effects.css" rel="stylesheet">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Portfolio Heading</h2>
+            <h2 class="page-header">新仪器展示</h2>
         </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
+        @foreach ($items as $item)
+        <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{{ $item->image }}" alt="">
+                <div class="overlay">
+                    <h2>型号：{{ $item->name }}</h2>
+                    <!--<p class="info" >简介：{{ $item->introduction }}</p>-->
+                    <a class="info" href="#">简介：{{ $item->introduction }}</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
+        @endforeach
     </div>
     <!-- /.row -->
 

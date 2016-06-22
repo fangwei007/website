@@ -11,9 +11,12 @@
   |
  */
 Route::auth();
-Route::get('/', function () {
-    return view('index');
+Route::get('/', 'HomeController@index');
+
+Route::get('/home', function () {
+    return redirect('/');
 });
+
 
 Route::get('/about', function () {
     return view('about');
@@ -41,7 +44,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
 
 Route::get('/user-manage', 'AdminController@userManage');
 
