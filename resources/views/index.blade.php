@@ -142,7 +142,6 @@
                 <img class="img-responsive" src="{{ $item->image }}" alt="">
                 <div class="overlay">
                     <h2>型号：{{ $item->name }}</h2>
-                    <!--<p class="info" >简介：{{ $item->introduction }}</p>-->
                     <p class="info" href="#">简介：{{ $item->introduction }}</p>
                 </div>
             </div>

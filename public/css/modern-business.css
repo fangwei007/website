@@ -306,13 +306,17 @@ footer {
     background-color: transparent;
 }
 
+.hovereffect:hover h2 {
+    color: #fff;
+}
+
 .hovereffect h2:after {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 2px;
-    background: #4e4e4e;
+    background: #fff;
     content: '';
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
@@ -326,7 +330,7 @@ footer {
 }
 
 .hovereffect a, .hovereffect p {
-    color: #4e4e4e;
+    color: #fff;
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
