@@ -143,7 +143,7 @@
                 <div class="overlay">
                     <h2>型号：{{ $item->name }}</h2>
                     <!--<p class="info" >简介：{{ $item->introduction }}</p>-->
-                    <a class="info" href="#">简介：{{ $item->introduction }}</a>
+                    <p class="info" href="#">简介：{{ $item->introduction }}</p>
                 </div>
             </div>
         </div>
