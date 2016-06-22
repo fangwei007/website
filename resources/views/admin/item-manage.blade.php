@@ -32,7 +32,7 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作</th>
+                                        <th>操 作&nbsp;&nbsp;</th>
                                         <th>器材型号</th>
                                         <th id="hide-when-500">器材简介</th>
                                         <th>器材图片</th>
@@ -45,15 +45,15 @@
                                     <tr class="odd gradeX">
                                         <td class="text-center tooltip-demo">
                                             <div class="row">
-                                                <a href="/items/{{ $item->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle" data-toggle="modal" data-target="#confirm-delete" data-href="/items/{{ $item->id }}/delete"></i></a>
+                                                <a href="/items/{{ $item->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil fa-1x"></i></a>&nbsp;
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle fa-1x" data-toggle="modal" data-target="#confirm-delete" data-href="/items/{{ $item->id }}/delete"></i></a>
                                             </div>
                                         </td>
-                                        <td class="col-sm-2">{{ $item->name }}</td>
-                                        <td id="hide-when-500" class="col-sm-4">{{ $item->introduction }}</td>
-                                        <td class="center col-sm-1"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
-                                        <td id="hide-when-500" class="col-sm-2">{{ $item->created_at }}</td>
-                                        <td id="hide-when-360" class="center col-sm-1"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
+                                        <td>{{ $item->name }}</td>
+                                        <td id="hide-when-500">{{ $item->introduction }}</td>
+                                        <td><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
+                                        <td id="hide-when-500">{{ $item->created_at }}</td>
+                                        <td id="hide-when-360"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

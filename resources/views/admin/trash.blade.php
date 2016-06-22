@@ -32,7 +32,7 @@
                             <table class="table table-striped table-bordered table-hover" id="user-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作</th>
+                                        <th>操 作&nbsp;&nbsp;&nbsp;</th>
                                         <th>用户名</th>
                                         <th>电子邮箱</th>
                                         <th>用户权限</th>
@@ -45,8 +45,8 @@
                                     <tr class="odd gradeX">
                                         <td class="text-center tooltip-demo">
                                             <div class="row">
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/user/{{ $user->id }}/restore"></i></a>&nbsp;
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/user/{{ $user->id }}/perm-delete"></i></a>
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh fa-1x" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/user/{{ $user->id }}/restore"></i></a>&nbsp;
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle fa-1x" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/user/{{ $user->id }}/perm-delete"></i></a>
                                             </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
@@ -99,7 +99,7 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作</th>
+                                        <th>操 作&nbsp;&nbsp;</th>
                                         <th>器材型号</th>
                                         <th id="hide-when-500">器材简介</th>
                                         <th id="hide-when-500">器材图片</th>
@@ -111,13 +111,13 @@
                                     <tr class="odd gradeX">
                                         <td class="text-center tooltip-demo">
                                             <div class="row">
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/item/{{ $item->id }}/restore"></i></a>&nbsp;
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/item/{{ $item->id }}/perm-delete"></i></a>
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh fa-1x" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/item/{{ $item->id }}/restore"></i></a>&nbsp;
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle fa-1x" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/item/{{ $item->id }}/perm-delete"></i></a>
                                             </div>
                                         </td>
                                         <td>{{ $item->name }}</td>
                                         <td id="hide-when-500"">{{ $item->introduction }}</td>
-                                        <td id="hide-when-500"><img class="img-thumbnail" style="max-height: 100px; max-width: 100px;" src="{{ $item->image }}"/></td>
+                                        <td id="hide-when-500"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
                                         <td>{{ $item->deleted_at }}</td>
                                     </tr>
                                     @endforeach

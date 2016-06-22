@@ -32,7 +32,7 @@
                             <table class="table table-striped table-bordered table-hover" id="user-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作</th>
+                                        <th>操 作&nbsp;&nbsp;&nbsp;</th>
                                         <th>用户名</th>
                                         <th>电子邮箱</th>
                                         <th>用户权限</th>
@@ -45,8 +45,8 @@
                                     <tr class="odd gradeX">
                                         <td class="text-center tooltip-demo">
                                             <div class="row">
-                                                <a href="/admin/{{ $user->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil"></i></a>&nbsp;
-                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle" data-toggle="modal" data-target="#confirm-delete" data-href="/admin/{{ $user->id }}/delete"></i></a>
+                                                <a href="/admin/{{ $user->id }}/edit" data-toggle="tooltip" data-placement="top" title="" data-original-title="编 辑"><i class="fa fa-pencil fa-1x"></i></a>&nbsp;
+                                                <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle fa-1x" data-toggle="modal" data-target="#confirm-delete" data-href="/admin/{{ $user->id }}/delete"></i></a>
                                             </div>
                                         </td>
                                         <td>{{ $user->name }}</td>

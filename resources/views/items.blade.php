@@ -39,16 +39,17 @@
     <!-- Projects Row -->
     <div class="row">
         @foreach ($items as $item)
-        <div class="col-md-4 img-portfolio">
-            <a href="/items/{{ $item->id }}">
-                <!--<img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">-->
-                <img class="img-responsive img-hover" src="{{ $item->image }}" alt="">
-            </a>
+        <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
+            <div class="hovereffect">
+                <img class="img-responsive" src="{{ $item->image }}" alt="">
+                <div class="overlay">
+                    <a href="/items/{{ $item->id }}">
+                        <h2>型号：{{ $item->name }}</h2>
+                        <p>简介：{{ $item->introduction }}</p>
+                    </a>
+                </div>
 
-            <h3>
-                <a href="/items/{{ $item->id }}">{{ $item->name }}</a>
-            </h3>
-            <p>{{ $item->introduction }}</p>
+            </div>
         </div>
         @endforeach
     </div>
