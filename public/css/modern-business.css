@@ -272,7 +272,7 @@ footer {
     overflow: hidden;
     top: 0;
     left: 0;
-    padding: 50px 20px;
+    padding: 10% 10px;
 }
 
 .hovereffect img {
@@ -308,6 +308,12 @@ footer {
 
 .hovereffect:hover h2 {
     color: #fff;
+}
+
+
+
+#hover-h2:hover {
+    visibility: visible;
 }
 
 .hovereffect h2:after {

@@ -53,39 +53,20 @@
         <div class="col-lg-12">
             <h3 class="page-header">类似的仪器设备</h3>
         </div>
-        @foreach ($related_items as $related_items)
+        @foreach ($related_items as $related_item)
 
-                <div class="col-sm-3 col-xs-6">
-                    <a href="/items/{{ $related_items->id }}">
-                        <img class="img-responsive img-hover img-related" src="{{ $related_items->image }}" style="width: 262.5; height: 157.5 " alt="">
+        <div class="col-sm-3 col-xs-6">
+            <div class="hovereffect" style="margin: 5px 0 5px 0;">
+                <img class="img-responsive" src="{{ $related_item->image }}" alt="">
+                <div class="overlay" style="padding: 30% 0;">
+                    <a href="/items/{{ $related_item->id }}">
+                        <p>型号：{{ $related_item->name }}</p>
                     </a>
                 </div>
+            </div>
+        </div>
 
         @endforeach
-
-<!--        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>-->
     </div>
     <!-- /.row -->
 </div>
