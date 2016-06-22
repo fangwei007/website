@@ -66,7 +66,7 @@ class InstrumentsController extends Controller {
         ]);
 
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator);
+            return redirect()->back()->withErrors($validator)->withInput();
         } else {
             $extension = $request->file("item-image")->getClientOriginalExtension();
             $filename = $request->input('item-name') . '.' . $extension;
