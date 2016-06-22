@@ -34,18 +34,30 @@
 
                             <input type="hidden" name="_method" value="PUT">
 
-                            <div class="form-group">
-                                <label>器材型号</label>
+                            <div class="form-group{{ $errors->has('item-name') ? ' has-error' : '' }}">
+                                <label class="control-label">器材型号</label>
                                 <input class="form-control" type="text" name="item-name" value="{{ $item->name }}" />
+                                
+                                @if ($errors->has('item-name'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-name') }}
+                                </span>
+                                @endif
                             </div>
 
-                            <div class="form-group">
-                                <label>器材简介</label>
+                            <div class="form-group{{ $errors->has('item-introduction') ? ' has-error' : '' }}">
+                                <label class="control-label">器材简介</label>
                                 <textarea class="form-control" name="item-introduction" rows="15">{{ $item->introduction }}</textarea>
+                                
+                                @if ($errors->has('item-introduction'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-introduction') }}
+                                </span>
+                                @endif
                             </div>
 
-                            <div class="form-group">
-                                <label>器材图片</label><br>
+                            <div class="form-group{{ $errors->has('item-image') ? ' has-error' : '' }}">
+                                <label class="control-label">器材图片</label><br>
                                 <img class="img-thumbnail" src="{{ $item->image }}"/>
                                 <p></p>
                                 <label class="btn btn-link" for="my-file-selector">
@@ -53,6 +65,12 @@
                                     <i class="fa fa-link"></i> 添加图片
                                 </label>
                                 <span class='label label-success' id="upload-file-info"></span>
+                                
+                                @if ($errors->has('item-image'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-image') }}
+                                </span>
+                                @endif
                             </div>
 
                             <div class="form-group">
