@@ -32,7 +32,7 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作&nbsp;&nbsp;</th>
+                                        <th>操 作&nbsp;&nbsp;&nbsp;&nbsp;</th>
                                         <th>器材型号</th>
                                         <th id="hide-when-500">器材简介</th>
                                         <th>器材图片</th>

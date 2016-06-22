@@ -32,7 +32,7 @@
                             <table class="table table-striped table-bordered table-hover" id="user-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作&nbsp;&nbsp;&nbsp;</th>
+                                        <th>操 作&nbsp;&nbsp;&nbsp;&nbsp;</th>
                                         <th>用户名</th>
                                         <th>电子邮箱</th>
                                         <th>用户权限</th>
