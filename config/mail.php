@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'info@sunnytechs.com', 'name' => 'Sunnytechs'],
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => NULL,
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => NULL,
 
     /*
     |--------------------------------------------------------------------------
