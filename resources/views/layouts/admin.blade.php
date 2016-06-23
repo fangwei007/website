@@ -40,7 +40,7 @@
 
 
 
-    <body>
+    <body style="background-image: url('/images/patterns/straws.png')">
 
         @yield('content')
         

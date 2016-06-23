@@ -8,6 +8,13 @@ body {
     background-color: #f8f8f8;
     /*font-family: "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
     font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",serif;
+    border-bottom: 5px solid #121214;
+    border-radius: 5px;
+    border-top: 5px solid #CCC;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+    margin: 10px auto;
+    max-width: 1170px;
+    height: auto;
 }
 
 #wrapper {
