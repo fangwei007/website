@@ -32,12 +32,12 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                                        <th>器材型号</th>
-                                        <th id="hide-when-500">器材简介</th>
-                                        <th>器材图片</th>
-                                        <th id="hide-when-500">入库日期</th>
-                                        <th id="hide-when-360">效果预览</th>
+                                        <th class="col-lg-2">操 作</th>
+                                        <th class="col-lg-2">器材型号</th>
+                                        <th class="col-lg-3" id="hide-when-1170">器材简介</th>
+                                        <th class="col-lg-2" id="hide-when-700">器材图片</th>
+                                        <th class="col-lg-2" id="hide-when-1170">入库日期</th>
+                                        <th class="col-lg-1" id="hide-when-360">效果预览</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,9 +50,9 @@
                                             </div>
                                         </td>
                                         <td>{{ $item->name }}</td>
-                                        <td id="hide-when-500">{{ $item->introduction }}</td>
-                                        <td><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
-                                        <td id="hide-when-500">{{ $item->created_at }}</td>
+                                        <td id="hide-when-1170">{{ $item->introduction }}</td>
+                                        <td id="hide-when-700"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
+                                        <td id="hide-when-1170">{{ $item->created_at }}</td>
                                         <td id="hide-when-360"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
                                     </tr>
                                     @endforeach

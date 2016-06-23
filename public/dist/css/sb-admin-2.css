@@ -6,6 +6,8 @@
 
 body {
     background-color: #f8f8f8;
+    /*font-family: "Hiragino Sans GB", "Microsoft YaHei", sans-serif;*/
+    font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",serif;
 }
 
 #wrapper {
@@ -353,15 +355,19 @@ table.dataTable thead .sorting:after {
     color: #df8a13;
 }
 
+@media(max-width:1170px) {
+    #hide-when-1170 {
+        display: none;
+    }
+}
+
 @media(max-width:767px) {
     .navbar-top-links .dropdown-user {
         right: 0;
         left: 0;
     }
-}
-
-@media(max-width:500px) {
-    #hide-when-500 {
+    
+    #hide-when-700 {
         display: none;
     }
 }
