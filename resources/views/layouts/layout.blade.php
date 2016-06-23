@@ -37,10 +37,10 @@
                 <div class="top-bar">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-6 col-xs-6">
-                                <div class="top-number"><p><i class="fa fa-phone-square"></i> 13903336666 &nbsp;&nbsp;&nbsp;<i class="fa fa-mobile-phone"></i> 13903336666</p></div>
+                            <div class="col-sm-6 col-xs-6" style="padding-left: 30px;">
+                                <div class="top-number"><p><i class="fa fa-phone-square"></i> 13903336666 &nbsp;&nbsp;&nbsp;<i class="fa fa-phone-square"></i> 13903336666</p></div>
                             </div>
-                            <div class="col-sm-6 col-xs-6">
+                            <div class="col-sm-6 col-xs-6" style="padding-right: 30px;">
                                 <div class="social">
                                     <ul class="social-share">
                                         <li><a href="#"><i class="fa fa-weibo"></i></a></li>
