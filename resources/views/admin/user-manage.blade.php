@@ -32,11 +32,11 @@
                             <table class="table table-striped table-bordered table-hover" id="user-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作&nbsp;&nbsp;&nbsp;</th>
-                                        <th>用户名</th>
-                                        <th>电子邮箱</th>
-                                        <th>用户权限</th>
-                                        <th id="hide-when-500">创建日期</th>
+                                        <th class="col-lg-1">操 作</th>
+                                        <th class="col-lg-1">用户名</th>
+                                        <th class="col-lg-2" id="hide-when-700">电子邮箱</th>
+                                        <th class="col-lg-2">用户权限</th>
+                                        <th class="col-lg-2" id="hide-when-1170">创建日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,7 +50,7 @@
                                             </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
+                                        <td id="hide-when-700">{{ $user->email }}</td>
                                         <td class="center">
                                             @if ($user->role === 'N')
                                             未认证
@@ -60,7 +60,7 @@
                                             管理员
                                             @endif
                                         </td>
-                                        <td id="hide-when-500">{{ $user->created_at }}</td>
+                                        <td id="hide-when-1170">{{ $user->created_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
