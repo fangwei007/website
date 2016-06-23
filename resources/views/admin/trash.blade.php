@@ -35,8 +35,8 @@
                                         <th>操 作</th>
                                         <th>用户名</th>
                                         <th id="hide-when-1170">电子邮箱</th>
-                                        <th id="hide-when-700">用户权限</th>
-                                        <th>删除日期</th>
+                                        <th id="hide-when-1170">用户权限</th>
+                                        <th id="hide-when-360">删除日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,7 +51,7 @@
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td id="hide-when-1170">{{ $user->email }}</td>
-                                        <td class="center" id="hide-when-700">
+                                        <td class="center" id="hide-when-1170">
                                             @if ($user->role === 'N')
                                             未认证
                                             @elseif ($user->role === 'A')
@@ -60,7 +60,7 @@
                                             管理员
                                             @endif
                                         </td>
-                                        <td>{{ $user->deleted_at }}</td>
+                                        <td id="hide-when-360">{{ $user->deleted_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -101,9 +101,9 @@
                                     <tr>
                                         <th>操 作</th>
                                         <th>器材型号</th>
-                                        <th id="hide-when-700">器材简介</th>
+                                        <th id="hide-when-1170">器材简介</th>
                                         <th id="hide-when-1170">器材图片</th>
-                                        <th>删除日期</th>
+                                        <th id="hide-when-360">删除日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -116,9 +116,9 @@
                                             </div>
                                         </td>
                                         <td>{{ $item->name }}</td>
-                                        <td id="hide-when-700"">{{ $item->introduction }}</td>
+                                        <td id="hide-when-1170"">{{ $item->introduction }}</td>
                                         <td id="hide-when-1170"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
-                                        <td>{{ $item->deleted_at }}</td>
+                                        <td id="hide-when-360">{{ $item->deleted_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
