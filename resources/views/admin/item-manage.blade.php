@@ -50,7 +50,7 @@
                                             </div>
                                         </td>
                                         <td>{{ $item->name }}</td>
-                                        <td id="hide-when-1170">{{ $item->introduction }}</td>
+                                        <td id="hide-when-1170"><?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></td>
                                         <td id="hide-when-700"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
                                         <td id="hide-when-1170">{{ $item->created_at }}</td>
                                         <td id="hide-when-360"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>

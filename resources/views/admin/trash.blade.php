@@ -99,11 +99,11 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作</th>
-                                        <th>器材型号</th>
-                                        <th id="hide-when-1170">器材简介</th>
-                                        <th id="hide-when-1170">器材图片</th>
-                                        <th id="hide-when-360">删除日期</th>
+                                        <th class="col-lg-1">操 作</th>
+                                        <th class="col-lg-1">器材型号</th>
+                                        <th class="col-lg-2" id="hide-when-1170">器材简介</th>
+                                        <th class="col-lg-1" id="hide-when-1170">器材图片</th>
+                                        <th class="col-lg-2" id="hide-when-360">删除日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -116,7 +116,7 @@
                                             </div>
                                         </td>
                                         <td>{{ $item->name }}</td>
-                                        <td id="hide-when-1170"">{{ $item->introduction }}</td>
+                                        <td id="hide-when-1170"><?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></td>
                                         <td id="hide-when-1170"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
                                         <td id="hide-when-360">{{ $item->deleted_at }}</td>
                                     </tr>
