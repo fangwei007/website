@@ -125,7 +125,9 @@
                                 <button type="submit" class="btn btn-primary">确认修改</button>
                             </div>
                         </form>
+                        @if (Auth::user()->id != $user->id)
                         <div class="col-lg-8"><button class="btn btn-danger pull-right" data-toggle="modal" data-target="#confirm-delete" data-href="/admin/{{ $user->id }}/delete?r=user" style="margin-top: -50px">放入回收站</button></div>
+                        @endif
                     </div>
                 </div>
             </div>
