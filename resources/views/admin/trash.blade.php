@@ -32,11 +32,11 @@
                             <table class="table table-striped table-bordered table-hover" id="user-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                        <th>操 作</th>
                                         <th>用户名</th>
-                                        <th>电子邮箱</th>
-                                        <th>用户权限</th>
-                                        <th id="hide-when-500">删除日期</th>
+                                        <th id="hide-when-1170">电子邮箱</th>
+                                        <th id="hide-when-700">用户权限</th>
+                                        <th>删除日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,8 +50,8 @@
                                             </div>
                                         </td>
                                         <td>{{ $user->name }}</td>
-                                        <td>{{ $user->email }}</td>
-                                        <td class="center">
+                                        <td id="hide-when-1170">{{ $user->email }}</td>
+                                        <td class="center" id="hide-when-700">
                                             @if ($user->role === 'N')
                                             未认证
                                             @elseif ($user->role === 'A')
@@ -60,7 +60,7 @@
                                             管理员
                                             @endif
                                         </td>
-                                        <td id="hide-when-500">{{ $user->deleted_at }}</td>
+                                        <td>{{ $user->deleted_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -99,10 +99,10 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
-                                        <th>操 作&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                        <th>操 作</th>
                                         <th>器材型号</th>
-                                        <th id="hide-when-500">器材简介</th>
-                                        <th id="hide-when-500">器材图片</th>
+                                        <th id="hide-when-700">器材简介</th>
+                                        <th id="hide-when-1170">器材图片</th>
                                         <th>删除日期</th>
                                     </tr>
                                 </thead>
@@ -116,8 +116,8 @@
                                             </div>
                                         </td>
                                         <td>{{ $item->name }}</td>
-                                        <td id="hide-when-500"">{{ $item->introduction }}</td>
-                                        <td id="hide-when-500"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
+                                        <td id="hide-when-700"">{{ $item->introduction }}</td>
+                                        <td id="hide-when-1170"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
                                         <td>{{ $item->deleted_at }}</td>
                                     </tr>
                                     @endforeach
