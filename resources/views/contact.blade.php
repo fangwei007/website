@@ -60,15 +60,22 @@ if ($html == null) :
             <div class="col-md-4">
                 <h3>联系方式</h3>
                 <p>
-                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                    广东康盛生物科技有限公司<br>
                 </p>
-                <p><i class="fa fa-phone"></i> 
-                    <abbr title="Phone">移动电话</abbr>: (123) 456-7890</p>
-                <p><i class="fa fa-envelope-o"></i> 
-                    <abbr title="Email">电子邮件</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                <p>
+                    <i class="fa fa-phone"></i> 
+                    <abbr title="Phone">电 话</abbr>: (020)83828799
+                </p>
+                <p>
+                    <i class="fa fa-fax"></i> 
+                    <abbr title="Fax">传 真</abbr>: (020)83828797
+                </p>
+                <p>
+                    <i class="fa fa-envelope-o"></i> 
+                    <abbr title="Email">电子邮件</abbr>: <a href="mailto:sunnytech@126.com">sunnytech@126.com</a>
                 </p>
                 <p><i class="fa fa-clock-o"></i> 
-                    <abbr title="Hours">工作时间</abbr>: 星期一 至 星期五: 早上9:00 到 下午5:00</p>
+                    <abbr title="Hours">工作时间</abbr>: 星期一 至 星期五: 9:00 - 17:00</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
                         <a href="#"><i class="fa fa-weibo fa-2x"></i></a>

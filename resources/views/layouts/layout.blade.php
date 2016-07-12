@@ -38,7 +38,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6 col-xs-6" style="padding-left: 30px;">
-                                <div class="top-number"><p><i class="fa fa-phone-square"></i> 13903336666 &nbsp;&nbsp;&nbsp;<i class="fa fa-phone-square"></i> 13903336666</p></div>
+                                <div class="top-number"><p><i class="fa fa-phone-square"></i> (020)83828799 &nbsp;&nbsp;&nbsp;<i class="fa fa-fax"></i> (020)83828797</p></div>
                             </div>
                             <div class="col-sm-6 col-xs-6" style="padding-right: 30px;">
                                 <div class="social">
@@ -113,7 +113,7 @@
             <footer>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Copyright &copy; 新网站 方方 2016</p>
+                        <p>Copyright &copy; 广东康盛生物科技有限公司 2016</p>
                     </div>
                 </div>
             </footer>

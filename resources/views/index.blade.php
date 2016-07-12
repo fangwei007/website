@@ -119,14 +119,12 @@ if ($html == null) :
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">
-                    Welcome to Modern Business
-                </h1>
+                <h2 class="page-header">独家代理</h2>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
+                        <h4><i class="fa fa-fw fa-medkit"></i> 德国 Pro-Med 手术器械</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -137,7 +135,7 @@ if ($html == null) :
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+                        <h4><i class="fa fa-fw fa-eye"></i> 美国 SurgiTel 放大镜、头灯摄像系统</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -148,7 +146,7 @@ if ($html == null) :
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                        <h4><i class="fa fa-fw fa-flask"></i> 诊断试剂</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -163,7 +161,7 @@ if ($html == null) :
         <link href="/css/home-effects.css" rel="stylesheet">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">新仪器展示</h2>
+                <h2 class="page-header">仪器展示</h2>
             </div>
             @foreach ($items as $item)
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
@@ -182,20 +180,13 @@ if ($html == null) :
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Modern Business Features</h2>
+                <h2 class="page-header">公司简介</h2>
             </div>
-            <div class="col-md-6">
-                <p>The Modern Business template by Start Bootstrap includes:</p>
-                <ul>
-                    <li><strong>Bootstrap v3.2.0</strong>
-                    </li>
-                    <li>jQuery v1.11.0</li>
-                    <li>Font Awesome v4.1.0</li>
-                    <li>Working PHP contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
-                    <li>17 HTML pages</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+            <div class="col-md-6" style="text-indent:2em;">
+                <p>广东康盛生物科技有限公司创建于2003年12月，是经过广东省工商行政管理局及广东省食品药品监督局正式批准注册的集生物技术产品及医疗产品推广、应用、销售和服务于一身的专业化公司。</p>
+                <p>广东康盛生物科技有限公司以向医疗机构提供行业内顶级品牌的医疗器械产品为己任，康盛人以“认真做好每一件事” 的朴素理念让这些高端的医疗产品通过细致专业的服务使医疗机构及患者享受到高新技术的进步给人类带来的福祉。</p>
+                <p>我们把专注的医学道德精神融汇于医疗产品技术推广的全过程，并以高素质专业化的理念建设公司队伍。公司不断提高人员素质赴生产厂家进行相应的产品培训，以获得最新技术和资讯与国际国内接轨。</p>
+                <p>我们是德国Pro-Med Instrumente GmbH 外科手术器械及显微器械产品在中国地区的唯一总代理；我们是美国GSC公司SurgiTel手术放大镜、手术头灯及手术摄像系统产品在华中南区七省代理商；我们为客户提供如下诊断试剂：分子生物学实验室的病毒核酸检测、感染性疾病检测、肿瘤基因突变、耐药基因突变及优生优育检测等项目；荧光原位杂交FISH试剂；临床输血基因分型、器官移植、骨髓移植基因配型和临床研究用分子生物学相关项目；移植免疫药物浓度监测及临床生化试剂等项目。</p>
             </div>
             <div class="col-md-6">
                 <img class="img-responsive" src="http://placehold.it/700x450" alt="">
@@ -209,10 +200,10 @@ if ($html == null) :
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                    <p style="text-indent:2em;"><strong>致力于寻求技术领先、 质量上乘的医疗产品，并将之推广至医疗机构和广大患者。公司自成立以来，这些信念和追求从未停止过……</strong></p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+                    <a class="btn btn-lg btn-default btn-block" href="/contact">联系我们</a>
                 </div>
             </div>
         </div>
