@@ -37,7 +37,7 @@
     position: relative;
     font-size: 17px;
     padding: 10px;
-    background: #777;//#337ab7;//rgba(0, 0, 0, 0.6);
+    background: rgba(0,0,0,.5);//#337ab7;//rgba(0, 0, 0, 0.6);
     -webkit-transform: translateY(45px);
     -ms-transform: translateY(45px);
     transform: translateY(45px);

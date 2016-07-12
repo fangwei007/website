@@ -42,7 +42,7 @@ if ($html == null) :
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active fill" style="background-image: url(http://placehold.it/1400x730)">
+            <div class="item active fill" style="background-image: url(/images/slider/slide1.png)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
@@ -63,7 +63,7 @@ if ($html == null) :
                 </div>
             </div><!--/.item-->
 
-            <div class="item fill" style="background-image: url(http://placehold.it/1400x730)">
+            <div class="item fill" style="background-image: url(/images/slider/slide3.png)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
@@ -84,7 +84,7 @@ if ($html == null) :
                 </div>
             </div><!--/.item-->
 
-            <div class="item fill" style="background-image: url(http://placehold.it/1400x730)">
+            <div class="item fill" style="background-image: url(/images/slider/slide2.png)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
@@ -170,7 +170,7 @@ if ($html == null) :
                 <div class="hovereffect">
                     <img class="img-responsive" src="{{ $item->image }}" alt="">
                     <div class="overlay">
-                        <h2>型号：{{ $item->name }}</h2>
+                        <h2>{{ $item->name }}</h2>
                         <p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>
                     </div>
                 </div>

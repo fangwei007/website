@@ -279,7 +279,7 @@ footer {
     display: block;
     position: relative;
     max-width: none;
-    width: calc(100% + 20px);
+    width: calc(100.1% + 20px);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: translate3d(-10px,0,0);
@@ -296,6 +296,7 @@ footer {
 }
 
 .hovereffect h2 {
+    margin-top: 10px;
     text-transform: uppercase;
     color: #4e4e4e;
     text-align: center;
