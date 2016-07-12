@@ -252,6 +252,8 @@ footer {
 .page-container {
     background-color: white;
     width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .hovereffect {
