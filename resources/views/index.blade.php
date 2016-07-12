@@ -63,7 +63,7 @@ if ($html == null) :
                 </div>
             </div><!--/.item-->
 
-            <div class="item fill" style="background-image: url(/images/slider/slide3.png)">
+            <div class="item fill" style="background-image: url(/images/slider/slide2.png)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
@@ -84,7 +84,7 @@ if ($html == null) :
                 </div>
             </div><!--/.item-->
 
-            <div class="item fill" style="background-image: url(/images/slider/slide2.png)">
+            <div class="item fill" style="background-image: url(/images/slider/slide3.png)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
@@ -135,7 +135,7 @@ if ($html == null) :
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-eye"></i> 美国 SurgiTel 放大镜、头灯摄像系统</h4>
+                        <h4><i class="fa fa-fw fa-eye"></i> 美国 SurgiTel 光学设备</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
