@@ -124,7 +124,7 @@ if ($html == null) :
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-medkit"></i> 德国 Pro-Med 手术器械</h4>
+                        <h4><i class="fa fa-fw fa-medkit"></i> 德国 Pro-Med </h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -135,7 +135,7 @@ if ($html == null) :
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-eye"></i> 美国 SurgiTel 光学设备</h4>
+                        <h4><i class="fa fa-fw fa-eye"></i> 美国 SurgiTel </h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
@@ -200,7 +200,7 @@ if ($html == null) :
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
-                    <p style="text-indent:2em;"><strong>致力于寻求技术领先、 质量上乘的医疗产品，并将之推广至医疗机构和广大患者。公司自成立以来，这些信念和追求从未停止过……</strong></p>
+                    <p style="text-indent:2em;"><strong>致力于寻求技术领先、 质量上乘的医疗产品，并将之推广至医疗机构和广大患者，是公司始终秉承的信念和追求！</strong></p>
                 </div>
                 <div class="col-md-4">
                     <a class="btn btn-lg btn-default btn-block" href="/contact">联系我们</a>

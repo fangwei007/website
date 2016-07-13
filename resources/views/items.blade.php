@@ -62,27 +62,63 @@ if ($html == null) :
                     <!-- /.input-group -->
                 </div>
             </form>
+
+            <div class="panel-body col-md-8">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#home" data-toggle="tab">全 部</a>
+                    </li>
+                    <li>
+                        <a href="#home" data-toggle="tab">德国 Pro-Med</a>
+                    </li>
+                    <li>
+                        <a href="#profile" data-toggle="tab">美国 SurgiTel </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        @if (count($items) > 0)
-        <!-- Projects Row -->
+        <!-- Content Row -->
         <div class="row">
-            @foreach ($items as $item)
-            <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="{{ $item->image }}" alt="">
-                    <div class="overlay">
-                        <a href="/items/{{ $item->id }}">
-                            <h2>{{ $item->name }}</h2>
-                            <p>简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . '...' : $item->introduction; ?></p>
-                        </a>
-                    </div>
-
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="index.html" class="list-group-item">基 础</a>
+                    <a href="about.html" class="list-group-item">心胸外</a>
+                    <a href="services.html" class="list-group-item">普 外</a>
+                    <a href="contact.html" class="list-group-item">耳鼻喉</a>
+                    <a href="portfolio-1-col.html" class="list-group-item">骨科及显微</a>
+                    <a href="portfolio-2-col.html" class="list-group-item">2 Column Portfolio</a>
                 </div>
             </div>
-            @endforeach
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+
+                @if (count($items) > 0)
+                <!-- Projects Row -->
+                <div class="row">
+                    @foreach ($items as $item)
+                    <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="{{ $item->image }}" alt="">
+                            <div class="overlay">
+                                <a href="/items/{{ $item->id }}">
+                                    <h2>{{ $item->name }}</h2>
+                                    <p>简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . '...' : $item->introduction; ?></p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <!-- /.row -->
+            </div>
         </div>
         <!-- /.row -->
+
         @if($items->total() > 6) <hr> @endif
 
         <!-- Pagination -->
