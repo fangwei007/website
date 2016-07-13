@@ -84,12 +84,11 @@ if ($html == null) :
             <!-- Sidebar Column -->
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="index.html" class="list-group-item">基 础</a>
-                    <a href="about.html" class="list-group-item">心胸外</a>
-                    <a href="services.html" class="list-group-item">普 外</a>
-                    <a href="contact.html" class="list-group-item">耳鼻喉</a>
-                    <a href="portfolio-1-col.html" class="list-group-item">骨科及显微</a>
-                    <a href="portfolio-2-col.html" class="list-group-item">2 Column Portfolio</a>
+                    <a href="#" class="list-group-item">基 础</a>
+                    <a href="#" class="list-group-item">心胸外</a>
+                    <a href="#" class="list-group-item">普 外</a>
+                    <a href="#" class="list-group-item">耳鼻喉</a>
+                    <a href="#" class="list-group-item">骨科及显微</a>
                 </div>
             </div>
             <!-- Content Column -->
