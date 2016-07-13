@@ -75,7 +75,7 @@ if ($html == null) :
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "USA") echo "active"; ?>">
                         <a href="/items?company=USA">美国 SurgiTel </a>
                     </li>
-                    <li class="<?php ?>">
+                    <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "other") echo "active"; ?>">
                         <a href="/items?company=other">诊断试剂 </a>
                     </li>
                 </ul>
