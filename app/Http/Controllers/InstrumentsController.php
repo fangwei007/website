@@ -28,12 +28,15 @@ class InstrumentsController extends Controller {
      * @return Response
      */
     public function index() {
-        if (isset($_GET['q']) && !empty($_GET['q'])) {
-            $name = $_GET['q'];
+        $query = request()->all();
+        if (key_exists('q', $query)) {
+            $name = $query['q'];
             $instruments = Instruments::where('name', $name)->orWhere('name', 'like', '%' . $name . '%')->paginate(9)->appends(['q' => $name]);
         } else {
-            $instruments = Instruments::where('deleted_at', NULL)->paginate(9);
-        }
+            unset($query['page']);
+            $query['deleted_at'] = NULL;
+            $instruments = Instruments::where($query)->paginate(9)->appends($query);
+        } 
         return view('items', ['items' => $instruments]);
     }
 
@@ -56,13 +59,17 @@ class InstrumentsController extends Controller {
         $validator = Validator::make($request->all(), [
                     'item-name' => "required|unique:instruments,name",
                     'item-introduction' => "required",
-                    'item-image' => "required|image"
+                    'item-image' => "required|image",
+                    'item-company' => "required",
+                    'item-type' => "required",
                         ], [
                     'item-name.unique' => "器材型号重复，请重试。",
                     'item-name.required' => "请填写器材型号。",
                     'item-introduction.required' => "请填写器材简介。",
                     'item-image.required' => "请上传合适的图片。",
                     'item-image.image' => "非法图片格式，请重试。",
+                    'item-company.required' => "请选择公司。",
+                    'item-type.required' => "请选择类型。",
         ]);
 
         if ($validator->fails()) {
@@ -75,7 +82,9 @@ class InstrumentsController extends Controller {
             $data = [
                 'name' => $request->input('item-name'),
                 'introduction' => $request->input('item-introduction'),
-                'image' => "/uploads/" . $request->input('item-name') . '/' . $filename
+                'image' => "/uploads/" . $request->input('item-name') . '/' . $filename,
+                'company' => $request->input('item-company'),
+                'type' => $request->input('item-type'),
             ];
 
             Instruments::create($data);
@@ -120,11 +129,15 @@ class InstrumentsController extends Controller {
     public function update(Request $request, $id) {
         $validator = Validator::make($request->all(), [
                     'item-name' => "required|unique:instruments,name,$id,id",
-                    'item-introduction' => "required"
+                    'item-introduction' => "required",
+                    'item-company' => "required",
+                    'item-type' => "required",
                         ], [
                     'item-name.unique' => "器材型号重复，请重试。",
                     'item-name.required' => "请填写器材型号。",
                     'item-introduction.required' => "请填写器材简介。",
+                    'item-company.required' => "请选择公司。",
+                    'item-type.required' => "请选择类型。",
         ]);
 
         if ($validator->fails()) {
@@ -133,6 +146,8 @@ class InstrumentsController extends Controller {
             $data = [
                 'name' => $request->input('item-name'),
                 'introduction' => $request->input('item-introduction'),
+                'company' => $request->input('item-company'),
+                'type' => $request->input('item-type'),
             ];
 
             if ($request->hasFile('item-image')) {
@@ -145,7 +160,7 @@ class InstrumentsController extends Controller {
             Instruments::where('id', $id)->update($data);
             // redirect
             Session::flash('message', "更新成功!");
-            return redirect()->back();
+            return redirect("/items/$id/edit");
         }
     }
 

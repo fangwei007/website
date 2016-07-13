@@ -37,7 +37,7 @@
                             <div class="form-group{{ $errors->has('item-name') ? ' has-error' : '' }}">
                                 <label class="control-label">器材型号</label>
                                 <input class="form-control" type="text" name="item-name" value="{{ $item->name }}" />
-                                
+
                                 @if ($errors->has('item-name'))
                                 <span class="help-block">
                                     {{ $errors->first('item-name') }}
@@ -48,7 +48,7 @@
                             <div class="form-group{{ $errors->has('item-introduction') ? ' has-error' : '' }}">
                                 <label class="control-label">器材简介</label>
                                 <textarea class="form-control" name="item-introduction" rows="15">{{ $item->introduction }}</textarea>
-                                
+
                                 @if ($errors->has('item-introduction'))
                                 <span class="help-block">
                                     {{ $errors->first('item-introduction') }}
@@ -65,13 +65,87 @@
                                     <i class="fa fa-link"></i> 添加图片
                                 </label>
                                 <span class='label label-success' id="upload-file-info"></span>
-                                
+
                                 @if ($errors->has('item-image'))
                                 <span class="help-block">
                                     {{ $errors->first('item-image') }}
                                 </span>
                                 @endif
                             </div>
+
+                            <div class="form-group{{ $errors->has('item-company') ? ' has-error' : '' }}">
+                                <label class="control-label">所属公司</label>
+                                <select class="form-control" style="max-width: 300px;" name="item-company" id="item-company">
+                                    <option value="Germany" <?php if ($item->company == "Germany") echo 'selected'; ?>>德国 Pro-Med</option>
+                                    <option value="USA" <?php if ($item->company == "USA") echo 'selected'; ?>>美国 SurgiTel</option>
+                                    <option value="other" <?php if ($item->company == "other") echo 'selected'; ?>>诊断试剂</option>
+                                </select>
+
+                                @if ($errors->has('item-company'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-company') }}
+                                </span>
+                                @endif
+                            </div>
+
+                            @if ($item->company == "Germany")
+                            <div class="form-group{{ $errors->has('item-type') ? ' has-error' : '' }}">
+                                <label class="control-label">仪器类型</label>
+                                <select class="form-control" style="max-width: 300px;" name="item-type" id="my-select">
+                                    <option value="jc" id="Germany-type" <?php if ($item->type == "jc") echo 'selected'; ?>>基 础</option>
+                                    <option value="xxw" id="Germany-type" <?php if ($item->type == "xxw") echo 'selected'; ?>>心胸外</option>
+                                    <option value="pw" id="Germany-type" <?php if ($item->type == "pw") echo 'selected'; ?>>普 外</option>
+                                    <option value="ebh" id="Germany-type" <?php if ($item->type == "ebh") echo 'selected'; ?>>耳鼻喉</option>
+                                    <option value="gkxw" id="Germany-type" <?php if ($item->type == "gkxw") echo 'selected'; ?>>骨科及显微</option>
+                                    <option value="ssfdj" id="USA-type" style="display: none;">手术放大镜</option>
+                                    <option value="zdsj" id="zdsj-type" style="display: none;">诊断试剂</option>
+                                </select>
+
+                                @if ($errors->has('item-type'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-type') }}
+                                </span>
+                                @endif
+                            </div>
+                            @elseif ($item->company == "USA")
+                            <div class="form-group{{ $errors->has('item-type') ? ' has-error' : '' }}">
+                                <label class="control-label">仪器类型</label>
+                                <select class="form-control" style="max-width: 300px;" name="item-type" id="my-select">
+                                    <option value="jc" id="Germany-type" style="display: none;" >基 础</option>
+                                    <option value="xxw" id="Germany-type" style="display: none;" >心胸外</option>
+                                    <option value="pw" id="Germany-type" style="display: none;" >普 外</option>
+                                    <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉</option>
+                                    <option value="gkxw" id="Germany-type" style="display: none;" >骨科及显微</option>
+                                    <option value="ssfdj" id="USA-type" <?php if ($item->type == "ssfdj") echo 'selected'; ?>>手术放大镜</option>
+                                    <option value="zdsj" id="zdsj-type" style="display: none;">诊断试剂</option>
+                                </select>
+
+                                @if ($errors->has('item-type'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-type') }}
+                                </span>
+                                @endif
+                            </div>
+                            @else
+                            <div class="form-group{{ $errors->has('item-type') ? ' has-error' : '' }}">
+                                <label class="control-label">仪器类型</label>
+                                <select class="form-control" style="max-width: 300px;" name="item-type" id="my-select">
+                                    <option value="jc" id="Germany-type" style="display: none;" >基 础</option>
+                                    <option value="xxw" id="Germany-type" style="display: none;" >心胸外</option>
+                                    <option value="pw" id="Germany-type" style="display: none;" >普 外</option>
+                                    <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉</option>
+                                    <option value="gkxw" id="Germany-type" style="display: none;" >骨科及显微</option>
+                                    <option value="ssfdj" id="USA-type" style="display: none;">手术放大镜</option>
+                                    <option value="zdsj" id="zdsj-type" <?php if ($item->type == "zdsj") echo 'selected'; ?>>诊断试剂</option>
+                                </select>
+
+                                @if ($errors->has('item-type'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-type') }}
+                                </span>
+                                @endif
+                            </div>
+                            @endif
 
                             <div class="form-group">
                                 <label class="control-label">添加时间 </label>

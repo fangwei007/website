@@ -52,7 +52,7 @@ if ($html == null) :
         <!-- Blog Search Well -->
         <div class="row">
             <form  class="form-horizontal" role="form" method="get" action="{{ url('/items') }}">
-                <div class="col-md-4" style="padding: 15px; margin-bottom: 30px;">
+                <div class="col-md-3" style="padding: 15px; margin-bottom: 30px;">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="搜索仪器" name="q">
                         <span class="input-group-btn">
@@ -63,17 +63,20 @@ if ($html == null) :
                 </div>
             </form>
 
-            <div class="panel-body col-md-8">
+            <div class="panel-body col-md-9" id="tabs">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
-                    <li class="active">
-                        <a href="#home" data-toggle="tab">全 部</a>
+                    <li class="<?php if (!isset($_GET['company'])) echo "active"; ?>">
+                        <a href="/items">全 部</a>
                     </li>
-                    <li>
-                        <a href="#home" data-toggle="tab">德国 Pro-Med</a>
+                    <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "Germany") echo "active"; ?>">
+                        <a href="/items?company=Germany">德国 Pro-Med</a>
                     </li>
-                    <li>
-                        <a href="#profile" data-toggle="tab">美国 SurgiTel </a>
+                    <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "USA") echo "active"; ?>">
+                        <a href="/items?company=USA">美国 SurgiTel </a>
+                    </li>
+                    <li class="<?php ?>">
+                        <a href="/items?company=other">诊断试剂 </a>
                     </li>
                 </ul>
             </div>
@@ -82,19 +85,43 @@ if ($html == null) :
         <!-- Content Row -->
         <div class="row">
             <!-- Sidebar Column -->
-            <div class="col-md-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item">基 础</a>
-                    <a href="#" class="list-group-item">心胸外</a>
-                    <a href="#" class="list-group-item">普 外</a>
-                    <a href="#" class="list-group-item">耳鼻喉</a>
-                    <a href="#" class="list-group-item">骨科及显微</a>
+            <?php if (isset($_GET['company']) && $_GET['company'] == "Germany"): ?>
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基 础</a>
+                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心胸外</a>
+                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普 外</a>
+                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉</a>
+                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨科及显微</a>
+                    </div>
                 </div>
-            </div>
+            <?php elseif (isset($_GET['company']) && $_GET['company'] == "USA"): ?>
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="/items?company=USA&type=ssfdj" class="list-group-item">手术放大镜</a>
+                    </div>
+                </div>
+             <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="/items?company=other&type=zdsj" class="list-group-item">诊断试剂</a>
+                    </div>
+                </div>
+            <?php else : ?>
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基 础</a>
+                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心胸外</a>
+                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普 外</a>
+                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉</a>
+                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨科及显微</a>
+                        <a href="/items?company=USA&type=ssfdj" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ssfdj') echo 'active' ?>">手术放大镜</a>
+                    </div>
+                </div>
+            <?php endif; ?>
+
             <!-- Content Column -->
             <div class="col-md-9">
-
-
                 @if (count($items) > 0)
                 <!-- Projects Row -->
                 <div class="row">
@@ -105,7 +132,7 @@ if ($html == null) :
                             <div class="overlay">
                                 <a href="/items/{{ $item->id }}">
                                     <h2>{{ $item->name }}</h2>
-                                    <p>简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . '...' : $item->introduction; ?></p>
+                                    <p>简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 30, 'UTF-8') . '...' : $item->introduction; ?></p>
                                 </a>
                             </div>
 

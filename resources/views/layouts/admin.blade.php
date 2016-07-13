@@ -19,7 +19,7 @@
 
         <!-- Timeline CSS -->
         <link href="/dist/css/timeline.css" rel="stylesheet">
-        
+
         <!-- Custom Fonts -->
         <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -43,7 +43,7 @@
     <body style="background-image: url('/images/patterns/straws.png')">
 
         @yield('content')
-        
+
         <!-- jQuery -->
         <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -83,7 +83,40 @@
             $("[data-toggle=popover]")
                     .popover()
         </script>
-        
+        <script type="text/javascript">
+            var elem = document.getElementById("item-company");
+            elem.onchange = function () {
+                if (this.value == "Germany") {
+                    $("#my-select option[value='jc']").prop('selected', true);
+                    $("#my-select option[value='jc']").show();
+                    $("#my-select option[value='xxw']").show();
+                    $("#my-select option[value='pw']").show();
+                    $("#my-select option[value='ebh']").show();
+                    $("#my-select option[value='gkxw']").show();
+                    $("#my-select option[value='ssfdj']").hide();
+                    $("#my-select option[value='zdsj']").hide();
+                } else if (this.value == "USA") {
+                    $("#my-select option[value='ssfdj']").prop('selected', true);
+                    $("#my-select option[value='jc']").hide();
+                    $("#my-select option[value='xxw']").hide();
+                    $("#my-select option[value='pw']").hide();
+                    $("#my-select option[value='ebh']").hide();
+                    $("#my-select option[value='gkxw']").hide();
+                    $("#my-select option[value='ssfdj']").show();
+                    $("#my-select option[value='zdsj']").hide();
+                } else {
+                    $("#my-select option[value='zdsj']").prop('selected', true);
+                    $("#my-select option[value='jc']").hide();
+                    $("#my-select option[value='xxw']").hide();
+                    $("#my-select option[value='pw']").hide();
+                    $("#my-select option[value='ebh']").hide();
+                    $("#my-select option[value='gkxw']").hide();
+                    $("#my-select option[value='ssfdj']").hide();
+                    $("#my-select option[value='zdsj']").show();
+                }
+            };
+        </script>
+
         @include('modals')
     </body>
 
