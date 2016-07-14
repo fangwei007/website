@@ -45,7 +45,7 @@ if ($html == null) :
                     <li><a href="/items">仪器设备</a></li>
                     <li class="active">{{ $item->name }}</li>
                     @if (Auth::user()->role == 'V')
-                    <a class="pull-right" href="/items/{{ $item->id }}/edit"> <i class="fa fa-pencil"></i>编辑此仪器 </a>
+                    <a class="pull-right" href="/items/{{ $item->id }}/edit"> <i class="fa fa-edit"></i>编 辑 </a>
                     @endif
                 </ol>
 

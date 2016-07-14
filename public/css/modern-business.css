@@ -247,6 +247,16 @@ footer {
         width: 14px;
         height: 14px;
     }
+    
+    .breadcrumb {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:365px) {
+    .breadcrumb {
+        font-size: 9px;
+    }
 }
 
 .page-container {
