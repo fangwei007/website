@@ -128,7 +128,7 @@ if ($html == null) :
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="/items?company=Germany" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@ if ($html == null) :
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="/items?company=USA" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@ if ($html == null) :
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="/items?company=other" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
             </div>
