@@ -115,7 +115,8 @@ if ($html == null) :
                         <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普 外</a>
                         <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉</a>
                         <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨科及显微</a>
-                        <a href="/items?company=USA&type=ssfdj" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ssfdj') echo 'active' ?>">手术放大镜</a>
+                        <a href="/items?company=USA&type=ssfdj" class="list-group-item">手术放大镜</a>
+                        <a href="/items?company=other&type=zdsj" class="list-group-item">诊断试剂</a>
                     </div>
                 </div>
             <?php endif; ?>
