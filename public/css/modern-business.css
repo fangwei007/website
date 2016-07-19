@@ -38,6 +38,43 @@ body.boxed .body {
     height: auto;
 }
 
+/* change color from #337ab7 to #009eae */
+a {
+    color: #009eae;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #009eae;
+    border-color: #009eae;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #009eae;
+}
+
+.btn-link {
+    color: #009eae;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #009eae;
+    border-color: #009eae;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #ccc;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #ccc; 
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #009eae;
+    border-color: #009eae;
+}
+/* -------------------------------- */
+
 .img-portfolio {
     margin-bottom: 30px;
 }
@@ -120,9 +157,9 @@ footer {
 .carousel-indicators .active{
     width: 20px;
     height: 20px;
-    background-color: #337ab7;
+    background-color: #009eae;
     margin: 0 15px 0 0;
-    border: 1px solid #337ab7;
+    border: 1px solid #009eae;
     position: relative;
 }
 
@@ -132,14 +169,14 @@ footer {
     width: 24px;
     height: 24px;
     border-radius: 100%;
-    background: #337ab7;
-    border: 1px solid #337ab7;
+    background: #009eae;
+    border: 1px solid #009eae;
     left: -3px;
     top: -3px;
 }
 
 /*.carousel-inner h1 {
-    color: #337ab7;
+    color: #009eae;
 }
 
 .carousel-inner h2 {
@@ -159,6 +196,10 @@ footer {
 
 .carousel .slide-margin{
     margin-top: 0px;
+}
+
+.navbar-brand>img {
+        margin-top: -10px;
 }
 
 /* Responsive Styles */
@@ -197,6 +238,15 @@ footer {
     .carousel-indicators .active:after {
         width: 20px;
         height: 20px;
+    }
+
+    .navbar-collapse {
+        margin-top: 25px;
+        width: 105%;
+    }
+
+    .navbar-brand>img {
+        margin-bottom: 10px;
     }
 }
 
@@ -247,9 +297,14 @@ footer {
         width: 14px;
         height: 14px;
     }
-    
+
     .breadcrumb {
         font-size: 12px;
+    }
+
+    .navbar-brand>img {
+        margin-top: 0;
+        width: 215px;
     }
 }
 
@@ -274,7 +329,7 @@ footer {
     position: relative;
     text-align: center;
     cursor: default;
-    background: #337ab7;
+    background: #009eae;
 }
 
 .hovereffect .overlay {
