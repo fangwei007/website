@@ -309,6 +309,9 @@ footer {
 }
 
 @media(max-width:365px) {
+    .top-bar {
+        margin-bottom: -50px;
+    }
     .breadcrumb {
         font-size: 9px;
     }
