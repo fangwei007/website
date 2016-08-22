@@ -190,6 +190,8 @@ if ($html == null) :
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                 </div>
+                @else
+                <img class="img-responsive" src="{{ $item->image }}" />
                 @endif
             </div>
 
