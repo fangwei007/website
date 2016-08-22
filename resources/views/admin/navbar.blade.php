@@ -56,7 +56,7 @@
                 <li>
                     <a href="/msg-manage"><i class="fa fa-envelope-o fa-fw"></i> 留言管理</a>
                 </li>
-                <li>
+<!--                <li>
                     <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
@@ -66,8 +66,8 @@
                             <a href="#">Login Page</a>
                         </li>
                     </ul>
-                    <!-- /.nav-second-level -->
-                </li>
+                     /.nav-second-level 
+                </li>-->
                 <li>
                     <a href="/trash"><i class="fa fa-trash-o fa-fw"></i> 回收站</a>
                 </li>
