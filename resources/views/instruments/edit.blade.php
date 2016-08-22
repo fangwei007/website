@@ -92,11 +92,11 @@
                             <div class="form-group{{ $errors->has('item-type') ? ' has-error' : '' }}">
                                 <label class="control-label">仪器类型</label>
                                 <select class="form-control" style="max-width: 300px;" name="item-type" id="my-select">
-                                    <option value="jc" id="Germany-type" <?php if ($item->type == "jc") echo 'selected'; ?>>基 础</option>
-                                    <option value="xxw" id="Germany-type" <?php if ($item->type == "xxw") echo 'selected'; ?>>心胸外</option>
-                                    <option value="pw" id="Germany-type" <?php if ($item->type == "pw") echo 'selected'; ?>>普 外</option>
-                                    <option value="ebh" id="Germany-type" <?php if ($item->type == "ebh") echo 'selected'; ?>>耳鼻喉</option>
-                                    <option value="gkxw" id="Germany-type" <?php if ($item->type == "gkxw") echo 'selected'; ?>>骨科及显微</option>
+                                    <option value="jc" id="Germany-type" <?php if ($item->type == "jc") echo 'selected'; ?>>基础外科器械</option>
+                                    <option value="xxw" id="Germany-type" <?php if ($item->type == "xxw") echo 'selected'; ?>>心血管及胸外科</option>
+                                    <option value="pw" id="Germany-type" <?php if ($item->type == "pw") echo 'selected'; ?>>普通外科</option>
+                                    <option value="ebh" id="Germany-type" <?php if ($item->type == "ebh") echo 'selected'; ?>>耳鼻喉外科</option>
+                                    <option value="gkxw" id="Germany-type" <?php if ($item->type == "gkxw") echo 'selected'; ?>>骨外科神经外科及显微外科</option>
                                     <option value="ssfdj" id="USA-type" style="display: none;">手术放大镜</option>
                                     <option value="zdsj" id="zdsj-type" style="display: none;">诊断试剂</option>
                                 </select>
@@ -111,11 +111,11 @@
                             <div class="form-group{{ $errors->has('item-type') ? ' has-error' : '' }}">
                                 <label class="control-label">仪器类型</label>
                                 <select class="form-control" style="max-width: 300px;" name="item-type" id="my-select">
-                                    <option value="jc" id="Germany-type" style="display: none;" >基 础</option>
-                                    <option value="xxw" id="Germany-type" style="display: none;" >心胸外</option>
-                                    <option value="pw" id="Germany-type" style="display: none;" >普 外</option>
-                                    <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉</option>
-                                    <option value="gkxw" id="Germany-type" style="display: none;" >骨科及显微</option>
+                                    <option value="jc" id="Germany-type" style="display: none;" >基础外科器械</option>
+                                    <option value="xxw" id="Germany-type" style="display: none;" >心血管及胸外科</option>
+                                    <option value="pw" id="Germany-type" style="display: none;" >普通外科</option>
+                                    <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉外科</option>
+                                    <option value="gkxw" id="Germany-type" style="display: none;" >骨外科神经外科及显微外科</option>
                                     <option value="ssfdj" id="USA-type" <?php if ($item->type == "ssfdj") echo 'selected'; ?>>手术放大镜</option>
                                     <option value="zdsj" id="zdsj-type" style="display: none;">诊断试剂</option>
                                 </select>
@@ -130,11 +130,11 @@
                             <div class="form-group{{ $errors->has('item-type') ? ' has-error' : '' }}">
                                 <label class="control-label">仪器类型</label>
                                 <select class="form-control" style="max-width: 300px;" name="item-type" id="my-select">
-                                    <option value="jc" id="Germany-type" style="display: none;" >基 础</option>
-                                    <option value="xxw" id="Germany-type" style="display: none;" >心胸外</option>
-                                    <option value="pw" id="Germany-type" style="display: none;" >普 外</option>
-                                    <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉</option>
-                                    <option value="gkxw" id="Germany-type" style="display: none;" >骨科及显微</option>
+                                    <option value="jc" id="Germany-type" style="display: none;" >基础外科器械</option>
+                                    <option value="xxw" id="Germany-type" style="display: none;" >心血管及胸外科</option>
+                                    <option value="pw" id="Germany-type" style="display: none;" >普通外科</option>
+                                    <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉外科</option>
+                                    <option value="gkxw" id="Germany-type" style="display: none;" >骨外科神经外科及显微外科</option>
                                     <option value="ssfdj" id="USA-type" style="display: none;">手术放大镜</option>
                                     <option value="zdsj" id="zdsj-type" <?php if ($item->type == "zdsj") echo 'selected'; ?>>诊断试剂</option>
                                 </select>

@@ -54,7 +54,7 @@ if ($html == null) :
             <form  class="form-horizontal" role="form" method="get" action="{{ url('/items') }}">
                 <div class="col-md-3" style="padding: 15px; margin-bottom: 30px;">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="搜索仪器" name="q">
+                        <input type="text" class="form-control" placeholder="搜索产品" name="q">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                         </span>
@@ -88,17 +88,20 @@ if ($html == null) :
             <?php if (isset($_GET['company']) && $_GET['company'] == "Germany"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基 础</a>
-                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心胸外</a>
-                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普 外</a>
-                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉</a>
-                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨科及显微</a>
+                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
+                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
+                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
+                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
+                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
                     </div>
                 </div>
             <?php elseif (isset($_GET['company']) && $_GET['company'] == "USA"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
                         <a href="/items?company=USA&type=ssfdj" class="list-group-item">手术放大镜</a>
+                        <a href="/items?company=USA&type=sstd" class="list-group-item">手术头灯</a>
+                        <a href="/items?company=USA&type=yjdbh" class="list-group-item">眼镜的保护</a>
+                        <a href="/items?company=USA&type=sssxxt" class="list-group-item">手术摄像系统</a>
                     </div>
                 </div>
              <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>
@@ -110,11 +113,11 @@ if ($html == null) :
             <?php else : ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基 础</a>
-                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心胸外</a>
-                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普 外</a>
-                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉</a>
-                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨科及显微</a>
+                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
+                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
+                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
+                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
+                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
                         <a href="/items?company=USA&type=ssfdj" class="list-group-item">手术放大镜</a>
                         <a href="/items?company=other&type=zdsj" class="list-group-item">诊断试剂</a>
                     </div>
