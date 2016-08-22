@@ -102,10 +102,11 @@ class InstrumentsController extends Controller {
      */
     public function show($id) {
         $item = Instruments::where('id', $id)->first();
-        $total = Instruments::all()->where('type', $item->type)->except($id)->count();
-        if ($total < 4) $related_items = Instruments::all()->where('type', $item->type)->except($id)->random($total);
-        else $related_items = Instruments::all()->where('type', $item->type)->except($id)->random(4);
-        return view('instruments.show', ['item' => $item, 'related_items' => $related_items]);
+//        $total = Instruments::all()->where('type', $item->type)->except($id)->count();
+//        if ($total < 4) $related_items = Instruments::all()->where('type', $item->type)->except($id)->random($total);
+//        else $related_items = Instruments::all()->where('type', $item->type)->except($id)->random(4);
+//        return view('instruments.show', ['item' => $item, 'related_items' => $related_items]);
+        return view('instruments.show', ['item' => $item]);
     }
 
     /**
