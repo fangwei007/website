@@ -44,6 +44,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::post('/contact', 'ContactController@store');
+
 //Route::get('/home', 'HomeController@index');
 
 Route::get('/user-manage', 'AdminController@userManage');

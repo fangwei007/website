@@ -103,31 +103,62 @@ if ($html == null) :
         <div class="row">
             <div class="col-md-8">
                 <h3 class="page-header">在线留言</h3>
-                <form name="sentMessage" id="contactForm">
-                    <div class="control-group form-group">
+                @if (Session::has('contact-message'))
+                <div class="alert alert-info">{{ Session::get('contact-message') }}</div>
+                @endif
+                <form method="post" action="{{ url('/contact') }}">
+                    {!! csrf_field() !!}
+
+                    <div class="control-group form-group{{ $errors->has('contact-name') ? ' has-error' : '' }}">
                         <div class="controls">
                             <label>姓 名：</label>
-                            <input type="text" class="form-control" name="name" placeholder="请输入您的姓名">
-                            <p class="help-block"></p>
+                            <input type="text" class="form-control" name="contact-name" placeholder="请输入您的姓名">
                         </div>
+
+                        @if ($errors->has('contact-name'))
+                        <span class="help-block">
+                            {{ $errors->first('contact-name') }}
+                        </span>
+                        @endif
                     </div>
-                    <div class="control-group form-group">
+
+                    <div class="control-group form-group{{ $errors->has('contact-phone') ? ' has-error' : '' }}">
                         <div class="controls">
                             <label>联系电话：</label>
-                            <input type="tel" class="form-control" name="phone" placeholder="请输入您的联系电话">
+                            <input type="tel" class="form-control" name="contact-phone" placeholder="请输入您的联系电话">
                         </div>
+
+                        @if ($errors->has('contact-phone'))
+                        <span class="help-block">
+                            {{ $errors->first('contact-phone') }}
+                        </span>
+                        @endif
                     </div>
-                    <div class="control-group form-group">
+
+                    <div class="control-group form-group{{ $errors->has('contact-email') ? ' has-error' : '' }}">
                         <div class="controls">
                             <label>邮箱地址：</label>
-                            <input type="email" class="form-control" name="email" placeholder="请输入您的邮箱地址">
+                            <input type="email" class="form-control" name="contact-email" placeholder="请输入您的邮箱地址">
                         </div>
+
+                        @if ($errors->has('contact-email'))
+                        <span class="help-block">
+                            {{ $errors->first('contact-email') }}
+                        </span>
+                        @endif
                     </div>
-                    <div class="control-group form-group">
+
+                    <div class="control-group form-group{{ $errors->has('contact-message') ? ' has-error' : '' }}">
                         <div class="controls">
                             <label>留 言：</label>
-                            <textarea rows="10" cols="100" class="form-control" name="message" maxlength="999" style="resize:none"></textarea>
+                            <textarea rows="10" cols="100" class="form-control" name="contact-message" maxlength="999" style="resize:none"></textarea>
                         </div>
+
+                        @if ($errors->has('contact-message'))
+                        <span class="help-block">
+                            {{ $errors->first('contact-message') }}
+                        </span>
+                        @endif
                     </div>
                     <div id="success"></div>
                     <!-- For success/fail messages -->
