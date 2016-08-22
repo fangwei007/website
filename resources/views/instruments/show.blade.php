@@ -70,7 +70,7 @@ if ($html == null) :
             <div class="col-md-8">
                 @if ($item->company == "Germany")
                 <img class="img-responsive" src="{{ $item->image }}" />
-                @else
+                @elseif ($item->type == "sstd")
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
                     <!-- Wrapper for slides -->
@@ -95,6 +95,90 @@ if ($html == null) :
                         </div>
                         <div class="item">
                             <img class="img-responsive" src="/images/usa/6.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+                @elseif ($item->type == "yjdbh")
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive" src="{{ $item->image }}" />
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/7.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+                @elseif ($item->type == "sssxxt")
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive" src="{{ $item->image }}" />
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/8.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+                @elseif ($item->type == "ssfdj")
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img class="img-responsive" src="{{ $item->image }}" />
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/9.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/10.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/11.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/12.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/13.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/14.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/15.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="/images/usa/16.jpg" alt="">
                         </div>
                     </div>
 
