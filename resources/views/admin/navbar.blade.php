@@ -54,6 +54,9 @@
                     <a href="/item-manage"><i class="fa fa-gears fa-fw"></i> 设备管理</a>
                 </li>
                 <li>
+                    <a href="/msg-manage"><i class="fa fa-envelope-o fa-fw"></i> 留言管理</a>
+                </li>
+                <li>
                     <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>

@@ -51,3 +51,9 @@ Route::post('/contact', 'ContactController@store');
 Route::get('/user-manage', 'AdminController@userManage');
 
 Route::get('/item-manage', 'AdminController@itemManage');
+
+Route::get('/msg-manage', 'AdminController@msgManage');
+
+Route::get('/msg/{id}', 'AdminController@viewMsg');
+
+Route::post('/msg/{id}', 'AdminController@readMsg');
