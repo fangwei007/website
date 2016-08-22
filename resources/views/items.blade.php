@@ -98,10 +98,10 @@ if ($html == null) :
             <?php elseif (isset($_GET['company']) && $_GET['company'] == "USA"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=USA&type=ssfdj" class="list-group-item">手术放大镜</a>
-                        <a href="/items?company=USA&type=sstd" class="list-group-item">手术头灯</a>
-                        <a href="/items?company=USA&type=yjdbh" class="list-group-item">眼镜的保护</a>
-                        <a href="/items?company=USA&type=sssxxt" class="list-group-item">手术摄像系统</a>
+                        <a href="/items?company=USA&type=ssfdj" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ssfdj') echo 'active' ?>">手术放大镜</a>
+                        <a href="/items?company=USA&type=sstd" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sstd') echo 'active' ?>">手术头灯</a>
+                        <a href="/items?company=USA&type=yjdbh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'yjdbh') echo 'active' ?>">眼镜的保护</a>
+                        <a href="/items?company=USA&type=sssxxt" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sssxxt') echo 'active' ?>">手术摄像系统</a>
                     </div>
                 </div>
              <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>

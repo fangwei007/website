@@ -43,6 +43,17 @@ if ($html == null) :
                 <ol class="breadcrumb">
                     <li><a href="/">首 页</a></li>
                     <li><a href="/items">仪器设备</a></li>
+                    <li>
+                        <a href="/items?company={{ $item->company }}&type={{  $item->type }}">
+                            @if ($item->company == "Germany")
+                            德国 Pro-Med
+                            @elseif ($item->company == "USA")
+                            美国 SurgiTel
+                            @else
+                            诊断试剂
+                            @endif
+                        </a>
+                    </li>
                     <li class="active">{{ $item->name }}</li>
                     @if (Auth::user()->role == 'V')
                     <a class="pull-right" href="/items/{{ $item->id }}/edit"> <i class="fa fa-edit"></i>编 辑 </a>
