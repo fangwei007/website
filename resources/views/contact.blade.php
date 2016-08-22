@@ -87,12 +87,6 @@ if ($html == null) :
                     <li>
                         <a href="#"><i class="fa fa-qq fa-2x"></i></a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-apple fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-windows fa-2x"></i></a>
-                    </li>
                 </ul>
             </div>
         </div>

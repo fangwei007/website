@@ -46,8 +46,6 @@
                                         <li><a href="#"><i class="fa fa-weibo"></i></a></li>
                                         <li><a href="#"><i class="fa fa-weixin"></i></a></li>
                                         <li><a href="#"><i class="fa fa-qq"></i></a></li> 
-                                        <li><a href="#"><i class="fa fa-apple"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-windows"></i></a></li>
                                     </ul>
                                     <div class="search">
                                         <form role="form">
