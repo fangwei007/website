@@ -53,8 +53,9 @@ if ($html == null) :
         <div class="row">
             <!-- Map Column -->
             <div class="col-md-8" style="padding-left: 15px; padding-right: 15px;">
+                <img class="img-responsive" src="/images/contact.jpg" alt="">
                 <!-- Embedded Google Map -->
-                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.1237582994254!2d113.26318421344153!3d23.129151220449753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x0a9295165f14a06d!2sGuangzhou+Center!5e0!3m2!1sen!2sus!4v1466024920935"></iframe>
+                <!--<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.1237582994254!2d113.26318421344153!3d23.129151220449753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x0a9295165f14a06d!2sGuangzhou+Center!5e0!3m2!1sen!2sus!4v1466024920935"></iframe>-->
             </div>
             <!-- Contact Details Column -->
             <div class="col-md-4">
@@ -94,6 +95,46 @@ if ($html == null) :
                     </li>
                 </ul>
             </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-md-8">
+                <h3 class="page-header">在线留言</h3>
+                <form name="sentMessage" id="contactForm">
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>姓 名：</label>
+                            <input type="text" class="form-control" name="name" placeholder="请输入您的姓名">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>联系电话：</label>
+                            <input type="tel" class="form-control" name="phone" placeholder="请输入您的联系电话">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>邮箱地址：</label>
+                            <input type="email" class="form-control" name="email" placeholder="请输入您的邮箱地址">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>留 言：</label>
+                            <textarea rows="10" cols="100" class="form-control" name="message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">发送留言</button>
+                </form>
+            </div>
+
         </div>
         <!-- /.row -->
     </div>
