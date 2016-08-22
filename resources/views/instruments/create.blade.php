@@ -90,6 +90,9 @@
                                     <option value="ebh" id="Germany-type">耳鼻喉外科</option>
                                     <option value="gkxw" id="Germany-type">骨外科神经外科及显微外科</option>
                                     <option value="ssfdj" id="USA-type" style="display: none;">手术放大镜</option>
+                                    <option value="sstd" id="USA-type" style="display: none;">手术头灯</option>
+                                    <option value="yjdbh" id="USA-type" style="display: none;">眼镜的保护</option>
+                                    <option value="sssxxt" id="USA-type" style="display: none;">手术摄像系统</option>
                                     <option value="zdsj" id="zdsj-type" style="display: none;">诊断试剂</option>
                                 </select>
 
@@ -115,6 +118,9 @@
                                     $("#my-select option[value='ebh']").show();
                                     $("#my-select option[value='gkxw']").show();
                                     $("#my-select option[value='ssfdj']").hide();
+                                    $("#my-select option[value='sstd']").hide();
+                                    $("#my-select option[value='yjdbh']").hide();
+                                    $("#my-select option[value='sssxxt']").hide();
                                     $("#my-select option[value='zdsj']").hide();
                                 } else if (this.value == "USA") {
                                     $("#my-select option[value='ssfdj']").prop('selected', true);
@@ -124,6 +130,9 @@
                                     $("#my-select option[value='ebh']").hide();
                                     $("#my-select option[value='gkxw']").hide();
                                     $("#my-select option[value='ssfdj']").show();
+                                    $("#my-select option[value='sstd']").show();
+                                    $("#my-select option[value='yjdbh']").show();
+                                    $("#my-select option[value='sssxxt']").show();
                                     $("#my-select option[value='zdsj']").hide();
                                 } else {
                                     $("#my-select option[value='zdsj']").prop('selected', true);
@@ -133,6 +142,9 @@
                                     $("#my-select option[value='ebh']").hide();
                                     $("#my-select option[value='gkxw']").hide();
                                     $("#my-select option[value='ssfdj']").hide();
+                                    $("#my-select option[value='sstd']").hide();
+                                    $("#my-select option[value='yjdbh']").hide();
+                                    $("#my-select option[value='sssxxt']").hide();
                                     $("#my-select option[value='zdsj']").show();
                                 }
                             };

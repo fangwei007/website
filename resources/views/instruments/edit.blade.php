@@ -98,6 +98,9 @@
                                     <option value="ebh" id="Germany-type" <?php if ($item->type == "ebh") echo 'selected'; ?>>耳鼻喉外科</option>
                                     <option value="gkxw" id="Germany-type" <?php if ($item->type == "gkxw") echo 'selected'; ?>>骨外科神经外科及显微外科</option>
                                     <option value="ssfdj" id="USA-type" style="display: none;">手术放大镜</option>
+                                    <option value="sstd" id="USA-type" style="display: none;">手术头灯</option>
+                                    <option value="yjdbh" id="USA-type" style="display: none;">眼镜的保护</option>
+                                    <option value="sssxxt" id="USA-type" style="display: none;">手术摄像系统</option>
                                     <option value="zdsj" id="zdsj-type" style="display: none;">诊断试剂</option>
                                 </select>
 
@@ -117,6 +120,9 @@
                                     <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉外科</option>
                                     <option value="gkxw" id="Germany-type" style="display: none;" >骨外科神经外科及显微外科</option>
                                     <option value="ssfdj" id="USA-type" <?php if ($item->type == "ssfdj") echo 'selected'; ?>>手术放大镜</option>
+                                    <option value="sstd" id="USA-type" <?php if ($item->type == "sstd") echo 'selected'; ?>>手术头灯</option>
+                                    <option value="yjdbh" id="USA-type" <?php if ($item->type == "yjdbh") echo 'selected'; ?>>眼镜的保护</option>
+                                    <option value="sssxxt" id="USA-type" <?php if ($item->type == "sssxxt") echo 'selected'; ?>>手术摄像系统</option>
                                     <option value="zdsj" id="zdsj-type" style="display: none;">诊断试剂</option>
                                 </select>
 
@@ -136,6 +142,9 @@
                                     <option value="ebh" id="Germany-type" style="display: none;" >耳鼻喉外科</option>
                                     <option value="gkxw" id="Germany-type" style="display: none;" >骨外科神经外科及显微外科</option>
                                     <option value="ssfdj" id="USA-type" style="display: none;">手术放大镜</option>
+                                    <option value="sstd" id="USA-type" style="display: none;">手术头灯</option>
+                                    <option value="yjdbh" id="USA-type" style="display: none;">眼镜的保护</option>
+                                    <option value="sssxxt" id="USA-type" style="display: none;">手术摄像系统</option>
                                     <option value="zdsj" id="zdsj-type" <?php if ($item->type == "zdsj") echo 'selected'; ?>>诊断试剂</option>
                                 </select>
 
