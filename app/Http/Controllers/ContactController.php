@@ -102,7 +102,8 @@ class ContactController extends Controller {
     public function restore($id) {
         $removed_msg = Message::onlyTrashed()->where('id', $id)->first();
         if ($removed_msg != NULL) {
-            Session::flash('messageMsg', "已还原 $removed_msg->name 的留言。");
+            Session::flash('message', "已还原留言");
+            Session::flash('name', $removed_msg->name);
             $removed_msg->restore();
             return redirect()->back();
         }

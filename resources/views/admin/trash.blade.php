@@ -39,7 +39,7 @@
                                 <div class="row" style="margin-top: 30px;">
                                     <div class="col-lg-12">
                                         @if (Session::has('message'))
-                                        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('userName') }} </i></strong></div>
+                                        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('name') }} </i></strong></div>
                                         @endif
                                         <div class="panel panel-default">
                                             <div class="panel-body">
@@ -95,9 +95,6 @@
                             <div class="tab-pane fade" id="item">
                                 <div class="row" style="margin-top: 30px;">
                                     <div class="col-lg-12">
-                                        @if (Session::has('messageItem'))
-                                        <div class="alert alert-info">{{ Session::get('messageItem') }} <strong><i>{{ Session::get('itemName') }} </i></strong></div>
-                                        @endif
                                         <div class="panel panel-default">
                                             <div class="panel-body">
                                                 <div class="dataTable_wrapper">
@@ -143,9 +140,6 @@
                             <div class="tab-pane fade" id="messages">
                                 <div class="row" style="margin-top: 30px;">
                                     <div class="col-lg-12">
-                                        @if (Session::has('message'))
-                                        <div class="alert alert-info"><strong>{{ Session::get('messageMsg') }} </strong></div>
-                                        @endif
                                         <div class="panel panel-default">
                                             <div class="panel-body">
                                                 <div class="dataTable_wrapper">

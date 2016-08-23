@@ -190,8 +190,8 @@ class InstrumentsController extends Controller {
     public function restore($id) {
         $removed_item = Instruments::onlyTrashed()->where('id', $id)->first();
         if ($removed_item != NULL) {
-            Session::flash('messageItem', "已还原");
-            Session::flash('itemName', $removed_item->name);
+            Session::flash('message', "已还原设备");
+            Session::flash('name', $removed_item->name);
             $removed_item->restore();
             return redirect()->back();
         }
@@ -202,8 +202,8 @@ class InstrumentsController extends Controller {
     public function permDestroy($id) {
         $removed_item = Instruments::onlyTrashed()->where('id', $id)->first();
         if ($removed_item != NULL) {
-            Session::flash('messageItem', "永久删除");
-            Session::flash('itemName', $removed_item->name);
+            Session::flash('message', "永久删除设备");
+            Session::flash('name', $removed_item->name);
             $removed_item->forceDelete();
             return redirect()->back();
         }

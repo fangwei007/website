@@ -193,8 +193,8 @@ class AdminController extends Controller {
     public function restore($id) {
         $removed_user = User::onlyTrashed()->where('id', $id)->first();
         if ($removed_user != NULL) {
-            Session::flash('message', "已还原");
-            Session::flash('userName', $removed_user->name);
+            Session::flash('message', "已还原用户");
+            Session::flash('name', $removed_user->name);
             $removed_user->restore();
             return redirect()->back();
         }
@@ -205,8 +205,8 @@ class AdminController extends Controller {
     public function permDestroy($id) {
         $removed_user = User::onlyTrashed()->where('id', $id)->first();
         if ($removed_user != NULL) {
-            Session::flash('message', "永久删除");
-            Session::flash('userName', $removed_user->name);
+            Session::flash('message', "永久删除用户");
+            Session::flash('name', $removed_user->name);
             $removed_user->forceDelete();
             return redirect()->back();
         }
