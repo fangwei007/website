@@ -156,7 +156,7 @@
                                                                 <th class="col-lg-1">姓 名</th>
                                                                 <th class="col-lg-2" id="hide-when-700">联系电话</th>
                                                                 <th class="col-lg-2" id="hide-when-700">电子邮件</th>
-                                                                <th class="col-lg-2" id="hide-when-1170">创建日期</th>
+                                                                <th class="col-lg-2" id="hide-when-1170">删除日期</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -170,7 +170,7 @@
                                                                 <td>{{ $msg->name }}</td>
                                                                 <td id="hide-when-700">{{ $msg->phone }}</td>
                                                                 <td id="hide-when-700">{{ $msg->email }}</td>
-                                                                <td id="hide-when-1170">{{ $msg->created_at }}</td>
+                                                                <td id="hide-when-1170">{{ $msg->deleted_at }}</td>
                                                             </tr>
                                                             @endforeach
                                                         </tbody>
