@@ -48,9 +48,9 @@
                                         <li><a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="sunnytechs QQ"><i class="fa fa-qq"></i></a></li> 
                                     </ul>
                                     <div class="search">
-                                        <form role="form">
-                                            <input type="text" class="search-form" autocomplete="off" placeholder="搜索">
-                                            <i class="fa fa-search"></i>
+                                        <form role="form" method="get" action="{{ url('/items') }}">
+                                            <input type="text" class="search-form" autocomplete="off" placeholder="搜索产品" name="q">
+                                            <button class="btn btn-default" type="submit" style="border-color: transparent;"><i class="fa fa-search"></i></button>
                                         </form>
                                     </div>
                                 </div>
