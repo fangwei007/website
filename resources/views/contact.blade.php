@@ -79,13 +79,13 @@ if ($html == null) :
                     <abbr title="Hours">工作时间</abbr>: 星期一 至 星期五: 9:00 - 17:00</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
-                        <a href="#"><i class="fa fa-weibo fa-2x"></i></a>
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="sunnytechs微博号"><i class="fa fa-weibo fa-2x"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-weixin fa-2x"></i></a>
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="sunnytechs微信号"><i class="fa fa-weixin fa-2x"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-qq fa-2x"></i></a>
+                        <a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="sunnytechs QQ"><i class="fa fa-qq fa-2x"></i></a>
                     </li>
                 </ul>
             </div>

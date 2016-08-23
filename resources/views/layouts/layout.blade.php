@@ -42,10 +42,10 @@
                             </div>
                             <div class="col-sm-6 col-xs-6" style="padding-right: 30px;">
                                 <div class="social">
-                                    <ul class="social-share">
-                                        <li><a href="#"><i class="fa fa-weibo"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-weixin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-qq"></i></a></li> 
+                                    <ul class="social-share tooltip-demo">
+                                        <li><a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="sunnytechs微博号"><i class="fa fa-weibo"></i></a></li>
+                                        <li><a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="sunnytechs微信号"><i class="fa fa-weixin"></i></a></li>
+                                        <li><a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="sunnytechs QQ"><i class="fa fa-qq"></i></a></li> 
                                     </ul>
                                     <div class="search">
                                         <form role="form">
@@ -129,6 +129,18 @@
 $('.carousel').carousel({
     interval: 5000 //changes the speed
 })
+        </script>
+
+        <script>
+            // tooltip demo
+            $('.tooltip-demo').tooltip({
+                selector: "[data-toggle=tooltip]",
+                container: "body"
+            })
+
+            // popover demo
+            $("[data-toggle=popover]")
+                    .popover()
         </script>
     </body>
 
