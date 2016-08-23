@@ -167,7 +167,7 @@
                                                                         <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh fa-1x" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/msg/{{ $msg->id }}/restore"></i></a>
                                                                     </div>
                                                                 </td>
-                                                                <td><a href="/msg/{{$msg->id}}">{{ $msg->name }}</a></td>
+                                                                <td>{{ $msg->name }}</td>
                                                                 <td id="hide-when-700">{{ $msg->phone }}</td>
                                                                 <td id="hide-when-700">{{ $msg->email }}</td>
                                                                 <td id="hide-when-1170">{{ $msg->created_at }}</td>
