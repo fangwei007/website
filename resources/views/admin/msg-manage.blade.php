@@ -26,7 +26,7 @@
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="dataTable_wrapper">
-                            <table class="table table-striped table-bordered table-hover" id="user-records">
+                            <table class="table table-striped table-bordered table-hover" id="message-records">
                                 <thead>
                                     <tr>
                                         <th class="col-lg-1">状 态</th>
