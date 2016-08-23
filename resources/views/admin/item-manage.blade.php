@@ -32,12 +32,12 @@
                             <table class="table table-striped table-bordered table-hover" id="item-records">
                                 <thead>
                                     <tr>
-                                        <th class="col-lg-2" style="min-width: 70px;">操 作</th>
-                                        <th class="col-lg-1">器材型号</th>
-                                        <th class="col-lg-3" id="hide-when-1170">器材简介</th>
-                                        <th class="col-lg-1" id="hide-when-700">器材图片</th>
-                                        <th class="col-lg-1" id="hide-when-1170">入库日期</th>
-                                        <th class="col-lg-1" id="hide-when-360">效果预览</th>
+                                        <th class="col-lg-2 text-center" style="min-width: 50px;">操 作</th>
+                                        <th class="col-lg-1 text-center">器材型号</th>
+                                        <th class="col-lg-3 text-center" id="hide-when-1170">器材简介</th>
+                                        <th class="col-lg-1 text-center" id="hide-when-700">器材图片</th>
+                                        <th class="col-lg-1 text-center" id="hide-when-1170">入库日期</th>
+                                        <th class="col-lg-1 text-center" id="hide-when-360">效果预览</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,11 +49,11 @@
                                                 <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle fa-1x" data-toggle="modal" data-target="#confirm-delete" data-href="/items/{{ $item->id }}/delete"></i></a>
                                             </div>
                                         </td>
-                                        <td>{{ $item->name }}</td>
-                                        <td id="hide-when-1170"><?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></td>
-                                        <td id="hide-when-700"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
-                                        <td id="hide-when-1170">{{ $item->created_at }}</td>
-                                        <td id="hide-when-360"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
+                                        <td class="text-center">{{ $item->name }}</td>
+                                        <td class="text-center" id="hide-when-1170"><?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></td>
+                                        <td class="text-center" id="hide-when-700"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
+                                        <td class="text-center" id="hide-when-1170">{{ $item->created_at }}</td>
+                                        <td class="text-center" id="hide-when-360"><a href="/items/{{ $item->id }}" target="_blank"><button type="button" class="btn btn-outline btn-primary">预 览</button></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -29,11 +29,11 @@
                             <table class="table table-striped table-bordered table-hover" id="message-records">
                                 <thead>
                                     <tr>
-                                        <th class="col-lg-1">状 态</th>
-                                        <th class="col-lg-1">姓 名</th>
-                                        <th class="col-lg-2" id="hide-when-700">联系电话</th>
-                                        <th class="col-lg-2" id="hide-when-700">电子邮件</th>
-                                        <th class="col-lg-2" id="hide-when-1170">创建日期</th>
+                                        <th class="col-lg-1 text-center">状 态</th>
+                                        <th class="col-lg-1 text-center">操 作</th>
+                                        <th class="col-lg-2 text-center" id="hide-when-700">姓 名</th>
+                                        <th class="col-lg-2 text-center" id="hide-when-700">联系电话</th>
+                                        <th class="col-lg-2 text-center" id="hide-when-1170">创建日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,15 +41,15 @@
                                     <tr class="odd gradeX">
                                         <td class="text-center tooltip-demo">
                                             @if ($msg->status === 'O')
-                                            未 读
+                                            <a href="/msg/{{$msg->id}}">未 读</a>
                                             @elseif ($msg->status === 'C')
                                             已 读
                                             @endif
                                         </td>
-                                        <td><a href="/msg/{{$msg->id}}">{{ $msg->name }}</a></td>
-                                        <td id="hide-when-700">{{ $msg->phone }}</td>
-                                        <td id="hide-when-700">{{ $msg->email }}</td>
-                                        <td id="hide-when-1170">{{ $msg->created_at }}</td>
+                                        <td class="text-center"><a href="/msg/{{$msg->id}}">查 看</a></td>
+                                        <td class="text-center" id="hide-when-700">{{ $msg->name }}</td>
+                                        <td class="text-center" id="hide-when-700">{{ $msg->phone }}</td>
+                                        <td class="text-center" id="hide-when-1170">{{ $msg->created_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

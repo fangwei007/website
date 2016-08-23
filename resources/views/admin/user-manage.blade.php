@@ -32,11 +32,11 @@
                             <table class="table table-striped table-bordered table-hover" id="user-records">
                                 <thead>
                                     <tr>
-                                        <th class="col-lg-1">操 作</th>
-                                        <th class="col-lg-1">用户名</th>
-                                        <th class="col-lg-2" id="hide-when-700">电子邮箱</th>
-                                        <th class="col-lg-2">用户权限</th>
-                                        <th class="col-lg-2" id="hide-when-1170">创建日期</th>
+                                        <th class="col-lg-1 text-center" style="min-width: 50px;">操 作</th>
+                                        <th class="col-lg-1 text-center">用户名</th>
+                                        <th class="col-lg-2 text-center" id="hide-when-700">电子邮箱</th>
+                                        <th class="col-lg-2 text-center">用户权限</th>
+                                        <th class="col-lg-2 text-center" id="hide-when-1170">创建日期</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,9 +49,9 @@
                                                 <a data-toggle="tooltip" data-placement="top" title="" data-original-title="删 除"><i class="fa fa-minus-circle fa-1x" data-toggle="modal" data-target="#confirm-delete" data-href="/admin/{{ $user->id }}/delete"></i></a>
                                             </div>
                                         </td>
-                                        <td>{{ $user->name }}</td>
-                                        <td id="hide-when-700">{{ $user->email }}</td>
-                                        <td class="center">
+                                        <td class="text-center">{{ $user->name }}</td>
+                                        <td class="text-center" id="hide-when-700">{{ $user->email }}</td>
+                                        <td class="text-center">
                                             @if ($user->role === 'N')
                                             未认证
                                             @elseif ($user->role === 'A')
@@ -60,7 +60,7 @@
                                             管理员
                                             @endif
                                         </td>
-                                        <td id="hide-when-1170">{{ $user->created_at }}</td>
+                                        <td class="text-center" id="hide-when-1170">{{ $user->created_at }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

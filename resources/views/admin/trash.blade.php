@@ -47,11 +47,11 @@
                                                     <table class="table table-striped table-bordered table-hover" id="user-records">
                                                         <thead>
                                                             <tr>
-                                                                <th style="min-width: 50px;">操 作</th>
-                                                                <th>用户名</th>
-                                                                <th id="hide-when-1170">电子邮箱</th>
-                                                                <th id="hide-when-1170">用户权限</th>
-                                                                <th id="hide-when-360">删除日期</th>
+                                                                <th class="text-center" style="min-width: 50px;">操 作</th>
+                                                                <th class="text-center">用户名</th>
+                                                                <th class="text-center" id="hide-when-1170">电子邮箱</th>
+                                                                <th class="text-center" id="hide-when-1170">用户权限</th>
+                                                                <th class="text-center" id="hide-when-360">删除日期</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -64,9 +64,9 @@
                                                                         <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle fa-1x" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/user/{{ $user->id }}/perm-delete"></i></a>
                                                                     </div>
                                                                 </td>
-                                                                <td>{{ $user->name }}</td>
-                                                                <td id="hide-when-1170">{{ $user->email }}</td>
-                                                                <td class="center" id="hide-when-1170">
+                                                                <td class="text-center">{{ $user->name }}</td>
+                                                                <td class="text-center" id="hide-when-1170">{{ $user->email }}</td>
+                                                                <td class="text-center" id="hide-when-1170">
                                                                     @if ($user->role === 'N')
                                                                     未认证
                                                                     @elseif ($user->role === 'A')
@@ -75,7 +75,7 @@
                                                                     管理员
                                                                     @endif
                                                                 </td>
-                                                                <td id="hide-when-360">{{ $user->deleted_at }}</td>
+                                                                <td class="text-center" id="hide-when-360">{{ $user->deleted_at }}</td>
                                                             </tr>
                                                             @endforeach
                                                         </tbody>
@@ -104,11 +104,11 @@
                                                     <table class="table table-striped table-bordered table-hover" id="item-records">
                                                         <thead>
                                                             <tr>
-                                                                <th class="col-md-2" style="min-width: 50px;">操 作</th>
-                                                                <th class="col-md-1">器材型号</th>
-                                                                <th class="col-md-2" id="hide-when-1170">器材简介</th>
-                                                                <th class="col-md-1" id="hide-when-1170">器材图片</th>
-                                                                <th class="col-md-2" id="hide-when-360">删除日期</th>
+                                                                <th class="col-md-2 text-center" style="min-width: 50px;">操 作</th>
+                                                                <th class="col-md-1 text-center">器材型号</th>
+                                                                <th class="col-md-2 text-center" id="hide-when-1170">器材简介</th>
+                                                                <th class="col-md-1 text-center" id="hide-when-1170">器材图片</th>
+                                                                <th class="col-md-2 text-center" id="hide-when-360">删除日期</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -120,10 +120,10 @@
                                                                         <a data-toggle="tooltip" data-placement="top" title="" data-original-title="永久删除"><i class="fa fa-times-circle fa-1x" data-toggle="modal" data-target="#confirm-perm-delete" data-href="/trash/item/{{ $item->id }}/perm-delete"></i></a>
                                                                     </div>
                                                                 </td>
-                                                                <td>{{ $item->name }}</td>
-                                                                <td id="hide-when-1170"><?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></td>
-                                                                <td id="hide-when-1170"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
-                                                                <td id="hide-when-360">{{ $item->deleted_at }}</td>
+                                                                <td class="text-center">{{ $item->name }}</td>
+                                                                <td class="text-center" id="hide-when-1170"><?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></td>
+                                                                <td class="text-center" id="hide-when-1170"><img class="img-thumbnail" style="max-height: 80px; max-width: 80px;" src="{{ $item->image }}"/></td>
+                                                                <td class="text-center" id="hide-when-360">{{ $item->deleted_at }}</td>
                                                             </tr>
                                                             @endforeach
                                                         </tbody>
@@ -152,11 +152,11 @@
                                                     <table class="table table-striped table-bordered table-hover" id="message-records">
                                                         <thead>
                                                             <tr>
-                                                                <th class="col-lg-1">操 作</th>
-                                                                <th class="col-lg-1">姓 名</th>
-                                                                <th class="col-lg-2" id="hide-when-700">联系电话</th>
-                                                                <th class="col-lg-2" id="hide-when-700">电子邮件</th>
-                                                                <th class="col-lg-2" id="hide-when-1170">删除日期</th>
+                                                                <th class="col-lg-2 text-center" style="min-width: 50px;">操 作</th>
+                                                                <th class="col-lg-1 text-center">姓 名</th>
+                                                                <th class="col-lg-2 text-center" id="hide-when-700">联系电话</th>
+                                                                <th class="col-lg-1 text-center" id="hide-when-700">电子邮件</th>
+                                                                <th class="col-lg-2 text-center" id="hide-when-1170">删除日期</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -167,10 +167,10 @@
                                                                         <a data-toggle="tooltip" data-placement="top" title="" data-original-title="还 原"><i class="fa fa-refresh fa-1x" data-toggle="modal" data-target="#confirm-restore" data-href="/trash/msg/{{ $msg->id }}/restore"></i></a>
                                                                     </div>
                                                                 </td>
-                                                                <td>{{ $msg->name }}</td>
-                                                                <td id="hide-when-700">{{ $msg->phone }}</td>
-                                                                <td id="hide-when-700">{{ $msg->email }}</td>
-                                                                <td id="hide-when-1170">{{ $msg->deleted_at }}</td>
+                                                                <td class="text-center">{{ $msg->name }}</td>
+                                                                <td class="text-center" id="hide-when-700">{{ $msg->phone }}</td>
+                                                                <td class="text-center" id="hide-when-700">{{ $msg->email }}</td>
+                                                                <td class="text-center" id="hide-when-1170">{{ $msg->deleted_at }}</td>
                                                             </tr>
                                                             @endforeach
                                                         </tbody>
