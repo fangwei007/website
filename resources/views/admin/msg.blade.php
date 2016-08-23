@@ -46,7 +46,7 @@
 
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">留言内容:</label>
-                                <div class="col-md-12 text-left"><label class="radio-inline">{{ $msg->message }}</label></div>
+                                <div class="col-md-12 text-left"><label class="radio-inline">{!! $msg->message !!}</label></div>
                             </div>
 
                             <div class="form-group">

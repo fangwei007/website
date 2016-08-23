@@ -42,7 +42,7 @@ class ContactController extends Controller {
                     'name' => $request->input('contact-name'),
                     'phone' => $request->input('contact-phone'),
                     'email' => $request->input('contact-email'),
-                    'message' => $request->input('contact-message'),
+                    'message' => nl2br($request->input('contact-message')),
                 ];
 
                 Message::create($data);
