@@ -47,7 +47,7 @@
                                                     <table class="table table-striped table-bordered table-hover" id="user-records">
                                                         <thead>
                                                             <tr>
-                                                                <th>操 作</th>
+                                                                <th style="min-width: 50px;">操 作</th>
                                                                 <th>用户名</th>
                                                                 <th id="hide-when-1170">电子邮箱</th>
                                                                 <th id="hide-when-1170">用户权限</th>
