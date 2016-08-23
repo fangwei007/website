@@ -91,7 +91,8 @@ class ContactController extends Controller {
     public function destroy($id) {
         $delete_msg = Message::where('id', $id)->first();
         if ($delete_msg != NULL) {
-            Session::flash('message', "已删除 $delete_msg->name 的留言。");
+            Session::flash('message', "已删除");
+            Session::flash('name', $delete_msg->name);
             $delete_msg->delete();
             return redirect("/msg-manage");
         }

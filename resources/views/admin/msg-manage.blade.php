@@ -14,6 +14,9 @@
             </div>
             <!-- /.col-lg-12 -->
         </div>
+        @if (Session::has('message'))
+        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('name') }} </i></strong></div>
+        @endif
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-12">
