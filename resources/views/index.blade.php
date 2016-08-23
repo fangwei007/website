@@ -42,12 +42,12 @@ if ($html == null) :
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active fill" style="background-image: url(/images/slider/slide1-3.jpg)">
+            <div class="item active fill" style="background-image: url(/images/slider/slide1-2.jpg)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-8">
-                            <div class="carousel-caption" style="margin-bottom: 2%;">
-                                <h1 class="animation animated-item-1">德国 Pro-Med</h1>
+                            <div class="carousel-caption">
+                                <h2 class="animation animated-item-1">德国 Pro-Med</h2>
                                 <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">坐落在全球著名手术器械生产研发集散地: 德国图特林根的德国Pro-Med器械公司是以EN ISO9001及EN46001为标准的外科手术器械制造商，100%德国制造。</p>
                             </div>
                             <div class="carousel-content">
@@ -71,8 +71,8 @@ if ($html == null) :
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-12">
-                            <div class="carousel-caption" style="margin-bottom: 2%;color: #333333;font-weight: bold;">
-                                <h1 class="animation animated-item-1">美国 SurgiTel</h1>
+                            <div class="carousel-caption" style="color: #333333;font-weight: bold;">
+                                <h2 class="animation animated-item-1">美国 SurgiTel</h2>
                                 <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">通过十多年来几万名临床手术医生的使用，获得了手术医生的高度评价，并连续若干年被美国评为优质产品，获得美国人体工程学设计优秀奖。SurgiTel系列产品现已行销世界八十多个国家和地区。</p>
                             </div>
                             <div class="carousel-content">
@@ -96,7 +96,7 @@ if ($html == null) :
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-12">
-                            <div class="carousel-caption" style="margin-bottom: 2%;text-indent:4em;text-align: left;">
+                            <div class="carousel-caption" style="text-indent:4em;text-align: left;">
                                 <h3 class="animation animated-item-1">为广大的临床医学实验室及科研实验室提供国内及国际最尖端的检验技术及产品。</h3>
                                 <!--<h2 class="animation animated-item-2">100%德国制造</h2>-->
                             </div>

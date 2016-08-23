@@ -206,6 +206,9 @@ footer {
     height: 300px;
 }
 /* Responsive Styles */
+.carousel-caption {
+    margin-bottom: 10%;
+}
 
 @media(max-width:991px) {
     .panel-300 {
@@ -253,6 +256,10 @@ footer {
 
     .navbar-brand>img {
         margin-bottom: 10px;
+    }
+
+    .carousel-caption {
+        margin-bottom: 8%;
     }
 }
 
@@ -312,6 +319,10 @@ footer {
         margin-top: 0;
         width: 215px;
     }
+    
+    .carousel-caption {
+        margin-bottom: 0%;
+    }
 }
 
 @media(max-width:365px) {
@@ -320,6 +331,9 @@ footer {
     }
     .breadcrumb {
         font-size: 9px;
+    }
+    .carousel-caption {
+        margin-bottom: -10%;
     }
 }
 
