@@ -104,11 +104,11 @@
                                                     <table class="table table-striped table-bordered table-hover" id="item-records">
                                                         <thead>
                                                             <tr>
-                                                                <th class="col-lg-1">操 作</th>
-                                                                <th class="col-lg-1">器材型号</th>
-                                                                <th class="col-lg-2" id="hide-when-1170">器材简介</th>
-                                                                <th class="col-lg-1" id="hide-when-1170">器材图片</th>
-                                                                <th class="col-lg-2" id="hide-when-360">删除日期</th>
+                                                                <th class="col-md-2" style="min-width: 50px;">操 作</th>
+                                                                <th class="col-md-1">器材型号</th>
+                                                                <th class="col-md-2" id="hide-when-1170">器材简介</th>
+                                                                <th class="col-md-1" id="hide-when-1170">器材图片</th>
+                                                                <th class="col-md-2" id="hide-when-360">删除日期</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
