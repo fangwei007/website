@@ -16,7 +16,7 @@ class ContactController extends Controller {
      * @return void
      */
     public function __construct() {
-        
+        $this->middleware('admin', ['except' => [ 'store']]);
     }
 
     public function store(Request $request) {
@@ -54,6 +54,60 @@ class ContactController extends Controller {
             Session::flash('contact-message', "留意已发送，请稍后再试。");
             return redirect('/contact');
         }
+    }
+    
+    public function msgManage() {
+        $msgs = Message::all();
+        return view('admin.msg-manage', ['msgs' => $msgs]);
+    }
+    
+    public function viewMsg($id) {
+        $msg = Message::where('id', $id)->first();
+        return view('admin.msg', ['msg' => $msg]);
+    }
+    
+    public function readMsg(Request $request, $id) {
+        $validator = Validator::make($request->all(), [
+                    'status' => "required",
+                        ], [
+                    'status.required' => "请标记状态。",
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        } else {
+            $data = [
+                'status' => $request->input('status')
+            ];
+
+            Message::where('id', $id)->update($data);
+            // redirect
+            if ($request->input('status') == 'C') Session::flash('message', "已处理一个留言。");
+            else Session::flash('message', "留言标记为未读。");
+            return redirect('/msg-manage');
+        }
+    }
+    
+    public function destroy($id) {
+        $delete_msg = Message::where('id', $id)->first();
+        if ($delete_msg != NULL) {
+            Session::flash('message', "已删除 $delete_msg->name 的留言。");
+            $delete_msg->delete();
+            return redirect("/msg-manage");
+        }
+
+        return view("errors.404");
+    }
+    
+    public function restore($id) {
+        $removed_msg = Message::onlyTrashed()->where('id', $id)->first();
+        if ($removed_msg != NULL) {
+            Session::flash('messageMsg', "已还原 $removed_msg->name 的留言。");
+            $removed_msg->restore();
+            return redirect()->back();
+        }
+
+        return view("errors.404");
     }
 
 }

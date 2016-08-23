@@ -52,8 +52,13 @@ Route::get('/user-manage', 'AdminController@userManage');
 
 Route::get('/item-manage', 'AdminController@itemManage');
 
-Route::get('/msg-manage', 'AdminController@msgManage');
+Route::get('/msg-manage', 'ContactController@msgManage');
 
-Route::get('/msg/{id}', 'AdminController@viewMsg');
+Route::get('/msg/{id}', 'ContactController@viewMsg');
 
-Route::post('/msg/{id}', 'AdminController@readMsg');
+Route::post('/msg/{id}', 'ContactController@readMsg');
+
+Route::get('/msg/{id}/delete', 'ContactController@destroy');
+
+Route::get('/trash/msg/{id}/restore', 'ContactController@restore');
+

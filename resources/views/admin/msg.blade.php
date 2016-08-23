@@ -66,10 +66,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-lg-5 control-label"></label>
+                                <label class="col-lg-2 control-label"></label>
                                 <button type="submit" class="btn btn-primary">更新留言状态</button>
                             </div>
                         </form>
+                        <div class="col-lg-8">
+                            <button class="btn btn-danger pull-right" data-toggle="modal" data-target="#confirm-delete" data-href="/msg/{{ $msg->id }}/delete" style="margin-top: -49px">放入回收站</button>
+                        </div>
                     </div>
                 </div>
             </div>

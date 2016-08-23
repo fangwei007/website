@@ -44,38 +44,6 @@ class AdminController extends Controller {
         $instruments = Instruments::all();
         return view('admin.item-manage', ['items' => $instruments]);
     }
-    
-    public function msgManage() {
-        $msgs = Message::all();
-        return view('admin.msg-manage', ['msgs' => $msgs]);
-    }
-    
-    public function viewMsg($id) {
-        $msg = Message::where('id', $id)->first();
-        return view('admin.msg', ['msg' => $msg]);
-    }
-    
-    public function readMsg(Request $request, $id) {
-        $validator = Validator::make($request->all(), [
-                    'status' => "required",
-                        ], [
-                    'status.required' => "请标记状态。",
-        ]);
-
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator);
-        } else {
-            $data = [
-                'status' => $request->input('status')
-            ];
-
-            Message::where('id', $id)->update($data);
-            // redirect
-            if ($request->input('status') == 'C') Session::flash('message', "已处理一个留言。");
-            else Session::flash('message', "留言标记为未读。");
-            return redirect('/msg-manage');
-        }
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -215,8 +183,9 @@ class AdminController extends Controller {
         
         $removed_users = User::onlyTrashed()->get();
         $removed_items = Instruments::onlyTrashed()->get();
+        $removed_msgs = Message::onlyTrashed()->get();
         
-        return view('admin.trash', ['users' => $removed_users, 'items' => $removed_items]);
+        return view('admin.trash', ['users' => $removed_users, 'items' => $removed_items, 'msgs' => $removed_msgs]);
     }
     
     public function restore($id) {

@@ -10,20 +10,17 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header"><i class="fa fa-users"></i> 用户管理</h2>
+                <h2 class="page-header"><i class="fa fa-envelope"></i> 留言管理</h2>
             </div>
             <!-- /.col-lg-12 -->
         </div>
-        @if (Session::has('message'))
-        <div class="alert alert-info">{{ Session::get('message') }} <strong><i>{{ Session::get('userName') }} </i></strong></div>
-        @endif
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row"> 
-                            <div class="col-sm-6">注册用户记录表 <a href="/admin/create"><i class="fa fa-plus-square"></i></a></div>
+                            <div class="col-sm-6">留言列表 </div>
                         </div>
                     </div>
                     <!-- /.panel-heading -->

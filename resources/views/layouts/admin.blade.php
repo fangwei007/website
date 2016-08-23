@@ -70,6 +70,9 @@
             $(document).ready(function () {
                 $('#item-records').DataTable();
             });
+            $(document).ready(function () {
+                $('#message-records').DataTable();
+            });
         </script>
 
         <script>
