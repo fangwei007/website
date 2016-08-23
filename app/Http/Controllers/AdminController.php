@@ -30,9 +30,11 @@ class AdminController extends Controller {
     public function index() {
         $users = User::where('created_at', '>=', Carbon::now()->startOfMonth())->get();
         $instruments = Instruments::where('created_at', '>=', Carbon::now()->startOfMonth())->get();
+        $msgs = Message::where('created_at', '>=', Carbon::now()->startOfMonth())->get();
         $trash_u = User::onlyTrashed()->count();
         $trash_i = Instruments::onlyTrashed()->count();
-        return view('admin.dashboard', ['users' => $users, 'items' => $instruments, 'trash' => $trash_u + $trash_i]);
+        $trash_m = Message::onlyTrashed()->count();
+        return view('admin.dashboard', ['users' => $users, 'items' => $instruments, 'msgs' => $msgs, 'trash' => $trash_u + $trash_i + $trash_m]);
     }
     
     public function userManage() {
