@@ -251,11 +251,11 @@ input.search-form::-webkit-input-placeholder{
 }
 
 input.search-form:hover::-webkit-input-placeholder {
-    color: #333;
+    color: #ddd;
 }
 
 input.search-form:hover {
-    width: 180px;
+    width: 120px;
 }
 
 .navbar-brand {
