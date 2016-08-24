@@ -353,6 +353,7 @@ footer {
     text-align: center;
     cursor: default;
     background: #009eae;
+    border: solid #ddd 0.5px
 }
 
 .hovereffect .overlay {
