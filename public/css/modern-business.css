@@ -135,8 +135,8 @@ footer {
 }
 
 .carousel-indicators li {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: #fff;
     margin: 0 15px 0 0;
     position: relative;
@@ -145,8 +145,8 @@ footer {
 .carousel-indicators li:after {
     position: absolute;
     content: "";
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     border-radius: 100%;
     background: rgba(0, 0, 0, 0);
     border: 1px solid #FFF;
@@ -155,8 +155,8 @@ footer {
 }
 
 .carousel-indicators .active{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: #009eae;
     margin: 0 15px 0 0;
     border: 1px solid #009eae;
@@ -166,8 +166,8 @@ footer {
 .carousel-indicators .active:after {
     position: absolute;
     content: "";
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     border-radius: 100%;
     background: #009eae;
     border: 1px solid #009eae;
