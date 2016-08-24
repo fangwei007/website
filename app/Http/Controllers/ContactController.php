@@ -28,7 +28,7 @@ class ContactController extends Controller {
                         'contact-email' => "required|email",
                         'contact-message' => "required",
                             ], [
-                        'contact-name.required' => "请填写用户名。",
+                        'contact-name.required' => "请填写姓名。",
                         'contact-phone.required' => "请填写联系电话。",
                         'contact-email.required' => "请填写有效邮箱。",
                         'contact-email.email' => "邮箱格式无效。",

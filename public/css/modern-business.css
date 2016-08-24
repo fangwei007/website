@@ -127,6 +127,11 @@ header.carousel .fill {
     font-style: italic;
 }
 
+.required:after {
+  content:"*";
+  color:red;
+}
+
 /* Footer Styles */
 
 footer {
