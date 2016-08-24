@@ -9,7 +9,7 @@
         <meta name="description" content="Sunnytechs">
         <meta name="author" content="Sunnytechs">
 
-        <title>Sunnytechs</title>
+        <title>广东康盛生物科技有限公司</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="/css/bootstrap.min.css" rel="stylesheet">
