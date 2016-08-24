@@ -191,7 +191,7 @@ if ($html == null) :
         <link href="/css/home-effects.css" rel="stylesheet">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">仪器展示</h2>
+                <h2 class="page-header">产品介绍</h2>
             </div>
             @foreach ($items as $item)
             <!--            <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
