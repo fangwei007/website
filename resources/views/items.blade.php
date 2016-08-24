@@ -32,7 +32,7 @@ if ($html == null) :
     @section('content')
 
     <!-- Page Content -->
-    <div class="container page-container">
+    <div class="container page-container" style="min-height: 700px">
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
