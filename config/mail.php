@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'info@sunnytechs.com', 'name' => 'Sunnytechs'],
+    'from' => ['address' => 'info@sunnytechs.com', 'name' => '广东康盛生物科技有限公司'],
 
     /*
     |--------------------------------------------------------------------------
