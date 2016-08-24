@@ -113,7 +113,7 @@
             <footer>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Copyright &copy; 广东康盛生物科技有限公司 2016</p>
+                        <p>Copyright &copy; <img src="/images/small_logo.png" style="margin-right: 2px;margin-bottom: 3px;"/>广东康盛生物科技有限公司 2016</p>
                     </div>
                 </div>
             </footer>
