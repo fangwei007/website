@@ -45,5 +45,15 @@ use ResetsPasswords;
             'password.confirmed' => "密码输入有误，请重试。",
         ];
     }
+    
+    protected function getSendResetLinkEmailSuccessResponse($response)
+    {
+        return redirect()->back()->with('status', "已发送重置密码链接。");
+    }
+
+    protected function getSendResetLinkEmailFailureResponse($response)
+    {
+        return redirect()->back()->withErrors(['email' => "未找到用户信息，请重试。"]);
+    }
 
 }
