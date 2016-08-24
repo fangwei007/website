@@ -149,7 +149,7 @@ if ($html == null) :
         </div>
         <!-- /.row -->
 
-        @if($items->total() > 6) <hr> @endif
+        @if($items->total() > 9) <hr> @endif
 
         <!-- Pagination -->
         @include('pagination.default', ['paginator' => $items])
