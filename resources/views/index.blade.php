@@ -277,7 +277,7 @@ if ($html == null) :
                 <p>我们为客户提供如下诊断试剂：分子生物学实验室的病毒核酸检测、感染性疾病检测、肿瘤基因突变、耐药基因突变及优生优育检测等项目；荧光原位杂交FISH试剂；临床输血基因分型、器官移植、骨髓移植基因配型和临床研究用分子生物学相关项目；移植免疫药物浓度监测及临床生化试剂等项目。</p>
             </div>
             <div class="col-md-6">
-                <img class="img-responsive" src="/images/index-rb.jpg" alt="">
+                <img class="img-responsive" src="/images/index-rb2.jpg" alt="">
             </div>
         </div>
         <!-- /.row -->
