@@ -60,16 +60,19 @@ hr {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #fff;
 }
-
-.btn-default:hover, 
-.btn-default:focus {
+.btn-social {
+    border-color: transparent;
+    background: transparent;
+}
+.btn-social:hover, 
+.btn-social:focus {
     color: #009eae;
     background: transparent;
     outline: none;
     box-shadow: none;
 }
 
-.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+.btn-social.active.focus, .btn-social.active:focus, .btn-social.active:hover, .btn-social:active.focus, .btn-social:active:focus, .btn-social:active:hover, .open>.dropdown-toggle.btn-social.focus, .open>.dropdown-toggle.btn-social:focus, .open>.dropdown-toggle.btn-social:hover {
     color: #009eae;
     background-color: transparent;
 }

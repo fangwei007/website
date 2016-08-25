@@ -43,14 +43,14 @@
                             <div class="col-sm-6 col-xs-6" style="padding-right: 30px;">
                                 <div class="social">
                                     <ul class="social-share tooltip-demo">
-                                        <li><button class="btn-default" style="border-color: transparent;" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weibo"></i></button></li>
-                                        <li><button class="btn-default" style="border-color: transparent;" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weixin"></i></button></li>
-                                        <li><button class="btn-default" style="border-color: transparent;" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-qq"></i></button></li> 
+                                        <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weibo"></i></button></li>
+                                        <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weixin"></i></button></li>
+                                        <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-qq"></i></button></li> 
                                     </ul>
                                     <div class="search">
                                         <form role="form" method="get" action="{{ url('/items') }}">
                                             <input type="text" class="search-form" autocomplete="off" placeholder="搜索产品" name="q">
-                                            <button class="btn-default" type="submit" style="border-color: transparent;line-height: 25px;"><i class="fa fa-search"></i></button>
+                                            <button class="btn-social" type="submit" style="line-height: 25px;"><i class="fa fa-search"></i></button>
                                         </form>
                                     </div>
                                 </div>

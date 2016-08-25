@@ -228,7 +228,7 @@ if ($html == null) :
                 <div class="hovereffect">
                     <img class="img-responsive" src="/images/display3-3.jpg" alt="">
                     <div class="overlay">
-                        <h2>诊断试剂</h2>
+                        <h2>最尖端的检验技术和诊断试剂</h2>
                         <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
                     </div>
                 </div>
