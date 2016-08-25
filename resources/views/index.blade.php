@@ -131,12 +131,12 @@ if ($html == null) :
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">独家代理</h2>
+                <h2 class="page-header">产品包括</h2>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-medkit"></i> 德国 Pro-Med </h4>
+                        <h4><i class="fa fa-fw fa-medkit"></i> 德国 Pro-Med 独家代理  </h4>
                     </div>
                     <div class="panel-body">
                         <div class="panel-300">
@@ -226,9 +226,9 @@ if ($html == null) :
 
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="/images/display3.jpg" alt="">
+                    <img class="img-responsive" src="/images/display3-2.jpg" alt="">
                     <div class="overlay">
-                        <h2>产品试剂盒</h2>
+                        <h2>诊断试剂</h2>
                         <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
                     </div>
                 </div>
@@ -255,7 +255,7 @@ if ($html == null) :
 
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="/images/display6.jpg" alt="">
+                    <img class="img-responsive" src="/images/display6-2.jpg" alt="">
                     <div class="overlay">
                         <h2>显微镜下实验结果</h2>
                         <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->

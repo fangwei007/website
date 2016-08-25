@@ -104,7 +104,7 @@ if ($html == null) :
                         <a href="/items?company=USA&type=sssxxt" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sssxxt') echo 'active' ?>">手术摄像系统</a>
                     </div>
                 </div>
-             <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>
+            <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
                         <a href="/items?company=other&type=zdsj" class="list-group-item">诊断试剂</a>
@@ -144,6 +144,13 @@ if ($html == null) :
                     </div>
                     @endforeach
                 </div>
+                @else 
+                <div class="row">
+                    <div class="col-md-4 img-portfolio">
+                        <p><i class="fa fa-warning"></i> 对不起，没有相关仪器或设备！</p>
+                    </div>
+                </div>
+                @endif
                 <!-- /.row -->
             </div>
         </div>
@@ -154,13 +161,6 @@ if ($html == null) :
         <!-- Pagination -->
         @include('pagination.default', ['paginator' => $items])
         <!-- /.row -->
-        @else 
-        <div class="row">
-            <div class="col-md-4 img-portfolio">
-                <p><i class="fa fa-warning"></i> 对不起，没有相关仪器或设备！</p>
-            </div>
-        </div>
-        @endif
     </div>
     <!-- /.container -->
 
