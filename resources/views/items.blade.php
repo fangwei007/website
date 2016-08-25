@@ -107,7 +107,7 @@ if ($html == null) :
             <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=other&type=zdsj" class="list-group-item">诊断试剂</a>
+                        <a href="/items?company=other&type=zdsj" class="list-group-item active">诊断试剂</a>
                     </div>
                 </div>
             <?php else : ?>
