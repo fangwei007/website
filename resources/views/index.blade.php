@@ -255,7 +255,7 @@ if ($html == null) :
 
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="/images/display6-2.jpg" alt="">
+                    <img class="img-responsive" src="/images/display6-3.jpg" alt="">
                     <div class="overlay">
                         <h2>显微镜下实验结果</h2>
                         <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
