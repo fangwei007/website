@@ -131,7 +131,7 @@ if ($html == null) :
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">产品包括</h2>
+                <h2 class="page-header">代理包括</h2>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
