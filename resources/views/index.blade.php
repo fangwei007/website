@@ -216,7 +216,7 @@ if ($html == null) :
 
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="/images/display2-2.jpg" alt="">
+                    <img class="img-responsive" src="/images/display2-3.jpg" alt="">
                     <div class="overlay">
                         <h2>各种放大倍数的精美手术放大镜</h2>
                         <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
@@ -226,7 +226,7 @@ if ($html == null) :
 
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="/images/display3-2.jpg" alt="">
+                    <img class="img-responsive" src="/images/display3-3.jpg" alt="">
                     <div class="overlay">
                         <h2>诊断试剂</h2>
                         <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
@@ -245,7 +245,7 @@ if ($html == null) :
 
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="/images/display5.jpg" alt="">
+                    <img class="img-responsive" src="/images/display5-2.jpg" alt="">
                     <div class="overlay">
                         <h2>与手术放大镜共轴的头灯摄像系统</h2>
                         <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
