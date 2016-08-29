@@ -42,12 +42,12 @@ if ($html == null) :
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active fill" style="background-image: url(/images/slider/slide1-2.jpg)">
+            <div class="item active fill" style="background-image: url(/images/slider/slide1-4.jpg)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-8">
                             <div class="carousel-caption">
-                                <h2 class="animation animated-item-1">德国 Pro-Med</h2>
+                                <h2 class="animation animated-item-1">德国 Pro-Med(貝鎂)</h2>
                                 <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">坐落在全球著名手术器械生产研发集散地: 德国图特林根的德国Pro-Med器械公司是以EN ISO9001及EN46001为标准的外科手术器械制造商，100%德国制造。</p>
                             </div>
                             <div class="carousel-content">
@@ -136,7 +136,7 @@ if ($html == null) :
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-medkit"></i> 德国 Pro-Med 独家代理  </h4>
+                        <h4><i class="fa fa-fw fa-medkit"></i> 德国 Pro-Med(貝鎂) 独家代理  </h4>
                     </div>
                     <div class="panel-body">
                         <div class="panel-300">
