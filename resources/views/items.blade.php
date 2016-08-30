@@ -70,7 +70,7 @@ if ($html == null) :
                         <a href="/items">全 部</a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "Germany") echo "active"; ?>">
-                        <a href="/items?company=Germany">德国 Pro-Med</a>
+                        <a href="/items?company=Germany">德国 Pro-Med(貝鎂)</a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "USA") echo "active"; ?>">
                         <a href="/items?company=USA">美国 SurgiTel </a>
