@@ -219,10 +219,12 @@ footer {
     margin-bottom: 10%;
 }
 
-@media(max-width:1024px) {
+@media(max-width:1150px) {
     .panel-300 {
-        height: 445px;
+        height: 380px;
     }
+}
+@media(max-width:1024px) {
     .customer-img,
     .img-related {
         margin-bottom: 30px;
@@ -273,6 +275,9 @@ footer {
 }
 
 @media(max-width:767px) {
+    .panel-300 {
+        height: 300px;
+    }
     .img-portfolio {
         margin-bottom: 15px;
     }
@@ -335,6 +340,9 @@ footer {
 }
 
 @media(max-width:365px) {
+    .panel-300 {
+        height: 380px;
+    }
     .top-bar {
         margin-bottom: -50px;
     }

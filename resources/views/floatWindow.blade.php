@@ -1,7 +1,7 @@
 <script type="text/javascript" src="/js/floating-1.12.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 
-<div class="panel panel-default" id="floatdiv"></div>
+<div class="panel panel-default portfolio-item" id="floatdiv"></div>
 
 <script type="text/javascript">
     $("#floatdiv").html('<div class="panel-heading" style="background-color: #f0f0f0;">\n\
@@ -11,7 +11,7 @@
 
     $("#floatdiv").css({
         "position": "absolute",
-        "width": "270px",
+        "width": "225px",
         "height": "80px",
         "background": "#FFFFFF",
         "border": "1px solid #ccc",
@@ -54,7 +54,7 @@
         if (action == 1) {
             $("#floatdiv").css({
                 "position": "absolute",
-                "width": "270px",
+                "width": "225px",
                 "height": "80px",
                 "background": "#FFFFFF",
                 "border": "1px solid #009eae",
@@ -68,8 +68,8 @@
         } else {
             $("#floatdiv").css({
                 "position": "absolute",
-                "width": "270px",
-                "height": "360px",
+                "width": "225px",
+                "height": "300px",
                 "background": "#FFFFFF",
                 "border": "1px solid #009eae",
                 "z-index": "100",
@@ -91,12 +91,12 @@
                 // border depending upon property used. Only one should be  
                 // specified.  
                 // targetLeft: 0,  
-                targetRight: 20,
+                targetRight: 50,
                 // Represents distance from top or bottom browser window  
                 // border depending upon property used. Only one should be  
                 // specified.  
 //                        targetTop: 50,
-                targetBottom: 20,
+                targetBottom: 50,
                 // Uncomment one of those if you need centering on  
                 // X- or Y- axis.  
                 // centerX: true,  
