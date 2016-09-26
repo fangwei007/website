@@ -4,19 +4,64 @@
 <div class="panel panel-default" id="floatdiv"></div>
 
 <script type="text/javascript">
+    $("#floatdiv").html('<div class="panel-heading" style="background-color: #009eae;color: white;">\n\
+<h4><i class="fa fa-fw fa-rss"></i> 公司新闻 </h4></div>\n\
+<div class="panel-body" id="floatMsg">\n\
+<strong><?php echo "我是php变量"; ?></strong></div>');
+
     $("#floatdiv").css({
         "position": "absolute",
-        "width": "300px",
-        "height": "400px",
+        "width": "270px",
+        "height": "80px",
         "background": "#FFFFFF",
-        "border": "1px solid #555",
+        "border": "1px solid #009eae",
         "z-index": "100",
         "border-radius": "5px",
         "opacity": "0.9"
     });
 
-    $("#floatdiv").append('<div class="panel-heading" style="background-color: #555;color: #fff;"><h4><i class="fa fa-fw fa-rss fa-1x" style="color: yellowgreen"></i> 公司新闻 </h4></div><div class="panel-body"><?php echo "我是php变量"; ?></div>');
+    $("#floatMsg").hide();
 </script>
+
+<script type="text/javascript">
+    var action = 2;
+
+    $("#floatdiv").on("click", changeBox);
+
+    function changeBox() {
+        if (action == 1) {
+            $("#floatdiv").css({
+                "position": "absolute",
+                "width": "270px",
+                "height": "80px",
+                "background": "#FFFFFF",
+                "border": "1px solid #009eae",
+                "z-index": "100",
+                "border-radius": "5px",
+                "opacity": "0.9"
+            });
+
+            $("#floatMsg").hide();
+            action = 2;
+        } else {
+            $("#floatdiv").css({
+                "position": "absolute",
+                "width": "270px",
+                "height": "360px",
+                "background": "#FFFFFF",
+                "border": "1px solid #009eae",
+                "z-index": "100",
+                "border-radius": "5px",
+                "opacity": "0.9"
+            });
+
+            $("#floatMsg").show();
+            action = 1;
+        }
+    }
+
+</script>
+
 <script type="text/javascript">
     floatingMenu.add('floatdiv',
             {
