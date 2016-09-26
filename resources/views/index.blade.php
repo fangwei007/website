@@ -31,6 +31,7 @@ if ($html == null) :
 
     @section('content')
 
+    @include('floatWindow')
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide no-margin">
         <!-- Indicators -->
