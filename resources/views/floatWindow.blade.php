@@ -5,7 +5,7 @@
 
 <script type="text/javascript">
     $("#floatdiv").html('<div class="panel-heading" style="background-color: #009eae;color: white;">\n\
-<h4><i class="fa fa-fw fa-rss"></i> 公司新闻 </h4></div>\n\
+<h4><i class="fa fa-fw fa-rss"></i> 公司动态 </h4></div>\n\
 <div class="panel-body" id="floatMsg">\n\
 <strong><?php echo "我是php变量"; ?></strong></div>');
 
