@@ -55,7 +55,7 @@ if ($html == null) :
                         </a>
                     </li>
                     <li class="active">{{ $item->name }}</li>
-                    @if (Auth::user()->role == 'V')
+                    @if (!Auth::guest() && Auth::user()->role == 'V')
                     <a class="pull-right" href="/items/{{ $item->id }}/edit"> <i class="fa fa-edit"></i>编 辑 </a>
                     @endif
                 </ol>
@@ -201,12 +201,13 @@ if ($html == null) :
                 <h3>仪器介绍</h3>
                 <p>{{ $item->introduction }}</p>
                 <h3>详细参数</h3>
-                <ul style="margin-left: -20px">
+                <p>暂 无</p>
+<!--                <ul style="margin-left: -20px">
                     <li>Lorem Ipsum</li>
                     <li>Dolor Sit Amet</li>
                     <li>Consectetur</li>
                     <li>Adipiscing Elit</li>
-                </ul>
+                </ul>-->
             </div>
 
         </div>

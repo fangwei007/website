@@ -7,7 +7,7 @@
     $("#floatdiv").html('<div class="panel-heading" style="background-color: #009eae;color: white;">\n\
 <h4><i class="fa fa-fw fa-rss"></i> 公司动态 </h4></div>\n\
 <div class="panel-body" id="floatMsg">\n\
-<strong><?php echo "我是php变量"; ?></strong></div>');
+<strong><?php echo "广东康盛生物科技有限公司创建于2003年12月，是经过广东省工商行政管理局及广东省食品药品监督局正式批准注册的集生物技术产品及医疗产品推广、应用、销售和服务于一身的专业化公司。"; ?></strong></div>');
 
     $("#floatdiv").css({
         "position": "absolute",

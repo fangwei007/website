@@ -17,7 +17,7 @@ class InstrumentsController extends Controller {
      * @return void
      */
     public function __construct() {
-        $this->middleware(['auth', 'role'], ['except' => [ 'index']]);
+        $this->middleware(['auth', 'role'], ['except' => [ 'index', 'show']]);
 
         $this->middleware('admin', ['except' => [ 'index', 'show']]);
     }

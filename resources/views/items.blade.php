@@ -146,8 +146,26 @@ if ($html == null) :
                 </div>
                 @else 
                 <div class="row">
+                    <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect" style="margin-bottom: 10px">
+                            <img class="img-responsive" src="/images/display3-3.jpg" alt="">
+                            <div class="overlay">
+                                <!--<h2>最尖端的检验技术和诊断试剂</h2>-->
+                            </div>
+                        </div>
+                        <h5 style="text-align:center;">最尖端的检验技术和诊断试剂</h5>
+                    </div>
+                    <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect" style="margin-bottom: 10px">
+                            <img class="img-responsive" src="/images/display6-3.jpg" alt="">
+                            <div class="overlay">
+                                <!--<h2>显微镜下实验结果</h2>-->
+                            </div>
+                        </div>
+                        <h5 style="text-align:center;">显微镜下实验结果</h5>
+                    </div>
                     <div class="col-md-4 img-portfolio">
-                        <p><i class="fa fa-warning"></i> 对不起，没有相关仪器或设备！</p>
+                        <!--<p><i class="fa fa-warning"></i> 对不起，没有相关仪器或设备！</p>-->
                     </div>
                 </div>
                 @endif
