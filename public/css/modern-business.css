@@ -43,6 +43,10 @@ a {
     color: #009eae;
 }
 
+.h4, h4 {
+    font-size: 17px;
+}
+
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
     background-color: #009eae;
     border-color: #009eae;
@@ -215,9 +219,9 @@ footer {
     margin-bottom: 10%;
 }
 
-@media(max-width:991px) {
+@media(max-width:1024px) {
     .panel-300 {
-        height: auto;
+        height: 445px;
     }
     .customer-img,
     .img-related {

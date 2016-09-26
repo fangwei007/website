@@ -24,22 +24,22 @@
 </script>
 
 <script type="text/javascript">
-    $("#floatdiv")
-            .mouseover(function () {
+    $("#floatdiv").hover(
+            function () {
                 $(this).css({
                     "border-color": "#009eae"
                 });
-        
+
                 $('#floatdiv > .panel-heading').css({
                     "background-color": "#009eae",
                     "color": "white"
                 });
-            })
-            .mouseout(function () {
+            },
+            function () {
                 $(this).css({
                     "border-color": "#ccc"
                 });
-                
+
                 $('#floatdiv > .panel-heading').css({
                     "background-color": "#f0f0f0",
                     "color": "black"
@@ -57,7 +57,7 @@
                 "width": "270px",
                 "height": "80px",
                 "background": "#FFFFFF",
-                "border": "1px solid #ccc",
+                "border": "1px solid #009eae",
                 "z-index": "100",
                 "border-radius": "5px",
                 "opacity": "0.9"
@@ -71,7 +71,7 @@
                 "width": "270px",
                 "height": "360px",
                 "background": "#FFFFFF",
-                "border": "1px solid #ccc",
+                "border": "1px solid #009eae",
                 "z-index": "100",
                 "border-radius": "5px",
                 "opacity": "0.9"
