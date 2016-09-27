@@ -102,7 +102,7 @@
 <script type="text/javascript">
     $("#floatdiv").html('<div class="panel-heading" style="background-color: #f0f0f0;">\n\
 <h4><i class="fa fa-fw fa-rss-square"></i> 公司动态 </h4></div>\n\
-<div class="panel-body" id="floatMsg">\n\
+<div class="panel-body" id="floatMsg" style="overflow: scroll;height:390px;">\n\
 <p style="text-indent:2em;"><strong><?= $news[0][0]; ?></strong></p></div>');
 
     $("#floatdiv").css({
@@ -153,15 +153,8 @@
     function changeBox() {
         if (action == 1) {
             $("#floatdiv").css({
-                "position": "relative",
                 "width": "150px",
                 "height": "80px",
-                "min-height": "0",
-                "background": "#FFFFFF",
-                "border": "1px solid #009eae",
-                "z-index": "100",
-                "border-radius": "5px",
-                "opacity": "0.9"
             });
 
             $("#myCarousel").css({
@@ -172,19 +165,12 @@
             action = 2;
         } else {
             $("#floatdiv").css({
-                "position": "relative",
                 "width": "270px",
-                "min-height": "300px",
-                "height": "auto",
-                "background": "#FFFFFF",
-                "border": "1px solid #009eae",
-                "z-index": "100",
-                "border-radius": "5px",
-                "opacity": "0.9"
+                "height": "450px",
             });
 
             $("#myCarousel").css({
-                "margin-top": "-300px"
+                "margin-top": "-450px"
             });
 
             $("#floatMsg").show();
