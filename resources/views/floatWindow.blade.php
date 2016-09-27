@@ -1,7 +1,101 @@
 <script type="text/javascript" src="/js/floating-1.12.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 
-<div class="panel panel-default portfolio-item" id="floatdiv"></div>
+<div class="panel panel-default" id="floatdiv" style="margin-top: -22px;"></div>
+
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide no-margin">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active fill" style="background-image: url(/images/slider/slide1-4.jpg)">
+            <div class="container">
+                <div class="row slide-margin">
+                    <div class="col-sm-8">
+                        <div class="carousel-caption">
+                            <h2 class="animation animated-item-1">德国 Pro-Med(貝鎂)</h2>
+                            <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">坐落在全球著名手术器械生产研发集散地: 德国图特林根的德国Pro-Med器械公司是以EN ISO9001及EN46001为标准的外科手术器械制造商，100%德国制造。</p>
+                        </div>
+                        <div class="carousel-content">
+                            <!--                                <h1 class="animation animated-item-1">这是一所宁静美丽的江南小城。小城西北角，有一所大学</h1>
+                                                                <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 hidden-xs animation animated-item-4">
+                        <div class="slider-img">
+                            <!--<img src="images/slider/img1.png" class="img-responsive">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/.item-->
+
+        <div class="item fill" style="background-image: url(/images/slider/slide2-2.jpg)">
+            <div class="container">
+                <div class="row slide-margin">
+                    <div class="col-sm-12">
+                        <div class="carousel-caption" style="color: #333333;font-weight: bold;">
+                            <h2 class="animation animated-item-1">美国 SurgiTel</h2>
+                            <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">通过十多年来几万名临床手术医生的使用，获得了手术医生的高度评价，并连续若干年被美国评为优质产品，获得美国人体工程学设计优秀奖。SurgiTel系列产品现已行销世界八十多个国家和地区。</p>
+                        </div>
+                        <div class="carousel-content">
+                            <!--                                <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 hidden-xs animation animated-item-4">
+                        <div class="slider-img">
+                            <!--<img src="images/slider/img2.png" class="img-responsive">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/.item-->
+
+        <div class="item fill" style="background-image: url(/images/slider/slide3.png)">
+            <div class="container">
+                <div class="row slide-margin">
+                    <div class="col-sm-12">
+                        <div class="carousel-caption" style="text-indent:4em;text-align: left;">
+                            <h3 class="animation animated-item-1">为广大的临床医学实验室及科研实验室提供国内及国际最尖端的检验技术及产品。</h3>
+                            <!--<h2 class="animation animated-item-2">100%德国制造</h2>-->
+                        </div>
+                        <div class="carousel-content">
+                            <!--                                <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
+                        </div>
+                    </div>
+                    <div class="col-sm-6 hidden-xs animation animated-item-4">
+                        <div class="slider-img">
+                            <!--<img src="images/slider/img3.png" class="img-responsive">-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
 
 <script type="text/javascript">
     $("#floatdiv").html('<div class="panel-heading" style="background-color: #f0f0f0;">\n\
@@ -10,14 +104,18 @@
 <p style="text-indent:2em;"><strong><?php echo "广东康盛生物科技有限公司创建于2003年12月，是经过广东省工商行政管理局及广东省食品药品监督局正式批准注册的集生物技术产品及医疗产品推广、应用、销售和服务于一身的专业化公司。"; ?></strong></p></div>');
 
     $("#floatdiv").css({
-        "position": "absolute",
-        "width": "225px",
+        "position": "relative",
+        "width": "150px",
         "height": "80px",
         "background": "#FFFFFF",
         "border": "1px solid #ccc",
         "z-index": "100",
         "border-radius": "5px",
         "opacity": "0.9"
+    });
+
+    $("#myCarousel").css({
+        "margin-top": "-80px"
     });
 
     $("#floatMsg").hide();
@@ -53,8 +151,8 @@
     function changeBox() {
         if (action == 1) {
             $("#floatdiv").css({
-                "position": "absolute",
-                "width": "225px",
+                "position": "relative",
+                "width": "150px",
                 "height": "80px",
                 "background": "#FFFFFF",
                 "border": "1px solid #009eae",
@@ -63,18 +161,26 @@
                 "opacity": "0.9"
             });
 
+            $("#myCarousel").css({
+                "margin-top": "-80px"
+            });
+
             $("#floatMsg").hide();
             action = 2;
         } else {
             $("#floatdiv").css({
-                "position": "absolute",
-                "width": "225px",
+                "position": "relative",
+                "width": "270px",
                 "height": "300px",
                 "background": "#FFFFFF",
                 "border": "1px solid #009eae",
                 "z-index": "100",
                 "border-radius": "5px",
                 "opacity": "0.9"
+            });
+
+            $("#myCarousel").css({
+                "margin-top": "-300px"
             });
 
             $("#floatMsg").show();
@@ -85,18 +191,32 @@
 </script>
 
 <script type="text/javascript">
+    var tr;
+    var tb;
+
+    if (window.innerWidth >= 1700) {
+        tr = 0.2 * window.innerWidth;
+        tb = 0.2 * window.innerHeight;
+    } else if (window.innerWidth >= 1200) {
+        tr = 0.15 * window.innerWidth;
+        tb = 0.2 * window.innerHeight;
+    } else {
+        tr = 0.1 * window.innerWidth;
+        tb = 0.25 * window.innerHeight;
+    }
+
     floatingMenu.add('floatdiv',
             {
                 // Represents distance from left or right browser window  
                 // border depending upon property used. Only one should be  
                 // specified.  
                 // targetLeft: 0,  
-                targetRight: 50,
+                targetRight: tr,
                 // Represents distance from top or bottom browser window  
                 // border depending upon property used. Only one should be  
                 // specified.  
 //                        targetTop: 50,
-                targetBottom: 50,
+                targetBottom: tb,
                 // Uncomment one of those if you need centering on  
                 // X- or Y- axis.  
                 // centerX: true,  
