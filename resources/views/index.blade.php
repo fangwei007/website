@@ -105,7 +105,7 @@ if ($html == null) :
                     <img class="img-responsive" src="/images/display1.jpg" alt="">
                     <div class="overlay">
                         <h2>配套齐全的手术器械</h2>
-                        <!--<p class="info" href="#">简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
+                        <!--<p class="info" href="#">简介：<?php // echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
                     </div>
                 </div>
             </div>
