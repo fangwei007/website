@@ -109,7 +109,7 @@
         <!-- /.row -->
         <!-- /.panel -->
         <div class="row" style="padding-left: 15px; padding-right: 15px;">
-            <div class="chat-panel panel panel-default">
+            <div class="chat-panel panel panel-primary">
                 <div class="panel-heading">
                     <i class="fa fa-comments fa-rss"></i>
                     公司动态
@@ -140,7 +140,7 @@
                     @endif
                 </div>
                 <!-- /.panel-body -->
-                <div class="panel-footer">
+                <div class="panel-footer" style="background-color: #337ab7">
                     <form  class="form-horizontal" role="form" method="post" action="{{ url('/news') }}">
                         {!! csrf_field() !!}
                         <div class="input-group">
