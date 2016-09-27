@@ -147,7 +147,7 @@ if ($html == null) :
                 @else 
                 <div class="row">
                     <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
-                        <div class="hovereffect" style="margin-bottom: 10px">
+                        <div class="" style="margin-bottom: 10px">
                             <img class="img-responsive" src="/images/display3-3.jpg" alt="">
                             <div class="overlay">
                                 <!--<h2>最尖端的检验技术和诊断试剂</h2>-->
@@ -156,8 +156,8 @@ if ($html == null) :
                         <h5 style="text-align:center;">最尖端的检验技术和诊断试剂</h5>
                     </div>
                     <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
-                        <div class="hovereffect" style="margin-bottom: 10px">
-                            <img class="img-responsive" src="/images/display6-3.jpg" alt="">
+                        <div class="" style="margin-bottom: 10px">
+                            <img class="img-responsive" src="/images/display6-3.jpg" alt="" style="border: 1px solid #ccc;">
                             <div class="overlay">
                                 <!--<h2>显微镜下实验结果</h2>-->
                             </div>
