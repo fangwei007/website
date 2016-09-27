@@ -21,6 +21,7 @@ if (isset($_POST)) {
 
 // ONLY ACCESS CACHE IF $CACHE = TRUE
 if ($caching === true) {
+//    $html = Illuminate\Support\Facades\Redis::get($keyword_webpage);
     $html = __c("files")->get($keyword_webpage);
 }
 
@@ -105,7 +106,7 @@ if ($html == null) :
                     <img class="img-responsive" src="/images/display1.jpg" alt="">
                     <div class="overlay">
                         <h2>配套齐全的手术器械</h2>
-                        <!--<p class="info" href="#">简介：<?php // echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction; ?></p>-->
+                        <!--<p class="info" href="#">简介：<?php // echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction;   ?></p>-->
                     </div>
                 </div>
             </div>
@@ -194,6 +195,7 @@ if ($html == null) :
     $html = ob_get_contents();
     // Save to Cache 30 minutes
     __c("files")->set($keyword_webpage, $html, 60 * 30);
+//    Illuminate\Support\Facades\Redis::setex($keyword_webpage, 60 * 30 * 60, $html);
 endif;
 echo $html;
 ?>
