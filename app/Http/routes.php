@@ -62,3 +62,6 @@ Route::get('/msg/{id}/delete', 'ContactController@destroy');
 
 Route::get('/trash/msg/{id}/restore', 'ContactController@restore');
 
+Route::post('/news', 'AdminController@addNews');
+
+Route::get('/news/delete/{id}', 'AdminController@deleteNews');

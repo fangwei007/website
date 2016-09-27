@@ -10,6 +10,7 @@ use App\Message;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Session;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Redis;
 
 class AdminController extends Controller {
 
@@ -34,7 +35,9 @@ class AdminController extends Controller {
         $trash_u = User::onlyTrashed()->count();
         $trash_i = Instruments::onlyTrashed()->count();
         $trash_m = Message::onlyTrashed()->count();
-        return view('admin.dashboard', ['users' => $users, 'items' => $instruments, 'msgs' => $msgs, 'trash' => $trash_u + $trash_i + $trash_m]);
+        $newRaw = Redis::get('news');
+        $news = json_decode($newRaw, TRUE);
+        return view('admin.dashboard', ['users' => $users, 'items' => $instruments, 'msgs' => $msgs, 'trash' => $trash_u + $trash_i + $trash_m, 'news' => $news]);
     }
     
     public function userManage() {
@@ -212,6 +215,33 @@ class AdminController extends Controller {
         }
 
         return view("errors.404");
+    }
+    
+    public function addNews(Request $request) {
+        $newsRaw = Redis::get('news');
+        $data = [$request->input('news'), date("Y-m-d H:i:s")];
+        if (!is_null($newsRaw)) {
+            $news = json_decode($newsRaw, TRUE);
+            array_unshift($news, $data);
+            Redis::set('news', json_encode($news));
+        } else {
+            $news = json_encode([$data]);
+            Redis::set('news', $news);
+        }
+        return redirect('/admin');
+    }
+
+    public function deleteNews($id) {
+        $newsRaw = Redis::get('news');
+        $news = json_decode($newsRaw, TRUE);
+        if (is_null($news) || empty($news)) {
+            return;
+        } else {
+            unset($news[$id]);
+            $news = array_values($news);
+            Redis::set('news', json_encode($news));
+        }
+        return redirect('/admin');
     }
 
 }

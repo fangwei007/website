@@ -2,6 +2,8 @@
 <script type="text/javascript" src="/js/jquery.js"></script>
 
 <div class="panel panel-default" id="floatdiv" style="margin-top: -22px;"></div>
+<?php $newRaw = Illuminate\Support\Facades\Redis::get('news'); ?>
+<?php $news = json_decode($newRaw, TRUE); ?>
 
 <!-- Header Carousel -->
 <header id="myCarousel" class="carousel slide no-margin">
@@ -101,7 +103,7 @@
     $("#floatdiv").html('<div class="panel-heading" style="background-color: #f0f0f0;">\n\
 <h4><i class="fa fa-fw fa-rss-square"></i> 公司动态 </h4></div>\n\
 <div class="panel-body" id="floatMsg">\n\
-<p style="text-indent:2em;"><strong><?php echo "广东康盛生物科技有限公司创建于2003年12月，是经过广东省工商行政管理局及广东省食品药品监督局正式批准注册的集生物技术产品及医疗产品推广、应用、销售和服务于一身的专业化公司。"; ?></strong></p></div>');
+<p style="text-indent:2em;"><strong><?= $news[0][0]; ?></strong></p></div>');
 
     $("#floatdiv").css({
         "position": "relative",
@@ -154,6 +156,7 @@
                 "position": "relative",
                 "width": "150px",
                 "height": "80px",
+                "min-height": "0",
                 "background": "#FFFFFF",
                 "border": "1px solid #009eae",
                 "z-index": "100",
@@ -171,7 +174,8 @@
             $("#floatdiv").css({
                 "position": "relative",
                 "width": "270px",
-                "height": "300px",
+                "min-height": "300px",
+                "height": "auto",
                 "background": "#FFFFFF",
                 "border": "1px solid #009eae",
                 "z-index": "100",

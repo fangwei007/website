@@ -116,80 +116,42 @@
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
+                    @if (count($news))
                     <ul class="chat">
+                        @for ($i = 0; $i < count($news); $i++)
                         <li class="left clearfix">
                             <span class="chat-img pull-left">
-                                <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
+                                <a data-href="/news/delete/{{ $i }}" data-toggle="modal" data-target="#confirm-perm-delete"><img src="http://placehold.it/50/FA6F57/fff" alt="删 除" class="img-circle" /></a>
                             </span>
                             <div class="chat-body clearfix">
                                 <div class="header">
-                                    <strong class="primary-font">Jack Sparrow</strong>
+                                    <strong class="primary-font">公司动态</strong>
                                     <small class="pull-right text-muted">
-                                        <i class="fa fa-clock-o fa-fw"></i> 12 mins ago
+                                        <i class="fa fa-clock-o fa-fw"></i> {{ $news[$i][1] }} 
                                     </small>
                                 </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                </p>
+                                <p>{{ $news[$i][0] }}</p>
                             </div>
                         </li>
-                        <li class="right clearfix">
-                            <span class="chat-img pull-right">
-                                <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <small class=" text-muted">
-                                        <i class="fa fa-clock-o fa-fw"></i> 13 mins ago</small>
-                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="left clearfix">
-                            <span class="chat-img pull-left">
-                                <img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <strong class="primary-font">Jack Sparrow</strong>
-                                    <small class="pull-right text-muted">
-                                        <i class="fa fa-clock-o fa-fw"></i> 14 mins ago</small>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="right clearfix">
-                            <span class="chat-img pull-right">
-                                <img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" />
-                            </span>
-                            <div class="chat-body clearfix">
-                                <div class="header">
-                                    <small class=" text-muted">
-                                        <i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
-                                    <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
-                                </p>
-                            </div>
-                        </li>
+                        @endfor
                     </ul>
+                    @else
+                    <p>暂无公司最新动态，请继续关注。</p>
+                    @endif
                 </div>
                 <!-- /.panel-body -->
                 <div class="panel-footer">
-                    <div class="input-group">
-                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
-                        <span class="input-group-btn">
-                            <button class="btn btn-warning btn-sm" id="btn-chat">
-                                Send
-                            </button>
-                        </span>
-                    </div>
+                    <form  class="form-horizontal" role="form" method="post" action="{{ url('/news') }}">
+                        {!! csrf_field() !!}
+                        <div class="input-group">
+                            <input id="btn-input" type="text" name="news" class="form-control input-sm" placeholder="请输入公司最新动态内容……" />
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-warning btn-sm" id="btn-chat">
+                                    更 新
+                                </button>
+                            </span>
+                        </div>
+                    </form>
                 </div>
                 <!-- /.panel-footer -->
             </div>
