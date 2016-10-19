@@ -79,13 +79,13 @@ if ($html == null) :
                     <abbr title="Hours">工作时间</abbr>: 星期一 至 星期五: 9:00 - 17:00</p>
                 <ul class="list-unstyled list-inline list-social-icons">
                     <li>
-                        <button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weibo fa-2x"></i></button>
+                        <button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/weiboQR.jpg" width=120/><p class="text-center" style="margin-top:6px;margin-bottom:-4px;color:#009eae;">账号：kansheng_gd@sina.com</p>'><i class="fa fa-weibo fa-2x"></i></button>
                     </li>
                     <li>
-                        <button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weixin fa-2x"></i></button>
+                        <button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/wechatQR.jpg" width=120/><p class="text-center" style="margin-top:6px;margin-bottom:-4px;color:#009eae;">账号：13802512936</p>'><i class="fa fa-weixin fa-2x"></i></button>
                     </li>
                     <li>
-                        <button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-qq fa-2x"></i></button>
+                        <button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/qqQR.jpg" width=120/><p class="text-center" style="margin-top:6px;margin-bottom:-4px;color:#009eae;">账号：1839365285</p>'><i class="fa fa-qq fa-2x"></i></button>
                     </li>
                 </ul>
             </div>

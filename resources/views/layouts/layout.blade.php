@@ -44,9 +44,9 @@
                                 <div class="col-sm-6 col-xs-6" style="padding-right: 30px;">
                                     <div class="social">
                                         <ul class="social-share tooltip-demo">
-                                            <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weibo"></i></button></li>
-                                            <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-weixin"></i></button></li>
-                                            <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/QR.png" width=80/>'><i class="fa fa-qq"></i></button></li> 
+                                            <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/weiboQR.jpg" width=120/><p class="text-center" style="margin-top:6px;margin-bottom:-4px;color:#009eae;">账号：kansheng_gd@sina.com</p>'><i class="fa fa-weibo"></i></button></li>
+                                            <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/wechatQR.jpg" width=120/><p class="text-center" style="margin-top:6px;margin-bottom:-4px;color:#009eae;">账号：13802512936</p>'><i class="fa fa-weixin"></i></button></li>
+                                            <li><button class="btn-social" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover focus" data-html="true" data-content='<img src="/images/qqQR.jpg" width=120/><p class="text-center" style="margin-top:6px;margin-bottom:-4px;color:#009eae;">账号：1839365285</p>'><i class="fa fa-qq"></i></button></li> 
                                         </ul>
                                         <div class="search">
                                             <form role="form" method="get" action="{{ url('/items') }}">
