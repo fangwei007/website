@@ -98,7 +98,7 @@ $prefix = $lang == NULL ? '' : '/en';
 
                                     <ul class="dropdown-menu" role="menu">
                                         @if (Auth::user()->isAdmin()) <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-dashboard"></i> <?php echo $lang == NULL ? "控制台" : "Dashboard"; ?></a></li>@endif
-                                        <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> <?php echo $lang == NULL ? "退出登录" : "Logout"; ?></a></li>
+                                        <li><a href="<?php echo $prefix . "/logout"; ?>"><i class="fa fa-btn fa-sign-out"></i> <?php echo $lang == NULL ? "退出登录" : "Logout"; ?></a></li>
                                     </ul>
                                 </li>
                                 @endif

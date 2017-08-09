@@ -46,7 +46,15 @@ Route::post('/news', 'AdminController@addNews');
 Route::get('/news/delete/{id}', 'AdminController@deleteNews');
 
 Route::group(["prefix" => "en"], function() {
-    Route::auth();
+    Route::get('login', "Auth\EnAuthController@showLoginForm");
+    Route::post('login', "Auth\EnAuthController@login");
+    Route::get('logout', "Auth\EnAuthController@logout");
+    Route::get('register', "Auth\EnAuthController@showRegistrationForm");
+    Route::post('register', "Auth\EnAuthController@register");
+    Route::get('password/reset/{token?}', "Auth\EnPasswordController@showResetForm");
+    Route::post('password/reset', "Auth\EnPasswordController@reset");
+    Route::get('password/email', "Auth\EnPasswordController@sendResetLinkEmail");
+    
     Route::get('/', 'HomeController@index');
 
     Route::get('/home', function () {
