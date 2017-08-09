@@ -126,9 +126,9 @@ $prefix = $lang == NULL ? '' : '/en';
         "opacity": "0.9"
     });
 
-    $("#myCarousel").css({
-        "margin-top": "-80px"
-    });
+//    $("#myCarousel").css({
+//        "margin-top": "-80px"
+//    });
 
     $("#floatMsg").hide();
 </script>
