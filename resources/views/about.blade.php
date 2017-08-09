@@ -33,17 +33,19 @@ if ($html == null) :
 
     <!-- Page Content -->
     <div class="container page-container" style="min-height: 700px">
-
+        <?php
+        $request = Request();
+        $lang = $request->route()->getPrefix();
+        $prefix = $lang == NULL ? '' : '/en';
+        ?>
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">公司信息
-                    <!--<small>公司信息</small>-->
-                </h1>
+                <h1 class="page-header"><?php echo $lang == NULL ? "公司信息" : "About Company"; ?></h1>
                 <ol class="breadcrumb">
-                    <li><a href="/">首 页</a>
+                    <li><a href="{{ $prefix . "/" }}"><?php echo $lang == NULL ? "首 页" : "Home"; ?></a>
                     </li>
-                    <li class="active">关于我们</li>
+                    <li class="active"><?php echo $lang == NULL ? "关于我们" : "About"; ?></li>
                 </ol>
             </div>
         </div>
@@ -54,7 +56,7 @@ if ($html == null) :
                 <img class="img-responsive" src="/images/about-footer.jpg" alt="">
             </div>
             <div class="col-md-6">
-                <h2>公司简介</h2>
+                <h2><?php echo $lang == NULL ? "公司简介" : "Company Introduction"; ?></h2>
                 <p style="text-indent:2em;">广东康盛生物科技有限公司创建于2003年12月，是经过广东省工商行政管理局及广东省食品药品监督局正式批准注册的集生物技术产品及医疗产品推广、应用、销售和服务于一身的专业化公司。</p>
                 <p style="text-indent:2em;">广东康盛生物科技有限公司以向医疗机构提供行业内顶级品牌的医疗器械产品为己任，康盛人以“认真做好每一件事” 的朴素理念让这些高端的医疗产品通过细致专业的服务使医疗机构及患者享受到高新技术的进步给人类带来的福祉。</p>
                 <p style="text-indent:2em;">我们把专注的医学道德精神融汇于医疗产品技术推广的全过程，并以高素质专业化的理念建设公司队伍。公司不断提高人员素质赴生产厂家进行相应的产品培训，以获得最新技术和资讯与国际国内接轨。</p>

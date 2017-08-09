@@ -57,10 +57,6 @@ Route::group(["prefix" => "en"], function() {
     
     Route::get('/', 'HomeController@index');
 
-    Route::get('/home', function () {
-        return redirect('/');
-    });
-
     Route::get('/about', function () {
         return view('about');
     });

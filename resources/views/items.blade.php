@@ -33,17 +33,21 @@ if ($html == null) :
 
     <!-- Page Content -->
     <div class="container page-container" style="min-height: 700px">
-
+        <?php
+        $request = Request();
+        $lang = $request->route()->getPrefix();
+        $prefix = $lang == NULL ? '' : '/en';
+        ?>
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">仪器设备
-                    <small>分类列表</small>
+                <h1 class="page-header"><?php echo $lang == NULL ? "仪器设备" : "Products"; ?>
+                    <small><?php echo $lang == NULL ? "分类列表" : "Category Lists"; ?></small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="/">首 页</a>
+                    <li><a href="{{ $prefix . "/" }}"><?php echo $lang == NULL ? "首 页" : "Home"; ?></a>
                     </li>
-                    <li class="active">仪器设备</li>
+                    <li class="active"><?php echo $lang == NULL ? "仪器设备" : "Products"; ?></li>
                 </ol>
             </div>
         </div>
@@ -51,10 +55,10 @@ if ($html == null) :
 
         <!-- Blog Search Well -->
         <div class="row">
-            <form  class="form-horizontal" role="form" method="get" action="{{ url('/items') }}">
+            <form  class="form-horizontal" role="form" method="get" action="{{ url($prefix . '/items') }}">
                 <div class="col-md-3" style="padding: 15px; margin-bottom: 30px;">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="搜索产品" name="q">
+                        <input type="text" class="form-control" placeholder=<?php echo $lang == NULL ? "搜索产品" : "Search"; ?> name="q">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                         </span>
@@ -67,16 +71,16 @@ if ($html == null) :
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                     <li class="<?php if (!isset($_GET['company'])) echo "active"; ?>">
-                        <a href="/items">全 部</a>
+                        <a href="{{ $prefix . "/items" }}">全 部</a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "Germany") echo "active"; ?>">
-                        <a href="/items?company=Germany">德国 Pro-Med(貝鎂)</a>
+                        <a href="{{ $prefix . "/items?company=Germany" }}">德国 Pro-Med(貝鎂)</a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "USA") echo "active"; ?>">
-                        <a href="/items?company=USA">美国 SurgiTel </a>
+                        <a href="{{ $prefix . "/items?company=USA" }}">美国 SurgiTel </a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "other") echo "active"; ?>">
-                        <a href="/items?company=other">诊断试剂 </a>
+                        <a href="{{ $prefix . "/items?company=other" }}">诊断试剂 </a>
                     </li>
                 </ul>
             </div>
@@ -88,38 +92,38 @@ if ($html == null) :
             <?php if (isset($_GET['company']) && $_GET['company'] == "Germany"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
-                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
-                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
-                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
-                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=jc"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=xxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=pw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=ebh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=gkxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
                     </div>
                 </div>
             <?php elseif (isset($_GET['company']) && $_GET['company'] == "USA"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=USA&type=ssfdj" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ssfdj') echo 'active' ?>">手术放大镜</a>
-                        <a href="/items?company=USA&type=sstd" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sstd') echo 'active' ?>">手术头灯</a>
-                        <a href="/items?company=USA&type=yjdbh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'yjdbh') echo 'active' ?>">眼镜的保护</a>
-                        <a href="/items?company=USA&type=sssxxt" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sssxxt') echo 'active' ?>">手术摄像系统</a>
+                        <a href="{{ $prefix . "/items?company=USA&type=ssfdj"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ssfdj') echo 'active' ?>">手术放大镜</a>
+                        <a href="{{ $prefix . "/items?company=USA&type=sstd"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sstd') echo 'active' ?>">手术头灯</a>
+                        <a href="{{ $prefix . "/items?company=USA&type=yjdbh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'yjdbh') echo 'active' ?>">眼镜的保护</a>
+                        <a href="{{ $prefix . "/items?company=USA&type=sssxxt"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sssxxt') echo 'active' ?>">手术摄像系统</a>
                     </div>
                 </div>
             <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=other&type=zdsj" class="list-group-item">诊断试剂</a>
+                        <a href="{{ $prefix . "/items?company=other&type=zdsj"}}" class="list-group-item">诊断试剂</a>
                     </div>
                 </div>
             <?php else : ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="/items?company=Germany&type=jc" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
-                        <a href="/items?company=Germany&type=xxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
-                        <a href="/items?company=Germany&type=pw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
-                        <a href="/items?company=Germany&type=ebh" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
-                        <a href="/items?company=Germany&type=gkxw" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
-                        <a href="/items?company=USA&type=ssfdj" class="list-group-item">手术放大镜</a>
-                        <a href="/items?company=other&type=zdsj" class="list-group-item">诊断试剂</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=jc"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=xxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=pw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=ebh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=gkxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
+                        <a href="{{ $prefix . "/items?company=USA&type=ssfdj"}}" class="list-group-item">手术放大镜</a>
+                        <a href="{{ $prefix . "/items?company=other&type=zdsj"}}" class="list-group-item">诊断试剂</a>
                     </div>
                 </div>
             <?php endif; ?>
@@ -134,7 +138,7 @@ if ($html == null) :
                         <div class="hovereffect">
                             <img class="img-responsive" src="{{ $item->image }}" alt="">
                             <div class="overlay">
-                                <a href="/items/{{ $item->id }}">
+                                <a href="{{ $prefix . "/items/$item->id" }}">
                                     <h2>{{ $item->name }}</h2>
                                     <p>简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 30, 'UTF-8') . '...' : $item->introduction; ?></p>
                                 </a>

@@ -35,11 +35,15 @@ if ($html == null) :
     @include('floatWindow')
     <!-- Page Content -->
     <div class="container page-container">
-
+        <?php
+        $request = Request();
+        $lang = $request->route()->getPrefix();
+        $prefix = $lang == NULL ? '' : '/en';
+        ?>
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">代理包括</h2>
+                <h2 class="page-header"><?php echo $lang == NULL ? "代理包括" : "Cooperative Agents"; ?></h2>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
@@ -99,14 +103,14 @@ if ($html == null) :
         <link href="/css/home-effects.css" rel="stylesheet">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">产品介绍</h2>
+                <h2 class="page-header"><?php echo $lang == NULL ? "产品介绍" : "Products Introduction"; ?></h2>
             </div>
             <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                 <div class="hovereffect">
                     <img class="img-responsive" src="/images/display1.jpg" alt="">
                     <div class="overlay">
                         <h2>配套齐全的手术器械</h2>
-                        <!--<p class="info" href="#">简介：<?php // echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction;   ?></p>-->
+                        <!--<p class="info" href="#">简介：<?php // echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 80, 'UTF-8') . ' ...' : $item->introduction;    ?></p>-->
                     </div>
                 </div>
             </div>
@@ -160,7 +164,7 @@ if ($html == null) :
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">公司简介</h2>
+                <h2 class="page-header"><?php echo $lang == NULL ? "公司简介" : "About Company"; ?></h2>
             </div>
             <div class="col-md-6" style="text-indent:2em;">
                 <p>广东康盛生物科技有限公司创建于2003年12月，是经过广东省工商行政管理局及广东省食品药品监督局正式批准注册的集生物技术产品及医疗产品推广、应用、销售和服务于一身的专业化公司。</p>
@@ -183,7 +187,7 @@ if ($html == null) :
                     <p style="text-indent:2em;"><strong>致力于寻求技术领先、 质量上乘的医疗产品，并将之推广至医疗机构和广大患者，是公司始终秉承的信念和追求！</strong></p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="/contact">联系我们</a>
+                    <a class="btn btn-lg btn-default btn-block" href="/contact"><?php echo $lang == NULL ? "联系我们" : "Contact us"; ?></a>
                 </div>
             </div>
         </div>
