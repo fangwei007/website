@@ -1,7 +1,7 @@
 <script type="text/javascript" src="/js/floating-1.12.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 
-<div class="panel panel-default" id="floatdiv" style="margin-top: -22px;"></div>
+<!--<div class="panel panel-default" id="floatdiv" style="margin-top: -22px;"></div>-->
 <?php $newRaw = Illuminate\Support\Facades\Redis::get('news'); ?>
 <?php $news = json_decode($newRaw, TRUE); ?>
 <?php
