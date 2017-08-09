@@ -25,6 +25,7 @@ $prefix = $lang == NULL ? '' : '/en';
 
         <!-- Custom Fonts -->
         <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/css/flag-icon.min.css" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,7 +45,17 @@ $prefix = $lang == NULL ? '' : '/en';
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6 col-xs-6" style="padding-left: 30px;">
-                                <div class="top-number"><p><i class="fa fa-phone-square"></i> (020)83828799 &nbsp;&nbsp;&nbsp;<i class="fa fa-fax"></i> (020)83828797</p></div>
+                                <div class="top-number">
+                                    <p>
+                                        <i class="fa fa-phone-square"></i> (020)83828799 &nbsp;&nbsp;&nbsp;
+                                        <i class="fa fa-fax"></i> (020)83828797 &nbsp;&nbsp;&nbsp;
+                                        @if ($lang == NULL) 
+                                        <a href="/en"><i class="flag-icon flag-icon-us"></i> English</a>
+                                        @else 
+                                        <a href="/"><i class="flag-icon flag-icon-cn"></i> 中 文</a>
+                                        @endif
+                                    </p>
+                                </div>
                             </div>
                             <div class="col-sm-6 col-xs-6" style="padding-right: 30px;">
                                 <div class="social">
