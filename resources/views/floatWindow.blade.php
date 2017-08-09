@@ -4,7 +4,11 @@
 <div class="panel panel-default" id="floatdiv" style="margin-top: -22px;"></div>
 <?php $newRaw = Illuminate\Support\Facades\Redis::get('news'); ?>
 <?php $news = json_decode($newRaw, TRUE); ?>
-
+<?php
+$request = Request();
+$lang = $request->route()->getPrefix();
+$prefix = $lang == NULL ? '' : '/en';
+?>
 <!-- Header Carousel -->
 <header id="myCarousel" class="carousel slide no-margin">
     <!-- Indicators -->
@@ -21,13 +25,14 @@
                 <div class="row slide-margin">
                     <div class="col-sm-8">
                         <div class="carousel-caption">
-                            <h2 class="animation animated-item-1">德国 Pro-Med(貝鎂)</h2>
+                            <h2 class="animation animated-item-1"><?php echo $lang == NULL ? "德国 Pro-Med(貝鎂) 独家代理" : "Pro-Med"; ?></h2>
+                            @if ($lang == NULL)
                             <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">坐落在全球著名手术器械生产研发集散地: 德国图特林根的德国Pro-Med器械公司是以EN ISO9001及EN46001为标准的外科手术器械制造商，100%德国制造。</p>
+                            @else
+                            <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">Located in Tuttlingen, the world center for surgical instrument Pro-Med is a family-owned EN ISO 9001/EN 46001 certified manufacturer/distributor of fine surgical instruments and appliances-found in 1978.  </p>
+                            @endif 
                         </div>
                         <div class="carousel-content">
-                            <!--                                <h1 class="animation animated-item-1">这是一所宁静美丽的江南小城。小城西北角，有一所大学</h1>
-                                                                <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                                                <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
                         </div>
                     </div>
 
@@ -46,13 +51,14 @@
                 <div class="row slide-margin">
                     <div class="col-sm-12">
                         <div class="carousel-caption" style="color: #333333;font-weight: bold;">
-                            <h2 class="animation animated-item-1">美国 SurgiTel</h2>
+                            <h2 class="animation animated-item-1"><?php echo $lang == NULL ? "美国 SurgiTel" : "SurgiTel"; ?></h2>
+                            @if ($lang == NULL)
                             <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">通过十多年来几万名临床手术医生的使用，获得了手术医生的高度评价，并连续若干年被美国评为优质产品，获得美国人体工程学设计优秀奖。SurgiTel系列产品现已行销世界八十多个国家和地区。</p>
+                            @else
+                            <p class="animation animated-item-2" style="text-indent:2em;text-align: left;font-size: 16px;">Since 1932 SurgiTel has been innovating in the field of optical technology.  The unique loupes, headlights and other optical accessories provide both the technical requirements and the ergonomic support to make your work better.  </p>
+                            @endif
                         </div>
                         <div class="carousel-content">
-                            <!--                                <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                                            <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                                            <a class="btn-slide animation animated-item-3" href="#">Read More</a>-->
                         </div>
                     </div>
 
@@ -71,7 +77,11 @@
                 <div class="row slide-margin">
                     <div class="col-sm-12">
                         <div class="carousel-caption" style="text-indent:4em;text-align: left;">
+                            @if ($lang == NULL)
                             <h3 class="animation animated-item-1">为广大的临床医学实验室及科研实验室提供国内及国际最尖端的检验技术及产品。</h3>
+                            @else
+                            <h3 class="animation animated-item-1">We provide latest diagnostic technology and product at home and abroad to our clients in clinic medical center and research laboratory.</h3>
+                            @endif
                             <!--<h2 class="animation animated-item-2">100%德国制造</h2>-->
                         </div>
                         <div class="carousel-content">
