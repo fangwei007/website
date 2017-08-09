@@ -1,17 +1,22 @@
 @extends('layouts.layout')
 
 @section('content')
+<?php
+$request = Request();
+$lang = $request->route()->getPrefix();
+$prefix = $lang == NULL ? '' : '/en';
+?>
 <div class="container page-container">
     <div class="row" style="margin-top: 5%; min-height: 650px">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">注册新用户</div>
+                <div class="panel-heading"><?php echo $lang == NULL ? "注册新用户" : "Register"; ?></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url("$prefix/register") }}">
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">用户名</label>
+                            <label class="col-md-4 control-label"><?php echo $lang == NULL ? "用户名" : "Username"; ?></label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="name" value="{{ old('name') }}">
@@ -25,7 +30,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">电子邮箱</label>
+                            <label class="col-md-4 control-label"><?php echo $lang == NULL ? "电子邮箱" : "Email"; ?></label>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -39,7 +44,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">密 码</label>
+                            <label class="col-md-4 control-label"><?php echo $lang == NULL ? "密 码" : "Password"; ?></label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password">
@@ -53,7 +58,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">确认密码</label>
+                            <label class="col-md-4 control-label"><?php echo $lang == NULL ? "确认密码" : "Password Confirmation"; ?></label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password_confirmation">
@@ -67,7 +72,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('verification') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">验证码</label>
+                            <label class="col-md-4 control-label"><?php echo $lang == NULL ? "验证码" : "Verification"; ?></label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="verification" value="">
@@ -83,10 +88,10 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i> 注册用户
+                                    <i class="fa fa-btn fa-user"></i> <?php echo $lang == NULL ? "注册用户" : "Sign up"; ?>
                                 </button>
                                 
-                                <a class="btn btn-link" href="{{ url('/login') }}">返 回</a>
+                                <a class="btn btn-link" href="{{ url("$prefix/login") }}"><?php echo $lang == NULL ? "返 回" : "Back"; ?></a>
                             </div>
                         </div>
                     </form>
