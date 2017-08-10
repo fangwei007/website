@@ -72,6 +72,20 @@
                                 </span>
                                 @endif
                             </div>
+                            
+                            <div class="form-group{{ $errors->has('item-lang') ? ' has-error' : '' }}">
+                                <label class="control-label">语 言</label>
+                                <select class="form-control" style="max-width: 300px;" name="item-lang" id="item-lang">
+                                    <option value="cn" <?php if ($item->lang == "cn") echo 'selected'; ?>>中 文</option>
+                                    <option value="en" <?php if ($item->lang == "en") echo 'selected'; ?>>英 文</option>
+                                </select>
+
+                                @if ($errors->has('item-lang'))
+                                <span class="help-block">
+                                    {{ $errors->first('item-lang') }}
+                                </span>
+                                @endif
+                            </div>
 
                             <div class="form-group{{ $errors->has('item-company') ? ' has-error' : '' }}">
                                 <label class="control-label">所属公司</label>

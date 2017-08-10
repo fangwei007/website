@@ -134,6 +134,7 @@ if ($html == null) :
                 <!-- Projects Row -->
                 <div class="row">
                     @foreach ($items as $item)
+                    
                     <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                         <div class="hovereffect">
                             <img class="img-responsive" src="{{ $item->image }}" alt="">

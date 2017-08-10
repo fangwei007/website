@@ -28,6 +28,6 @@ class Instruments extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'introduction', 'image', 'company', 'type'
+        'name', 'introduction', 'image', 'company', 'type', 'lang'
     ];
 }

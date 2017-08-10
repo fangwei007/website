@@ -29,6 +29,8 @@ class InstrumentsController extends Controller {
      */
     public function index() {
         $query = request()->all();
+        $prefix = request()->route()->getPrefix();
+        $query['lang'] = $prefix == NULL ? 'cn' : 'en';
         if (key_exists('q', $query)) {
             $name = $query['q'];
             $instruments = Instruments::where('name', $name)->orWhere('name', 'like', '%' . $name . '%')->paginate(9)->appends(['q' => $name]);
@@ -62,6 +64,7 @@ class InstrumentsController extends Controller {
                     'item-image' => "required|image",
                     'item-company' => "required",
                     'item-type' => "required",
+                    'item-lang' => "required",
                         ], [
                     'item-name.unique' => "器材型号重复，请重试。",
                     'item-name.required' => "请填写器材型号。",
@@ -85,6 +88,7 @@ class InstrumentsController extends Controller {
                 'image' => "/uploads/" . $request->input('item-name') . '/' . $filename,
                 'company' => $request->input('item-company'),
                 'type' => $request->input('item-type'),
+                'lang' => $request->input('item-lang'),
             ];
 
             Instruments::create($data);
@@ -135,6 +139,7 @@ class InstrumentsController extends Controller {
                     'item-introduction' => "required",
                     'item-company' => "required",
                     'item-type' => "required",
+                    'item-lang' => "required",
                         ], [
                     'item-name.unique' => "器材型号重复，请重试。",
                     'item-name.required' => "请填写器材型号。",
@@ -151,6 +156,7 @@ class InstrumentsController extends Controller {
                 'introduction' => $request->input('item-introduction'),
                 'company' => $request->input('item-company'),
                 'type' => $request->input('item-type'),
+                'lang' => $request->input('item-lang'),
             ];
 
             if ($request->hasFile('item-image')) {
