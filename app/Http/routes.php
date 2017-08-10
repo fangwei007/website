@@ -63,4 +63,5 @@ Route::group(["prefix" => "en"], function() {
     Route::get('/contact', function () {
         return view('contact');
     });
+    Route::resource('items', 'InstrumentsController');
 });
