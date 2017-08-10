@@ -33,30 +33,34 @@ if ($html == null) :
 
     <!-- Page Content -->
     <div class="container page-container" style="min-height: 700px;">
-
+        <?php
+        $request = Request();
+        $lang = $request->route()->getPrefix();
+        $prefix = $lang == NULL ? '' : '/en';
+        ?>
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"> 仪器设备
+                <h1 class="page-header"> <?php echo $lang == NULL ? "仪器设备" : "Products"; ?>
                     <small>{{ $item->name }} </small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="/">首 页</a></li>
-                    <li><a href="/items">仪器设备</a></li>
+                    <li><a href="{{ $prefix. '/' }}"><?php echo $lang == NULL ? "首 页" : "Home"; ?></a></li>
+                    <li><a href="{{ $prefix. '/items' }}"><?php echo $lang == NULL ? "仪器设备" : "Products"; ?></a></li>
                     <li>
                         <a href="/items?company={{ $item->company }}&type={{  $item->type }}">
                             @if ($item->company == "Germany")
-                            德国 Pro-Med
+                            <?php echo $lang == NULL ? "德国 Pro-Med" : "Pro-Med"; ?>
                             @elseif ($item->company == "USA")
-                            美国 SurgiTel
+                            <?php echo $lang == NULL ? "美国 SurgiTel" : "SurgiTel"; ?>
                             @else
-                            诊断试剂
+                            <?php echo $lang == NULL ? "诊断试剂" : "Diagnosis Reagents"; ?>
                             @endif
                         </a>
                     </li>
                     <li class="active">{{ $item->name }}</li>
                     @if (!Auth::guest() && Auth::user()->role == 'V')
-                    <a class="pull-right" href="/items/{{ $item->id }}/edit"> <i class="fa fa-edit"></i>编 辑 </a>
+                    <a class="pull-right" href="{{ "/items/$item->id/edit" }}"> <i class="fa fa-edit"></i><?php echo $lang == NULL ? "编 辑" : "Edit"; ?> </a>
                     @endif
                 </ol>
 
@@ -196,12 +200,12 @@ if ($html == null) :
             </div>
 
             <div class="col-md-4">
-                <h3>仪器型号</h3>
+                <h3><?php echo $lang == NULL ? "仪器型号" : "Instrument ID"; ?></h3>
                 <p>{{ $item->name }}</p>
-                <h3>仪器介绍</h3>
+                <h3><?php echo $lang == NULL ? "仪器介绍" : "Instrument Introduction"; ?></h3>
                 <p>{{ $item->introduction }}</p>
-                <h3>详细参数</h3>
-                <p>暂 无</p>
+                <h3><?php echo $lang == NULL ? "详细参数" : "Specifications"; ?></h3>
+                <p><?php echo $lang == NULL ? "暂 无" : "Not Available"; ?></p>
 <!--                <ul style="margin-left: -20px">
                     <li>Lorem Ipsum</li>
                     <li>Dolor Sit Amet</li>
