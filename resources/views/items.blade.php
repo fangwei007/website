@@ -71,16 +71,16 @@ if ($html == null) :
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                     <li class="<?php if (!isset($_GET['company'])) echo "active"; ?>">
-                        <a href="{{ $prefix . "/items" }}">全 部</a>
+                        <a href="{{ $prefix . "/items" }}"><?php echo $lang == NULL ? "全 部" : "All"; ?></a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "Germany") echo "active"; ?>">
-                        <a href="{{ $prefix . "/items?company=Germany" }}">德国 Pro-Med(貝鎂)</a>
+                        <a href="{{ $prefix . "/items?company=Germany" }}"><?php echo $lang == NULL ? "德国 Pro-Med(貝鎂)" : "Pro-Med"; ?></a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "USA") echo "active"; ?>">
-                        <a href="{{ $prefix . "/items?company=USA" }}">美国 SurgiTel </a>
+                        <a href="{{ $prefix . "/items?company=USA" }}"><?php echo $lang == NULL ? "美国 SurgiTel" : "SurgiTel"; ?> </a>
                     </li>
                     <li class="<?php if (isset($_GET['company']) && $_GET['company'] == "other") echo "active"; ?>">
-                        <a href="{{ $prefix . "/items?company=other" }}">诊断试剂 </a>
+                        <a href="{{ $prefix . "/items?company=other" }}"><?php echo $lang == NULL ? "诊断试剂" : "Diagnosis Reagents"; ?> </a>
                     </li>
                 </ul>
             </div>
@@ -92,38 +92,38 @@ if ($html == null) :
             <?php if (isset($_GET['company']) && $_GET['company'] == "Germany"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="{{ $prefix . "/items?company=Germany&type=jc"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=xxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=pw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=ebh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=gkxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=jc"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>"><?php echo $lang == NULL ? "基础外科器械" : "General Surgery"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=xxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>"><?php echo $lang == NULL ? "心血管及胸外科" : "Thorax and Cardiovascular"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=pw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>"><?php echo $lang == NULL ? "普通外科" : "INT-URO-GYN-OB"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=ebh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>"><?php echo $lang == NULL ? "耳鼻喉外科" : "ENT and Maxillo-facial"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=gkxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>"><?php echo $lang == NULL ? "骨外科神经外科及显微外科" : "Bone Surgery Neuro Surgery Micro Surgery"; ?></a>
                     </div>
                 </div>
             <?php elseif (isset($_GET['company']) && $_GET['company'] == "USA"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="{{ $prefix . "/items?company=USA&type=ssfdj"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ssfdj') echo 'active' ?>">手术放大镜</a>
-                        <a href="{{ $prefix . "/items?company=USA&type=sstd"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sstd') echo 'active' ?>">手术头灯</a>
-                        <a href="{{ $prefix . "/items?company=USA&type=yjdbh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'yjdbh') echo 'active' ?>">眼镜的保护</a>
-                        <a href="{{ $prefix . "/items?company=USA&type=sssxxt"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sssxxt') echo 'active' ?>">手术摄像系统</a>
+                        <a href="{{ $prefix . "/items?company=USA&type=ssfdj"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ssfdj') echo 'active' ?>"><?php echo $lang == NULL ? "手术放大镜" : "Loupes"; ?></a>
+                        <a href="{{ $prefix . "/items?company=USA&type=sstd"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sstd') echo 'active' ?>"><?php echo $lang == NULL ? "手术头灯" : "Headlights"; ?></a>
+                        <a href="{{ $prefix . "/items?company=USA&type=yjdbh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'yjdbh') echo 'active' ?>"><?php echo $lang == NULL ? "眼镜的保护" : "Eye Protection"; ?></a>
+                        <a href="{{ $prefix . "/items?company=USA&type=sssxxt"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'sssxxt') echo 'active' ?>"><?php echo $lang == NULL ? "手术摄像系统" : "Video Camera"; ?></a>
                     </div>
                 </div>
             <?php elseif (isset($_GET['company']) && $_GET['company'] == "other"): ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="{{ $prefix . "/items?company=other&type=zdsj"}}" class="list-group-item">诊断试剂</a>
+                        <a href="{{ $prefix . "/items?company=other&type=zdsj"}}" class="list-group-item"><?php echo $lang == NULL ? "诊断试剂" : "Diagnosis Reagents"; ?></a>
                     </div>
                 </div>
             <?php else : ?>
                 <div class="col-md-3">
                     <div class="list-group">
-                        <a href="{{ $prefix . "/items?company=Germany&type=jc"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>">基础外科器械</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=xxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>">心血管及胸外科</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=pw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>">普通外科</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=ebh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>">耳鼻喉外科</a>
-                        <a href="{{ $prefix . "/items?company=Germany&type=gkxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>">骨外科神经外科及显微外科</a>
-                        <a href="{{ $prefix . "/items?company=USA&type=ssfdj"}}" class="list-group-item">手术放大镜</a>
-                        <a href="{{ $prefix . "/items?company=other&type=zdsj"}}" class="list-group-item">诊断试剂</a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=jc"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'jc') echo 'active' ?>"><?php echo $lang == NULL ? "基础外科器械" : "General Surgery"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=xxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'xxw') echo 'active' ?>"><?php echo $lang == NULL ? "心血管及胸外科" : "Thorax and Cardiovascular"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=pw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'pw') echo 'active' ?>"><?php echo $lang == NULL ? "普通外科" : "INT-URO-GYN-OB"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=ebh"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'ebh') echo 'active' ?>"><?php echo $lang == NULL ? "耳鼻喉外科" : "ENT and Maxillo-facial"; ?></a>
+                        <a href="{{ $prefix . "/items?company=Germany&type=gkxw"}}" class="list-group-item <?php if (isset($_GET['type']) && $_GET['type'] == 'gkxw') echo 'active' ?>"><?php echo $lang == NULL ? "骨外科神经外科及显微外科" : "Bone Surgery Neuro Surgery Micro Surgery"; ?></a>
+                        <a href="{{ $prefix . "/items?company=USA&type=ssfdj"}}" class="list-group-item"><?php echo $lang == NULL ? "手术放大镜" : "Loupes"; ?></a>
+                        <a href="{{ $prefix . "/items?company=other&type=zdsj"}}" class="list-group-item"><?php echo $lang == NULL ? "诊断试剂" : "Diagnosis Reagents"; ?></a>
                     </div>
                 </div>
             <?php endif; ?>
@@ -140,7 +140,7 @@ if ($html == null) :
                             <div class="overlay">
                                 <a href="{{ $prefix . "/items/$item->id" }}">
                                     <h2>{{ $item->name }}</h2>
-                                    <p>简介：<?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 30, 'UTF-8') . '...' : $item->introduction; ?></p>
+                                    <p><?php echo $lang == NULL ? "简介：" : "intro: "; ?><?php echo $short_string = (strlen($item->introduction) > 300) ? mb_substr($item->introduction, 0, 30, 'UTF-8') . '...' : $item->introduction; ?></p>
                                 </a>
                             </div>
 
@@ -157,7 +157,7 @@ if ($html == null) :
                                 <!--<h2>最尖端的检验技术和诊断试剂</h2>-->
                             </div>
                         </div>
-                        <h5 style="text-align:center;">最尖端的检验技术和诊断试剂</h5>
+                        <h5 style="text-align:center;"><?php echo $lang == NULL ? "最尖端的检验技术和诊断试剂" : "Sophisticated inspection techniques and diagnostic reagents"; ?></h5>
                     </div>
                     <div class="img-portfolio col-md-4 col-sm-6 col-xs-12">
                         <div class="" style="margin-bottom: 10px">
@@ -166,7 +166,7 @@ if ($html == null) :
                                 <!--<h2>显微镜下实验结果</h2>-->
                             </div>
                         </div>
-                        <h5 style="text-align:center;">显微镜下实验结果</h5>
+                        <h5 style="text-align:center;"><?php echo $lang == NULL ? "显微镜下实验结果" : "Accurate test results under microscope"; ?></h5>
                     </div>
                     <div class="col-md-4 img-portfolio">
                         <!--<p><i class="fa fa-warning"></i> 对不起，没有相关仪器或设备！</p>-->
