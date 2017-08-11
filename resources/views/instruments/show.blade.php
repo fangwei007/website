@@ -48,7 +48,7 @@ if ($html == null) :
                     <li><a href="{{ $prefix. '/' }}"><?php echo $lang == NULL ? "首 页" : "Home"; ?></a></li>
                     <li><a href="{{ $prefix. '/items' }}"><?php echo $lang == NULL ? "仪器设备" : "Products"; ?></a></li>
                     <li>
-                        <a href="/items?company={{ $item->company }}&type={{  $item->type }}">
+                        <a href="{{ $prefix . "/items?company=$item->company&type=$item->type" }}">
                             @if ($item->company == "Germany")
                             <?php echo $lang == NULL ? "德国 Pro-Med" : "Pro-Med"; ?>
                             @elseif ($item->company == "USA")
