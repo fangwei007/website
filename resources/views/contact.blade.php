@@ -67,11 +67,11 @@ if ($html == null) :
                 </p>
                 <p>
                     <i class="fa fa-phone"></i> 
-                    <abbr title="Phone"><?php echo $lang == NULL ? "电 话" : "Phone"; ?></abbr>: (020)83828799
+                    <abbr title="Phone"><?php echo $lang == NULL ? "电 话" : "Phone"; ?></abbr>: (020) 83828799
                 </p>
                 <p>
                     <i class="fa fa-fax"></i> 
-                    <abbr title="Fax"><?php echo $lang == NULL ? "传 真" : "Fax"; ?></abbr>: (020)83828797
+                    <abbr title="Fax"><?php echo $lang == NULL ? "传 真" : "Fax"; ?></abbr>: (020) 83828797
                 </p>
                 <p>
                     <i class="fa fa-envelope-o"></i> 
