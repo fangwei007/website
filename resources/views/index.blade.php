@@ -219,7 +219,7 @@ if ($html == null) :
                 </div>
                 @else 
                 <div class="col-md-8">
-                    <p style="text-indent:2em;"><strong>We never stop to seeking innovative technology, high-quality health care products, and extended them to hospital and patients.</strong></p>
+                    <p style="text-indent:2em;"><strong>We will never stop seeking innovative technologies, high-quality health care products and extending them to hospital and patients…</strong></p>
                 </div>
                 @endif
                 <div class="col-md-4">
