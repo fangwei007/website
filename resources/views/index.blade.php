@@ -196,7 +196,7 @@ if ($html == null) :
             <div class="col-md-6" style="text-indent:2em;">
                 <p>Established in end of 2003, Guangdong Sunny Technologies,Inc is professional company on promoting, selling and marketing of life science and medical products.  We have registered in Guangdong Provincial Administration for Industry and Guangdong Provincial Food and Drug Administration.</p>
                 <p>Our mission is to provide high quality products and excellent services to medical organization.  Our people follows simple concept of "to do everything by heart" and let human being really get benefit from progress of high-tech through meticulous serve to our client.</p> 
-                <p>We are sole distributor of surgical product for Pro-Med Instrumente GmbH in China.</p>
+                <p>We are exclusive distributor of surgical product for Pro-Med Instrumente GmbH in China.</p>
                 <p>We sell and do promotion activities for SurgiTel products in south China (7 provinces).</p>
                 <p>We provide following products for our clients: virus nucleic acid detection, detection of infection disease, FISH, cancer gene mutation, and resistant gene mutation, HLA genotyping, transplantation immunology drug monitoring.</p>
                 </p>
