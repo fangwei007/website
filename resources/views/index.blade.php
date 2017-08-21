@@ -223,7 +223,7 @@ if ($html == null) :
                 </div>
                 @endif
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="/contact"><?php echo $lang == NULL ? "联系我们" : "Contact us"; ?></a>
+                    <a class="btn btn-lg btn-default btn-block" href="{{ $prefix . "/contact" }}"><?php echo $lang == NULL ? "联系我们" : "Contact us"; ?></a>
                 </div>
             </div>
         </div>
