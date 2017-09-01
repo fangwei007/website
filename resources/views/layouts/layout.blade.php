@@ -11,8 +11,15 @@ $prefix = $lang == NULL ? '' : '/en';
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Sunnytechs">
-        <meta name="author" content="Sunnytechs">
+        @if ($lang == NULL) 
+        <meta name="description" content="广东康盛生物科技有限公司创建于2003年12月，是经过广东省工商行政管理局及广东省食品药品监督局正式批准注册的集生物技术产品及医疗产品推广、应用、销售和服务于一身的专业化公司。">
+        <meta name="author" content="广东康盛生物科技有限公司">
+        @else 
+        <meta name="description" content="Established in end of 2003, Guangdong Sunny Technologies,Inc is professional company on promoting, selling and marketing of life science and medical products. We have registered in Guangdong Provincial Administration for Industry and Guangdong Provincial Food and Drug Administration.">
+        <meta name="author" content="Guangdong Sunny Technologies, Inc">
+        @endif
+        <!--<meta name="description" content="Sunnytechs">-->
+        <!--<meta name="author" content="Sunnytechs">-->
 
         <title><?php echo $lang == NULL ? "广东康盛生物科技有限公司" : "Guangdong Sunny Technologies, Inc"; ?></title>
 
