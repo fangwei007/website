@@ -80,6 +80,17 @@ $prefix = $lang == NULL ? '' : '/en';
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12" style="padding-left: 30px;padding-right: 30px;">
+                                <div class="top-number">
+                                    @if ($lang == NULL)
+                                        <h6 style="color:red">好消息：全新网址 <span style="color:#009eae">sunnytechco.com</span> 全面升级, 为您提供更可靠的服务 !!</h6>
+                                    @else
+                                        <h6 style="color:red">Announcement：we have upgraded our website with new URL <span style="color:#009eae">sunnytechco.com</span> and continue to provide you with reliable and efficient services !!</h6>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
                     </div><!--/.container-->
                 </div><!--/.top-bar-->
 
